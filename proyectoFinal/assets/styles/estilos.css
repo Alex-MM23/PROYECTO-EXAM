@@ -288,9 +288,11 @@ h1 {
 }
 
 .logos div{
-    margin-right: -1%;
-    margin-top: -1%;
-    
+    margin-left: 5%;
     justify-content: space-around;
+}
+
+.logos p {
+    margin-left: 80%;
 }
 
