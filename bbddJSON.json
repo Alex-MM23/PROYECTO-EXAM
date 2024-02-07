@@ -1,0 +1,323 @@
+﻿[
+    {
+        "create database vacantes_BBDD_2024_EXA;": "use vacantes_BBDD_2024_EXA;"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": ""
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "CREATE TABLE `Categorias` ("
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "id_categoria int NOT NULL AUTO_INCREMENT,"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "nombre varchar(100) NOT NULL,"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "descripcion varchar(2000),"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "PRIMARY KEY (id_categoria)"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": ") ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": ""
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "INSERT INTO Categorias (nombre, descripcion)"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "VALUES ('Desarrollo de software', 'Categoría relacionada con la creación y mantenimiento de software.'),"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "('Diseño gráfico', 'Categoría relacionada con la creación de elementos visuales y gráficos.'),"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "('Marketing digital', 'Categoría relacionada con estrategias de marketing en medios digitales.');"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": ""
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "-- DROP TABLE IF EXISTS `Perfiles`;"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "CREATE TABLE `Perfiles` ("
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "id_perfil int NOT NULL AUTO_INCREMENT,"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "perfil varchar(100) NOT NULL,"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "PRIMARY KEY (id_perfil)"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": ") ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": ""
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "INSERT INTO Perfiles (perfil)"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "VALUES ('USU_ADMIN');"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "INSERT INTO Perfiles (perfil)"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "VALUES ('USU_CLIENTE');"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": ""
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "-- DROP TABLE IF EXISTS `Usuarios`;"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "CREATE TABLE `Usuarios` ("
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "id_usuario int NOT NULL AUTO_INCREMENT,"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "nombre varchar(45) NOT NULL,"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "email varchar(100) NOT NULL,"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "username varchar(45) NOT NULL,"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "password varchar(100) NOT NULL,"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "enabled int NOT NULL DEFAULT 1,"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "fecha_Registro date,"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "PRIMARY KEY (id_usuario),"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "UNIQUE (email)"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": ") ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": ""
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "INSERT INTO Usuarios (nombre, email, username, password, enabled, fecha_Registro)"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "VALUES (\"tomas\", \"tomas@ifp.es\", \"tomas\", \"tomasin\", 1, \"2024-02-06\");"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "INSERT INTO Usuarios (nombre, email, username, password, enabled, fecha_Registro)"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "VALUES ('juan', 'juan@ifp.es', 'juan', 'juanin', 1, '2024-02-02');"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "INSERT INTO Usuarios (nombre, email, username, password, enabled, fecha_Registro)"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "VALUES ('alex', 'alex@ifp.es', 'alex', 'alexin', 1, '2024-01-01');"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": ""
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "-- DROP TABLE IF EXISTS `Vacantes`;"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "CREATE TABLE `Vacantes` ("
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "id_vacante int NOT NULL AUTO_INCREMENT,"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "nombre varchar(200) NOT NULL,"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "descripcion varchar(2000) NOT NULL,"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "fecha date NOT NULL,"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "salario double NOT NULL,"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "estatus enum('Creada','Aprobada','Eliminada') NOT NULL,"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "destacado int NOT NULL,"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "imagen varchar(250) NOT NULL,"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "detalles varchar(2000),"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "id_Categoria int NOT NULL,"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "PRIMARY KEY (id_vacante),"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "FOREIGN KEY (id_categoria) REFERENCES `Categorias` (id_categoria)"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": ") ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": ""
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "INSERT INTO Vacantes (nombre, descripcion, fecha, salario, estatus, destacado, imagen, detalles, id_Categoria)"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "VALUES ('Desarrollador Full Stack', 'Se busca desarrollador con experiencia en tecnologías web.', '2024-02-06', 50000.00, 'Aprobada', 0, 'imagen1.jpg', 'Detalles adicionales sobre la vacante.', 1),"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "('Diseñador Gráfico Senior', 'Se requiere un diseñador con experiencia en diseño editorial.', '2024-02-06', 60000.00, 'Creada', 1, 'imagen2.jpg', 'Detalles adicionales sobre la vacante.', 2),"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "('Especialista en Marketing Digital', 'Buscamos un experto en estrategias de marketing online.', '2024-02-06', 70000.00, 'Aprobada', 1, 'imagen3.jpg', 'Detalles adicionales sobre la vacante.', 3),"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "('Ingeniero de Software', 'Se busca ingeniero de software para trabajar en proyectos de desarrollo.', '2024-02-06', 55000.00, 'Creada', 0, 'imagen4.jpg', 'Detalles adicionales sobre la vacante.', 1),"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "('Community Manager', 'Se necesita un experto en redes sociales para gestionar la comunidad en línea.', '2024-02-06', 45000.00, 'Aprobada', 0, 'imagen5.jpg', 'Detalles adicionales sobre la vacante.', 3),"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "('Diseñador UX/UI', 'Buscamos un diseñador especializado en experiencia de usuario e interfaz.', '2024-02-06', 58000.00, 'Creada', 1, 'imagen6.jpg', 'Detalles adicionales sobre la vacante.', 2);"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": ""
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "-- DROP TABLE IF EXISTS `Solicitudes`;"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "CREATE TABLE `Solicitudes` ("
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "id_solicitud int NOT NULL AUTO_INCREMENT,"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "fecha date NOT NULL,"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "archivo varchar(250) NOT NULL,"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "comentarios varchar(2000),"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "id_Vacante int NOT NULL,"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "id_Usuario int NOT NULL,"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "PRIMARY KEY (id_solicitud),"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "UNIQUE(id_Vacante,id_Usuario),"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "FOREIGN KEY (id_Usuario) REFERENCES `Usuarios` (id_usuario),"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "FOREIGN KEY (id_Vacante) REFERENCES `Vacantes` (id_vacante)"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": ") ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": ""
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "INSERT INTO Solicitudes (fecha, archivo, comentarios, id_Vacante, id_Usuario)"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "VALUES ('2024-02-06', 'archivo1.pdf', 'Comentarios adicionales sobre la solicitud.', 1, 1),"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "('2024-02-06', 'archivo2.pdf', 'Comentarios adicionales sobre la solicitud.', 2, 2),"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "('2024-02-06', 'archivo3.pdf', 'Comentarios adicionales sobre la solicitud.', 3, 3),"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "('2024-02-06', 'archivo4.pdf', 'Comentarios adicionales sobre la solicitud.', 4, 1),"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "('2024-02-06', 'archivo5.pdf', 'Comentarios adicionales sobre la solicitud.', 5, 2),"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "('2024-02-06', 'archivo6.pdf', 'Comentarios adicionales sobre la solicitud.', 6, 3);"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": ""
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "-- DROP TABLE IF EXISTS `UsuarioPerfil`;"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "CREATE TABLE `UsuarioPerfil` ("
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "id_Usuario int NOT NULL,"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "id_Perfil int NOT NULL,"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "PRIMARY KEY(id_Usuario,id_Perfil),"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "FOREIGN KEY (id_Usuario) REFERENCES `Usuarios` (id_usuario),"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "FOREIGN KEY (id_Perfil) REFERENCES `Perfiles` (id_perfil)"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": ") ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": ""
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "INSERT INTO UsuarioPerfil (id_Usuario, id_Perfil)"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "VALUES (1, 1);"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "INSERT INTO UsuarioPerfil (id_Usuario, id_Perfil)"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "VALUES (2, 2);"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "INSERT INTO UsuarioPerfil (id_Usuario, id_Perfil)"
+    },
+    {
+        "create database vacantes_BBDD_2024_EXA;": "VALUES (3, 2);"
+    }
+]
