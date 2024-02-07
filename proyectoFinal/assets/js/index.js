@@ -1,3 +1,5 @@
+let divFamilia = document.getElementById("productos");
+
 fetch(bbddJSON.json)
     .then((res) => res.json())
     .then((Categorias) => {
