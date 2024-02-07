@@ -1,17 +1,26 @@
-var mysql = require('mysql');
+let urlFetchAll = "http://localhost:8085/apirest/categorias/todas";
+let divCategorias = "";
 
-var conexion = mysql.createConnection({
-    host: 'localhost',
-    database: 'vacantes_BBDD_2024_EXA',
-    user: 'uvariantes',
-    password: 'uvariantes'
-});
+fetch(urlFetchAll)
+    .then((res) => res.json())
+    .then((categorias) => {
+        categorias.forEach((categoria) => {
+            let divProducto = document.createElement("div");
+            divProducto.classList.add("divProductos");
+            let pID = document.createElement("p");
+            let pDescripcion = document.createElement("p");
 
-conexion.connect(function(error){
-    if (error){
-        throw error;
-    }else{
-        console.log('CONEXION EXITOSA');
-    }
-});
-conexion.end();
+            divProducto.addEventListener("click", () => {
+                cargarProductosPorFamilia(familia.idFamilia);
+            });
+
+            pID.innerHTML = `${categoria.idFamilia}`;
+            pDescripcion.innerHTML = categoria.descripcion;
+
+
+            divProducto.appendChild(pDescripcion);
+            divProducto.style.border = "solid black 2px";
+
+            divFamilia.appendChild(divProducto);
+        });
+    });
