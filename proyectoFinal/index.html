@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BuscoTrabajo</title>
+    <link rel="stylesheet" href="assets/styles/estilos.css" />
+
+    <script src="assets/js/script.js" defer></script>
+</head>
+
+<body>
+    <header class="menu">
+        <ul>
+            <img class="logo" src="assets/IMG/logo.png" alt="logo">
+            <li><a onclick="candidatos()" href="#">Zona Candidatos</a></li>
+        </ul>
+
+        <button onclick="login()" class="accede-btn">Accede</button>
+        <button onclick="registro()" class="registro-btn">Date de alta</button>
+    </header>
+
+    <section class="section">
+        <div class="empresas">
+            <h1>InfoJobs Empresa</h1>
+            <p> Encuentra a tu </p>
+            <p> candidato de forma</p>
+            <p> rápida, fácil y segura.</p>
+            <button onclick="empresas()" class="button-empresa">PUBLICAR OFERTA</button>
+        </div>
+        <div class="banner">
+            <img src="assets/IMG/home.png" alt="Empresas">
+        </div>
+        <div class="informacion">
+            <p class="titulo">Encuentra al mejor profesional</p>
+        </div>
+        <div class="container">
+            <div class="cuadrado cuadrado1">
+                <img src="assets/IMG/descripcion.png">
+                <h2>Describe el puesto de trabajo</h2>
+                <p>Detalla los requisitos que debe tener el candidato y publica tu oferta.</p>
+            </div>
+            <div class="cuadrado cuadrado2">
+                <img src="assets/IMG/usuario.png">
+                <h2>Recibe CVs en minutos</h2>
+                <p>Avisaremos a los candidatos que mejor se ajusten al perfil.</p>
+            </div>
+            <div class="cuadrado cuadrado3">
+                <img src="assets/IMG/corazon.png">
+                <h2>Selecciona fácilmente</h2>
+                <p>Filtra entre los inscritos y contacta con los que más te interesen.</p>
+            </div>
+        </div>
+        <div class="rectangulo-azul">
+            <div class="contenido-izquierda">
+                <h1>Publica tu primera oferta</h1>
+                <button onclick="empresas()" class="button-empresa">PUBLICAR OFERTA</button>
+            </div>
+            <div class="contenido-derecha">
+                <img src="assets/IMG/oferta.png" alt="oferta">
+            </div>
+        </div>
+
+        <div class="cvs">
+            <div class="contenido-izquierdas">
+                <img src="assets/IMG/cvs.png" alt="img-cv">   
+            </div>
+            <div class="contenido-derechas">
+                <div class="bloque">
+                    <img class="icono" src="assets/IMG/lupa.png" alt="lupa">
+                    <h2>Busca en la bolsa de CVs</h2>
+                    <p>Accede a los 8 millones de CVs sin tener que publicar una oferta</p>
+                </div>
+                <div class="bloque">
+                    <img class="icono" src="assets/IMG/tick.png" alt="lupa">
+                    <h2>Comprueba el interés</h2>
+                    <p>Descubre si les interesa tu oferta de empleo antes de pagar por el CV</p>
+                </div>
+                <div class="bloque">
+                    <img class="icono" src="assets/IMG/euro.png" alt="lupa">
+                    <h2>Paga por CV destapado</h2>
+                    <p>Paga sólo para ver los datos de contacto de los que te interesan.</p>
+                </div>
+                <button onclick="registro()" class="registro2-btn">REGÍSTRATE</button>
+            </div>
+        </div>
+    </section>
+    <footer>
+
+    </footer>
+</body>
+
+</html>
