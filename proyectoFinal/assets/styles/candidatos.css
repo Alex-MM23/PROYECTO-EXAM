@@ -86,3 +86,69 @@ header ul li a {
 .registro-btn:hover {
     background-color: #2980b9;
 }
+
+.buscador {
+    display: flex;
+    align-items: center;
+    margin-left: 17%;
+    
+}
+
+.rectangulo {
+    width: 80%;
+    height: 50px;
+    background-color: white;
+    box-shadow: 10px 0 15px -5px black;
+    margin: 30px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.rectangulo1 {
+    background-color: #3498db;
+    color: #ffffff;
+}
+
+.categorias {
+    display: flex;
+    align-items: center;
+    margin-left: 17%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cuadrado {
+    width: 300px;
+    height: 150px;
+    background-color: white;
+    box-shadow: 10px 0 15px -5px black;
+    margin: 30px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.cuadrado p {
+    font-size: 18px;
+    margin-top: 12%;
+}
+
+.cuadrado img {
+    width: 60px;
+}
+
+.cuadrado1 {
+    background-color: #3498db;
+    color: #ffffff;
+}
+
+.cuadrado2 {
+    background-color: #e74c3c;
+    color: #ffffff;
+}
+
+.cuadrado3 {
+    background-color: #2ecc71;
+    color: #ffffff;
+}
