@@ -1,28 +1,27 @@
-let divFamilia = document.getElementById("productos");
+let divProductos = document.getElementById("categorias");
 
-fetch(bbddJSON.json)
-    .then((res) => res.json())
-    .then((Categorias) => {
-        Categorias.forEach((categoria) => {
-            let divProducto = document.createElement("div");
-            divProducto.classList.add("divProductos");
-            let pID = document.createElement("p");
-            let pDescripcion = document.createElement("p");
+let urlFetchAll = "http://localhost:8084/apirest/categoria/todos";
 
-            divProducto.addEventListener("click", () => {
-                cargarProductosPorFamilia(categoria.idFamilia);
-            });
+fetch(urlFetchAll)
+.then(res => res.json())
+.then(categorias => {
+    categorias.forEach(categoria => {
+        let divCategoria = document.createElement("div");
+        divCategoria.classList.add("section-categoria");
+        let pID = document.createElement("p");
+        pID.classList.add("categoria-nombre")
+        let pDescripcion = document.createElement("p");
+        pDescripcion.classList.add("categoria-descripcion")
 
-            pID.innerHTML = `${categoria.nombre}`;
-            pDescripcion.innerHTML = categoria.descripcion;
+        pID.innerHTML = categoria.nombre;
+        pDescripcion.innerHTML = categoria.descripcion;
 
+        divCategoria.appendChild(pID);
+        divCategoria.appendChild(pDescripcion);
 
-            divProducto.appendChild(pDescripcion);
-            divProducto.style.border = "solid black 2px";
-
-            divFamilia.appendChild(divProducto);
+        divProductos.appendChild(divCategoria);
         });
-    });
+})
 
 function login(){
     window.location.href = 'login.html';
