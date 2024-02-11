@@ -1,0 +1,170 @@
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #ffffff;
+    color: black;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul {
+    list-style-type: none;
+    display: flex;
+}
+
+header ul li {
+    padding: 0 15px;
+}
+
+header ul li a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.menu {
+    margin-top: 1%;
+}
+
+.logo {
+    margin-left: -40%;
+    height: 30px;
+}
+
+.accede-btn {
+    border: 2px solid #3498db;
+    background-color: #FFFFFF;
+    color: #3498db;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 30%;
+}
+
+.accede-btn:hover {
+    background-color: #3498db;
+    color: #FFFFFF;
+}
+
+.registro-btn {
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 2%;
+}
+
+.registro-btn:hover {
+    background-color: #2980b9;
+}
+
+.button-empresa {
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 2%;
+}
+
+.button-empresa:hover {
+    background-color: #2980b9;
+}
+
+h1 {
+    color: blue;
+}
+
+.section {
+    margin-top: -10%;
+}
+
+.empresas {
+    margin-top: 15%;
+    margin-left: 10%;
+}
+
+.banner {
+    height: 30%;
+    margin-top: -15%;
+    margin-left: 35%;
+}
+
+.titulo {
+    font-size: 40px;
+    margin-top: 1%;
+    margin-left: 30%;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    margin-left: 17%;
+}
+
+.cuadrado {
+    width: 300px;
+    height: 320px;
+    background-color: white;
+    box-shadow: 10px 0 15px -5px black;
+    margin: 20px;
+    display: inline-block;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.cuadrado p {
+    font-size: 18px;
+    margin-top: 12%;
+}
+
+.cuadrado img {
+    width: 60px;
+}
+
+.cuadrado1 {
+    background-color: #3498db;
+    color: #ffffff;
+}
+
+.cuadrado2 {
+    background-color: #e74c3c;
+    color: #ffffff;
+}
+
+.cuadrado3 {
+    background-color: #2ecc71;
+    color: #ffffff;
+}
+
+footer{
+    margin-top: 40px;
+    margin-left: 20%;
+}
