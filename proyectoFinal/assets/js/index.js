@@ -31,3 +31,7 @@ function login(){
 function registro(){
     window.location.href = 'registro.html';
 }
+
+function bEmpleo(){
+    window.location.href = 'categorias.html';
+}

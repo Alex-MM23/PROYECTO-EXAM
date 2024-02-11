@@ -15,7 +15,7 @@
     <header class="menu">
         <ul>
             <img class="logo" src="assets/IMG/logo.png" alt="logo">
-            <li><a onclick="categorias()" href="">Categorias</a></li>
+            <li><a onclick="candidatos()" href="candidatos.html">Categorias</a></li>
         </ul>
 
         <button onclick="login()" class="accede-btn">Accede</button>
@@ -26,11 +26,14 @@
             <input type="checkbox" class="checkbox"> Destacados
         </div>
     
-        <div class="search-box">
-            <label for="search">Buscar por nombre:</label>
-            <input type="text" id="search" name="search">
+        <div id="search-box">
+            <input type="text" id="search-input" placeholder="Buscar...">
+            <button id="search-button">Buscar</button>
         </div>
-    
+        
+        <div class="nav">
+            <a> Categorias </a>
+        </div>
         <div>
             <input type="checkbox" class="category-checkbox"> Categoría 1
         </div>

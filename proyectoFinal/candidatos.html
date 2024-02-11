@@ -10,40 +10,25 @@
 
 <body>
     <header class="menu">
-        
-            <ul>
-                <img class="logo" src="assets/IMG/logo.png" alt="logo">
-                <li><a onclick="bEmpleo()" href="#">Buscar empleo</a></li>
-            </ul>
-
-            <button onclick="login()" class="accede-btn">ACCESO</button>
-            <button onclick="registro()" class="registro-btn">REGISTRO</button>
-        
+        <ul>
+            <img class="logo" src="assets/IMG/logo.png" alt="logo">
+            <li><a onclick="bEmpleo()">Buscar empleo</a></li>
+        </ul>
+        <button onclick="login()" class="accede-btn">Accede</button>
+        <button onclick="registro()" class="registro-btn">Date de alta</button>
     </header>
     <section>
-        <div class="buscador">
-            <div class="rectangulo rectangulo1">           
-                <input type="text" value="Buscar por nombre" width="40px">
-            </div>
+        <div id="search-box">
+            <input type="text" id="search-input" placeholder="Buscar...">
+            <button id="search-button">Buscar</button>
         </div>
+
         <div class="categorias">
-            <div class="cuadrado cuadrado1">           
+            <div class="cuadrado cuadrado1">
                 <p>Categoría Imagen</p>
                 <p>Categoría Descripción</p>
             </div>
-            <div class="cuadrado cuadrado2">               
-                <p>Categoría Imagen</p>
-                <p>Categoría Descripción</p>
-            </div>
-            <div class="cuadrado cuadrado3">
-                <p>Categoría Imagen</p>
-                <p>Categoría Descripción</p>
-            </div>
-            <div class="cuadrado cuadrado1">           
-                <p>Categoría Imagen</p>
-                <p>Categoría Descripción</p>
-            </div>
-            <div class="cuadrado cuadrado2">               
+            <div class="cuadrado cuadrado2">
                 <p>Categoría Imagen</p>
                 <p>Categoría Descripción</p>
             </div>
@@ -51,11 +36,23 @@
                 <p>Categoría Imagen</p>
                 <p>Categoría Descripción</p>
             </div>
-            <div class="cuadrado cuadrado1">           
+            <div class="cuadrado cuadrado1">
                 <p>Categoría Imagen</p>
                 <p>Categoría Descripción</p>
             </div>
-            <div class="cuadrado cuadrado2">               
+            <div class="cuadrado cuadrado2">
+                <p>Categoría Imagen</p>
+                <p>Categoría Descripción</p>
+            </div>
+            <div class="cuadrado cuadrado3">
+                <p>Categoría Imagen</p>
+                <p>Categoría Descripción</p>
+            </div>
+            <div class="cuadrado cuadrado1">
+                <p>Categoría Imagen</p>
+                <p>Categoría Descripción</p>
+            </div>
+            <div class="cuadrado cuadrado2">
                 <p>Categoría Imagen</p>
                 <p>Categoría Descripción</p>
             </div>
@@ -66,5 +63,5 @@
         </div>
     </section>
 </body>
-
+<script src="assets/js/index.js"></script>
 </html>
