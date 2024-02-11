@@ -36,9 +36,6 @@ header ul li a {
     text-decoration: none;
 }
 
-
-
-
 .menu {
     margin-top: 1%;
     margin-left: 2%;
@@ -48,7 +45,7 @@ header ul li a {
 }
 
 .logo {
-    margin-left: -5%;
+    margin-left: -70%;
     height: 30px;
 }
 
@@ -62,7 +59,7 @@ header ul li a {
     font-size: 12px;
     cursor: pointer;
     border-radius: 10px;
-    margin-left: 10%;
+    margin-left: 40%;
 }
 
 .accede-btn:hover {

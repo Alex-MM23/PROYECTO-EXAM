@@ -6,31 +6,32 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BuscoTrabajo</title>
-    <link rel="stylesheet" href="assets/styles/candidatos.css"/>
+    <link rel="stylesheet" href="assets/styles/candidatos.css" />
 
-    <script src="assets/js/script.js" ></script>
+
 </head>
 
 <body>
     <header class="menu">
+
         <ul>
-            <img class="logo" src="assets/IMG/logo.png" alt="logo">
-            <li><a onclick="categorias()" href="">Categorias</a></li>
+            <img class="logo" src="assets/IMG/logo.png" alt="logo" onclick="categorias()" href="index.html">
         </ul>
 
-        <button onclick="login()" class="accede-btn">Accede</button>
-        <button onclick="registro()" class="registro-btn">Date de alta</button>
+        <button onclick="login()" class="accede-btn">ACCESO</button>
+        <button onclick="registro()" class="registro-btn">REGISTRO</button>
     </header>
+
     <nav>
         <div class="nav">
             <input type="checkbox" class="checkbox"> Destacados
         </div>
-    
+
         <div class="search-box">
             <label for="search">Buscar por nombre:</label>
             <input type="text" id="search" name="search">
         </div>
-    
+
         <div>
             <input type="checkbox" class="category-checkbox"> Categoría 1
         </div>
@@ -43,7 +44,7 @@
         <div>
             <input type="checkbox" class="category-checkbox"> Categoría 4
         </div>
-        
+
     </nav>
     <section>
         <div id="vacantes">
@@ -51,3 +52,6 @@
         </div>
     </section>
     <footer></footer>
+    <script src="assets/js/index.js"></script>
+</body>
+</html>
