@@ -44,6 +44,7 @@ if (idCategoria) {
         .then((vacantes) => {
             vacantes.forEach((vacante) => {
                 let divProducto = document.createElement("div");
+                divProducto.classList.add("section-vacante");
                 let pDescripcion = document.createElement("p");
                 let pNombre = document.createElement("p");
                 let pFecha = document.createElement("p");
@@ -101,7 +102,6 @@ if (idVacante) {
         .then((vacantes) => {
             vacantes.forEach((vacante) => {
                 let divProducto = document.createElement("div");
-                
                 let pDescripcion = document.createElement("p");
                 let pNombre = document.createElement("p");
                 let pFecha = document.createElement("p");
