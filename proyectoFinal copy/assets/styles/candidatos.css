@@ -119,9 +119,13 @@ section{
     margin-left: 50%;
     margin-top: -20%;
 }
-
+.div-vacante{
+    margin-bottom: 20px;
+}
 #vacantes{
     margin-left: -25%;
+    
+    margin-top: -65%;
     width: 80%;
     background-color: #9c9c9c;
     color: rgb(0, 0, 0);
