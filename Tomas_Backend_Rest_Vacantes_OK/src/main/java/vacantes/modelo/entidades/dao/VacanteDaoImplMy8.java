@@ -9,7 +9,7 @@ import vacantes.modelo.entidades.Vacante;
 import vacantes.modelo.repository.VacanteRepository;
 
 @Repository
-public class VacanteDaoImpl implements VacanteDao{
+public class VacanteDaoImplMy8 implements VacanteDao{
 
 	@Autowired
 	private VacanteRepository vrepo;
@@ -40,6 +40,12 @@ public class VacanteDaoImpl implements VacanteDao{
 	public List<Vacante> findByCategoria(int idCategoria) {
 		// TODO Auto-generated method stub
 		return vrepo.productosPorCategoria(idCategoria);
+	}
+
+	@Override
+	public List<Vacante> vacantePorDetalle(int idVacante) {
+		// TODO Auto-generated method stub
+		return vrepo.vacanteDetalle(idVacante);
 	}
 
 }

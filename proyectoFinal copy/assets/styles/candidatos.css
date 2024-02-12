@@ -100,7 +100,7 @@ nav {
     display: flex;
     flex-direction: column;
 }
- 
+
 
 
 .checkbox {
@@ -115,22 +115,60 @@ nav {
     margin-right: 5px;
 }
 
-section{
+section {
     margin-left: 50%;
     margin-top: -20%;
 }
-.div-vacante{
-    margin-bottom: 20px;
-}
-#vacantes{
+
+
+
+#vacantes {
     margin-left: -25%;
-    
-    margin-top: -65%;
+    margin-top: -76.6%;
     width: 80%;
-    background-color: #9c9c9c;
     color: rgb(0, 0, 0);
 }
 
-.section-vacante{
-    margin-bottom: 5%;
+.section-vacante {
+    background-color: #9c9c9c;
+    
+    margin-top: 2%;
+    margin-left: 1%;
+}
+
+.section-descripcion {
+    margin-top: 2%;
+    margin-left: 1%;
+}
+
+.section-nombre{
+    font-size: 30px ;
+    margin-bottom: 2%;
+    margin-left: 1%;
+}
+
+.section-fecha{
+    margin-bottom: 2%;
+    margin-top: 2%;
+    margin-left: 1%;
+}
+
+.section-salario{
+    margin-bottom: 2%;
+    margin-left: 1%;
+}
+
+.section-estatus{
+    margin-left: 1%;
+    margin-bottom: 2%;
+}
+
+.section-imagen{
+    margin-left: 1%;
+    margin-bottom: 2%;
+}
+
+.section-detalles{
+    margin-left: 1%;
+    margin-bottom: 2%;
 }

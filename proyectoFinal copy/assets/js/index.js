@@ -46,12 +46,19 @@ if (idCategoria) {
                 let divProducto = document.createElement("div");
                 divProducto.classList.add("section-vacante");
                 let pDescripcion = document.createElement("p");
+                pDescripcion.classList.add("section-descripcion");
                 let pNombre = document.createElement("p");
+                pNombre.classList.add("section-nombre");
                 let pFecha = document.createElement("p");
+                pFecha.classList.add("section-fecha");
                 let pSalario = document.createElement("p");
+                pSalario.classList.add("section-salario");
                 let pEstatus = document.createElement("p");
-                let pImagen = document.createElement("p");
+                pEstatus.classList.add("section-estatus");
+                let pImagen = document.createElement("img");
+                pImagen.classList.add("section-imagen");
                 let pDetalles = document.createElement("p");
+                pDetalles.classList.add("section-detalles");
 
                 divProducto.addEventListener("click", () => {
                     cargarDetalleVacante(vacante.idVacante);

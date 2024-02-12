@@ -10,5 +10,6 @@ public interface VacanteDao {
 	Vacante findById(int idVacante);
 	Vacante insertOne(Vacante vacante);
 	List<Vacante> findByCategoria(int idCategoria);
+	List<Vacante> vacantePorDetalle(int idVacante);
 	
 }

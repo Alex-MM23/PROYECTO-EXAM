@@ -9,6 +9,9 @@ import vacantes.modelo.entidades.Vacante;
 
 public interface VacanteRepository extends JpaRepository<Vacante, Integer> {
 
-	@Query("select v from Vacante v where v.categoria.idCategoria = ?1")
+	@Query("SELECT v FROM Vacante v WHERE v.categoria.idCategoria = ?1")
 	public List<Vacante> productosPorCategoria(int idCategoria);
+	
+	@Query("SELECT v FROM Vacante v WHERE v.idVacante = ?1")
+	public List<Vacante> vacanteDetalle(int idVacante);
 }
