@@ -14,4 +14,8 @@ public interface VacanteRepository extends JpaRepository<Vacante, Integer> {
 	
 	@Query("SELECT v FROM Vacante v WHERE v.idVacante = ?1")
 	public List<Vacante> vacanteDetalle(int idVacante);
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 55c78e6a561e6225d2d26239dcfdf1e019fdd093
