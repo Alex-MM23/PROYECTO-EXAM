@@ -30,11 +30,14 @@ public class HomeRestController {
 		return cdao.findAll();
 		
 	}
-	
+	 
 	@GetMapping("/porCategoria/{idCategoria}")
 	public List<Vacante>  buscarPorCategoria(@PathVariable int idCategoria){
-		
 		return vdao.findByCategoria(idCategoria);
-		
+	}
+	
+	@GetMapping("/vacanteDetalle/{idVacante}")
+	public List<Vacante> vacanteDetalle(@PathVariable int idVacante){
+		return vdao.vacantePorDetalle(idVacante);
 	}
 }

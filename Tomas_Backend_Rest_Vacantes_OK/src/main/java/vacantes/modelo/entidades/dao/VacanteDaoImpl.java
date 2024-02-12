@@ -42,4 +42,10 @@ public class VacanteDaoImpl implements VacanteDao{
 		return vrepo.productosPorCategoria(idCategoria);
 	}
 
+	@Override
+	public List<Vacante> vacantePorDetalle(int idVacante) {
+		// TODO Auto-generated method stub
+		return vrepo.vacanteDetalle(idVacante);
+	}
+
 }
