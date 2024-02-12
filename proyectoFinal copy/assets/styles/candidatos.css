@@ -119,3 +119,10 @@ section{
     margin-left: 50%;
     margin-top: -20%;
 }
+
+#vacantes{
+    margin-left: -25%;
+    width: 80%;
+    background-color: #9c9c9c;
+    color: rgb(0, 0, 0);
+}

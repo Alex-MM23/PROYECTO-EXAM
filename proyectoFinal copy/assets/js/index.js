@@ -71,3 +71,7 @@ function login(){
 function registro(){
     window.location.href = 'registro.html';
 }
+
+function categorias(){
+    window.location.href = 'index.html';
+}
