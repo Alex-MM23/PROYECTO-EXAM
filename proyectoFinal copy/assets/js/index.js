@@ -56,6 +56,7 @@ if (idCategoria) {
                 let pEstatus = document.createElement("p");
                 pEstatus.classList.add("section-estatus");
                 let pImagen = document.createElement("img");
+                pImagen.src = "assets/IMG/" + vacante.imagen;
                 pImagen.classList.add("section-imagen");
                 let pDetalles = document.createElement("p");
                 pDetalles.classList.add("section-detalles");
