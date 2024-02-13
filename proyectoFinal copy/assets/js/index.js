@@ -147,6 +147,39 @@ if (idVacante) {
     console.error("No se proporcionó un ID de familia en la URL.");
 }
 
+let urlLogin = `http://localhost:8084/apirest/categoria/login`;
+
+function procLogin(username, password){
+    let datosUsuario = {
+        username: username,
+        password: password
+    };
+
+    fetch(urlLogin, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(datosUsuario)
+    })
+    .then(data => {
+        localStorage.setItem('token', data.token);
+        window.location.href = 'inicioUsuario.html';
+    })
+    .catch(error => {
+        console.error('Error de login:', error);
+        alert('Error en el login. Verifica tus credenciales e intenta de nuevo.');
+    });
+}
+
+document.getElementById('formulario-login').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    let username = document.getElementById('username').value;
+    let password = document.getElementById('password').value;
+
+    procLogin(username, password);
+});
 
 function login(){
     window.location.href = 'login.html';
