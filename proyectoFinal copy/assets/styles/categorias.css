@@ -84,6 +84,22 @@ header ul li a {
     background-color: #2980b9;
 }
 
+.volver-btn {
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 2%;
+}
+
+.volver-btn:hover {
+    background-color: #2980b9;
+}
 
 nav {
     background-color: #9c9c9c;
@@ -146,3 +162,5 @@ section{
     text-align: left; 
     color: black; 
   }
+
+  

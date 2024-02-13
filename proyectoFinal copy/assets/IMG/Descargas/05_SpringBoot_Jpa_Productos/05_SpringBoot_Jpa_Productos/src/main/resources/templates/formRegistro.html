@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Inicio</title>
+</head>
+<body>
+	<h1>Aplicacion de productos: Inicio Sesion</h1>
+	<h3 th:text="${mensaje}"></h3>
+	<form th:action="@{/registro}" method="post" th:object="${usuario}">
+		<p><input type="text" th:field="*{username}"></p>
+		<p><input type="text" th:field="*{password}"></p>
+		<p><input type="text" th:field="*{nombre}"></p>
+		<p><input type="text" th:field="*{apellidos}"></p>
+		<p><input type="submit" th:field="Enviar"></p>
+		
+	</form>
+</body>
+</html>

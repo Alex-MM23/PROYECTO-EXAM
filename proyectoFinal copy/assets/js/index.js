@@ -43,6 +43,9 @@ if (idCategoria) {
         .then((res) => res.json())
         .then((vacantes) => {
             vacantes.forEach((vacante) => {
+                let pImagen = document.createElement("img");
+                pImagen.src = "assets/IMG/" + vacante.imagen;
+                pImagen.classList.add("section-imagen");
                 let divProducto = document.createElement("div");
                 divProducto.classList.add("section-vacante");
                 let pDescripcion = document.createElement("p");
@@ -54,31 +57,28 @@ if (idCategoria) {
                 let pSalario = document.createElement("p");
                 pSalario.classList.add("section-salario");
                 let pEstatus = document.createElement("p");
-                pEstatus.classList.add("section-estatus");
-                let pImagen = document.createElement("img");
-                pImagen.src = "assets/IMG/" + vacante.imagen;
-                pImagen.classList.add("section-imagen");
+                pEstatus.classList.add("section-estatus");  
                 let pDetalles = document.createElement("p");
                 pDetalles.classList.add("section-detalles");
 
                 divProducto.addEventListener("click", () => {
                     cargarDetalleVacante(vacante.idVacante);
                 });
-
+                pImagen.innerHTML = `${vacante.imagen}`;
                 pNombre.innerHTML = `${vacante.nombre}`;
                 pDescripcion.innerHTML = `${vacante.descripcion}`;
-                pFecha.innerHTML = `${vacante.fecha}`;
-                pSalario.innerHTML = `${vacante.salario}€`;
+                pFecha.innerHTML = `Fecha de publicación: ${vacante.fecha}`;
+                pSalario.innerHTML = `Salario Anual: ${vacante.salario}€`;
                 pEstatus.innerHTML = `${vacante.estatus}`;
-                pImagen.innerHTML = `${vacante.imagen}`;
+                
                 pDetalles.innerHTML = `${vacante.detalles}`;
 
+                divProducto.appendChild(pImagen);
                 divProducto.appendChild(pNombre);
                 divProducto.appendChild(pDescripcion);
                 divProducto.appendChild(pFecha);
                 divProducto.appendChild(pSalario);
                 divProducto.appendChild(pEstatus);
-                divProducto.appendChild(pImagen);
                 divProducto.appendChild(pDetalles);
                 divProducto.style.border = "solid black 2px";
 
@@ -157,5 +157,13 @@ function registro(){
 }
 
 function categorias(){
+    window.location.href = 'index.html';
+}
+
+function volver(){
+    window.location.href = 'candidatos.html';
+}
+
+function volverC(){
     window.location.href = 'index.html';
 }

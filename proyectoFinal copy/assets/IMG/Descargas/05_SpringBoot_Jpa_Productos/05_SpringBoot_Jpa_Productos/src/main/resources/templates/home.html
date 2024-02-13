@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>Aplicacion de Productos</h1>
+	<h2 th:text="${session.usuario == null ? 'Guest' : session.usuario.nombre}"></h2>
+	<a th:href="@{/login}">Inicio Sesion</a>
+	<a th:href="@{/registro}">Registrate</a>
+	<a th:href="@{/logout}">Cerrar sesion</a>
+	<h3>Mensaje: <span th:text="${mensaje}"></span></h3>
+	<a th:href="@{/web/familias/alta}">Nueva Familia</a>
+	
+	
+	<h2>Listado de Familias</h2>
+	<table width="100%" border="2">
+		<tr>
+			<th>Id Familia</th>
+			<th>Descripcion</th>
+			<th>Eliminar</th>
+			<th>Editar</th>
+			
+		</tr>
+		<tr th:each="ele : ${familias}">
+			<td th:text="${ele.idFamilia}"></td>
+			<td th:text="${ele.descripcion}"></td>
+			<td ><a th:href="@{/web/familias/eliminar/{id}(id=${ele.idFamilia})}">Eliminar</a></td>
+			<td ><a th:href="@{/web/familias/editar/{id}(id=${ele.idFamilia})}">Editar</a></td>
+		</tr>
+
+	</table>
+</body>
+</html>

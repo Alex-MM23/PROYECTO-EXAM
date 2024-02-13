@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    background-color: #141C29;
+    padding-top: 80px;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    margin: 30px 0px;
+}
+
+img {
+    width: 120px; /* Ajusta el tamaño según tus necesidades */
+    margin-left: 6px;
+    margin-top: 15px;
+    height: 130px; /* Ajusta el tamaño según tus necesidades */
+    border-radius: 60px 60px 60px 60px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15%;
+    height: 70px;
+    top: 0;
+    position: fixed;
+    width: 100%;
+}
+
+.contenedor {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px; /* Ajusta el espacio entre los productos */
+    margin-bottom: 20px;
+}
+
+.contenedor>div {
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+    background-color: #2D4263;
+    border-radius: 20px;
+}
+
+.contenedor>div:hover {
+    background-color: #11294d;
+}
+
+.informacion {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.informacion>p:first-child {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 300;
+}
+
+.informacion .precio {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.informacion .precio span {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.informacion button {
+    background-color: #263143;
+    width: 80px; /* Ajusta el ancho del botón */
+    height: 30px; /* Ajusta la altura del botón */
+    border-radius: 10px;
+    border: none;
+    font-size: 14px;
+    font-weight: 300;
+    cursor: pointer;
+}
+
+.informacion button:hover {
+    background-color: #2D4263;
+}
+
+.input-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin-top: 1%;
+    margin-left: 35%;
+    width: 30%;
+    border: 3px solid rgb(255, 254, 254); 
+    border-radius: 10px; 
+}
+
+.input-row {
+    display: flex;
+    align-items: center;    
+    margin-bottom: 10px;
+}
+
+p {
+    margin-right: 10px;
+}
+
+button {
+    height: 35px;
+    width: 20%;
+    margin-top: 10px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: rgb(255, 255, 255);
+    border: none;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #5dade2;
+    box-shadow: 0 0 20px rgba(52, 152, 219, 0.8);
+}
+
+footer {
+    text-align: center;
+    align-items: center;
+    margin-top: 320px;
+}
+

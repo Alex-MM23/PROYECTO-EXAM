@@ -1,0 +1,10 @@
+Para el VIERNES, SÁBADO Y DOMINGO: 
+
+MANUEL: 
+ - Ordenar HTML.
+ - Ordenar CSS.
+ - Aplicar mejores estilos.
+
+JS:
+Sacar las categorias. (HECHO)
+vacantes por categoría.

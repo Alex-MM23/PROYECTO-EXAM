@@ -40,8 +40,5 @@ public class HomeRestController {
 	public List<Vacante> vacanteDetalle(@PathVariable int idVacante){
 		return vdao.vacantePorDetalle(idVacante);
 	}
-	@GetMapping("/vacanteDetalle/{idVacante}")
-	public List<Vacante> vacanteDetalle(@PathVariable int idVacante){
-		return vdao.vacantePorDetalle(idVacante);
-	}
+	
 }
