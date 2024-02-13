@@ -8,29 +8,32 @@ function cargarVacantesPorCategoria(idCategoria) {
 }
 
 fetch(urlFetchAll)
-  .then((res) => res.json())
-  .then((categorias) => {
-    categorias.forEach((categoria) => {
-      let divCategoria = document.createElement("div");
-      divCategoria.classList.add("section-categoria");
-      let pID = document.createElement("p");
-      pID.classList.add("categoria-nombre");
-      let pDescripcion = document.createElement("p");
-      pDescripcion.classList.add("categoria-descripcion");
+    .then(res => res.json())
+    .then(categorias => {
+        categorias.forEach(categoria => {
+            let pImagen = document.createElement("img");
+            pImagen.src = "assets/IMG/" + categoria.imagen;
+            pImagen.classList.add("section-imagen");
+            let divCategoria = document.createElement("div");
+            divCategoria.classList.add("section-categoria");
+            let pID = document.createElement("p");
+            pID.classList.add("categoria-nombre")
+            let pDescripcion = document.createElement("p");
+            pDescripcion.classList.add("categoria-descripcion")
 
-      divCategoria.addEventListener("click", () => {
-        cargarVacantesPorCategoria(categoria.idCategoria);
-      });
+            divCategoria.addEventListener("click", () => {
+                cargarVacantesPorCategoria(categoria.idCategoria);
+            });
 
-      pID.innerHTML = categoria.nombre;
-      pDescripcion.innerHTML = categoria.descripcion;
+            pID.innerHTML = categoria.nombre;
+            pDescripcion.innerHTML = categoria.descripcion;
 
-      divCategoria.appendChild(pID);
-      divCategoria.appendChild(pDescripcion);
+            divCategoria.appendChild(pID);
+            divCategoria.appendChild(pDescripcion);
 
-      divFCategoria.appendChild(divCategoria);
-    });
-  });
+            divFCategoria.appendChild(divCategoria);
+        });
+    })
 
 const urlParams = new URLSearchParams(window.location.search);
 const idCategoria = urlParams.get("idCategoria");

@@ -150,18 +150,18 @@ h1 {
 }
 
 .cuadrado1 {
-    background-color: #3498db;
-    color: #ffffff;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .cuadrado2 {
-    background-color: #e74c3c;
-    color: #ffffff;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .cuadrado3 {
-    background-color: #2ecc71;
-    color: #ffffff;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 footer{
