@@ -8,29 +8,32 @@ function cargarVacantesPorCategoria(idCategoria) {
 }
 
 fetch(urlFetchAll)
-.then(res => res.json())
-.then(categorias => {
-    categorias.forEach(categoria => {
-        let divCategoria = document.createElement("div");
-        divCategoria.classList.add("section-categoria");
-        let pID = document.createElement("p");
-        pID.classList.add("categoria-nombre")
-        let pDescripcion = document.createElement("p");
-        pDescripcion.classList.add("categoria-descripcion")
+    .then(res => res.json())
+    .then(categorias => {
+        categorias.forEach(categoria => {
+            let pImagen = document.createElement("img");
+            pImagen.src = "assets/IMG/" + categoria.imagen;
+            pImagen.classList.add("section-imagen");
+            let divCategoria = document.createElement("div");
+            divCategoria.classList.add("section-categoria");
+            let pID = document.createElement("p");
+            pID.classList.add("categoria-nombre")
+            let pDescripcion = document.createElement("p");
+            pDescripcion.classList.add("categoria-descripcion")
 
-        divCategoria.addEventListener("click", () => {
-            cargarVacantesPorCategoria(categoria.idCategoria);
+            divCategoria.addEventListener("click", () => {
+                cargarVacantesPorCategoria(categoria.idCategoria);
+            });
+
+            pID.innerHTML = categoria.nombre;
+            pDescripcion.innerHTML = categoria.descripcion;
+
+            divCategoria.appendChild(pID);
+            divCategoria.appendChild(pDescripcion);
+
+            divFCategoria.appendChild(divCategoria);
         });
-
-        pID.innerHTML = categoria.nombre;
-        pDescripcion.innerHTML = categoria.descripcion;
-
-        divCategoria.appendChild(pID);
-        divCategoria.appendChild(pDescripcion);
-
-        divFCategoria.appendChild(divCategoria);
-        });
-})
+    })
 
 const urlParams = new URLSearchParams(window.location.search);
 const idCategoria = urlParams.get("idCategoria");
@@ -57,7 +60,7 @@ if (idCategoria) {
                 let pSalario = document.createElement("p");
                 pSalario.classList.add("section-salario");
                 let pEstatus = document.createElement("p");
-                pEstatus.classList.add("section-estatus");  
+                pEstatus.classList.add("section-estatus");
                 let pDetalles = document.createElement("p");
                 pDetalles.classList.add("section-detalles");
 
@@ -70,7 +73,7 @@ if (idCategoria) {
                 pFecha.innerHTML = `Fecha de publicación: ${vacante.fecha}`;
                 pSalario.innerHTML = `Salario Anual: ${vacante.salario}€`;
                 pEstatus.innerHTML = `${vacante.estatus}`;
-                
+
                 pDetalles.innerHTML = `${vacante.detalles}`;
 
                 divProducto.appendChild(pImagen);
@@ -80,7 +83,7 @@ if (idCategoria) {
                 divProducto.appendChild(pSalario);
                 divProducto.appendChild(pEstatus);
                 divProducto.appendChild(pDetalles);
-                divProducto.style.border = "solid black 2px";
+
 
                 divProductos.appendChild(divProducto);
             });
@@ -109,31 +112,38 @@ if (idVacante) {
         .then((res) => res.json())
         .then((vacantes) => {
             vacantes.forEach((vacante) => {
+                let pImagen = document.createElement("img");
+                pImagen.src = "assets/IMG/" + vacante.imagen;
+                pImagen.classList.add("section-imagen");
                 let divProducto = document.createElement("div");
+                divProducto.classList.add("section-vacante");
                 let pDescripcion = document.createElement("p");
+                pDescripcion.classList.add("section-descripcion");
                 let pNombre = document.createElement("p");
+                pNombre.classList.add("section-nombre");
                 let pFecha = document.createElement("p");
+                pFecha.classList.add("section-fecha");
                 let pSalario = document.createElement("p");
+                pSalario.classList.add("section-salario");
                 let pEstatus = document.createElement("p");
-                let pImagen = document.createElement("p");
+                pEstatus.classList.add("section-estatus");
                 let pDetalles = document.createElement("p");
+                pDetalles.classList.add("section-detalles");
 
+                pImagen.innerHTML = `${vacante.imagen}`;
                 pNombre.innerHTML = `${vacante.nombre}`;
                 pDescripcion.innerHTML = `${vacante.descripcion}`;
-                pFecha.innerHTML = `${vacante.fecha}`;
-                pSalario.innerHTML = `${vacante.salario}€`;
+                pFecha.innerHTML = `Fecha de publicación: ${vacante.fecha}`;
+                pSalario.innerHTML = `Salario Anual: ${vacante.salario}€`;
                 pEstatus.innerHTML = `${vacante.estatus}`;
-                pImagen.innerHTML = `${vacante.imagen}`;
-                pDetalles.innerHTML = `${vacante.detalles}`;
 
+                divProducto.appendChild(pImagen);
                 divProducto.appendChild(pNombre);
                 divProducto.appendChild(pDescripcion);
                 divProducto.appendChild(pFecha);
                 divProducto.appendChild(pSalario);
                 divProducto.appendChild(pEstatus);
-                divProducto.appendChild(pImagen);
-                divProducto.appendChild(pDetalles);
-                divProducto.style.border = "solid black 2px";
+
 
                 divProductos.appendChild(divProducto);
             });
@@ -148,22 +158,15 @@ if (idVacante) {
 }
 
 
-function login(){
+function login() {
     window.location.href = 'login.html';
 }
 
-function registro(){
+function registro() {
     window.location.href = 'registro.html';
 }
 
-function categorias(){
+function categorias() {
     window.location.href = 'index.html';
 }
 
-function volver(){
-    window.location.href = 'candidatos.html';
-}
-
-function volverC(){
-    window.location.href = 'index.html';
-}
