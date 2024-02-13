@@ -9,7 +9,7 @@ import vacantes.modelo.entidades.Vacante;
 import vacantes.modelo.repository.VacanteRepository;
 
 @Repository
-public class VacanteDaoImplMy8 implements VacanteDao{
+public class VacanteDaoImpl implements VacanteDao{
 
 	@Autowired
 	private VacanteRepository vrepo;

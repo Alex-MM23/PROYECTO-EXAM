@@ -7,5 +7,5 @@ import vacantes.modelo.entidades.Usuario;
 
 public interface UsuarioRepository extends JpaRepository<Usuario, String> {
 
-	public Usuario findByUsernameAndPassword(String username, String password);
+	Usuario findByUsernameAndPassword(String username, String password);
 }
