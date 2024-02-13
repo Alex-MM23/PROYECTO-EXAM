@@ -83,7 +83,7 @@ if (idCategoria) {
         divProducto.appendChild(pSalario);
         divProducto.appendChild(pEstatus);
         divProducto.appendChild(pDetalles);
-        divProducto.style.border = "solid black 2px";
+        
 
         divProductos.appendChild(divProducto);
       });
@@ -137,7 +137,7 @@ if (idVacante) {
         divProducto.appendChild(pEstatus);
         divProducto.appendChild(pImagen);
         divProducto.appendChild(pDetalles);
-        divProducto.style.border = "solid black 2px";
+        
 
         divProductos.appendChild(divProducto);
       });
@@ -246,14 +246,10 @@ function registro() {
   window.location.href = "registro.html";
 }
 
-function categorias() {
+function home() {
   window.location.href = "index.html";
 }
 
-function volver() {
-  window.location.href = "candidatos.html";
-}
 
-function volverC() {
-  window.location.href = "index.html";
-}
+
+
