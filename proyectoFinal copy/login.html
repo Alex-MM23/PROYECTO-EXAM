@@ -7,14 +7,15 @@
     <link rel="stylesheet" href="assets/styles/login.css">
 </head>
 <body>
-    <form action="" method="post" class="registro-form">
+    <form id="formulario-login" class="registro-form">
         <h1 class="registro-title">Inicio de Sesión</h1>
-        <label class="registro-label" for="alias">Usuario:</label>
-        <p><input type="text" name="alias" id="alias" class="registro-input" required></p>
+        <label class="registro-label" for="username">Usuario:</label>
+        <p><input type="text" name="username" id="username" class="registro-input" required></p>
         <label class="registro-label" for="password">Contraseña:</label>
         <p><input type="password" name="password" id="password" class="registro-input" required></p>
-        <p><input type="button" value="Iniciar Sesión" class="registro-submit" onclick="login()"></p>
-        <p><a href="registro.html" class="registro-link" onclick="registro()">Registrarse</a></p>
+        <p><input type="submit" value="Iniciar Sesión" class="registro-submit"></p>
+        <p><a href="registro.html" class="registro-link">Registrarse</a></p>
     </form>
+    <script src="assets/js/index.js"></script>
 </body>
 </html>
