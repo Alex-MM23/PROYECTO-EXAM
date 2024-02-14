@@ -27,16 +27,13 @@ public class CategoriaDaoImpl implements CategoriaDao{
 	}
 
 	@Override
-	public int insertOne(Categoria categoria) {
+	public Categoria insertOne(Categoria categoria) {
 		// TODO Auto-generated method stub
 		try {
-			crepo.save(categoria);
-			return 1;
+			return crepo.save(categoria);
 		} catch (Exception e) {
-			// TODO: handle exception
-			 
-			return 0;
-			}
+			return null;
+		}
 	}
 	
 	

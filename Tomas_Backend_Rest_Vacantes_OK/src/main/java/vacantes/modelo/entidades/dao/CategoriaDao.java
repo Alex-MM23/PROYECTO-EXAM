@@ -8,5 +8,5 @@ public interface CategoriaDao {
 
 	Categoria findById(int idCategoria);
 	List<Categoria> findAll();
-	int insertOne (Categoria categoria);
+	Categoria insertOne (Categoria categoria);
 }
