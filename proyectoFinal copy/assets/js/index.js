@@ -226,7 +226,7 @@ function procLogin(username, password) {
     .then((data) => {
       if (data.message === "Login correcto") {
         localStorage.setItem("token", data.token);
-        window.location.href = "inicioUsuario.html";
+        window.location.href = "indexU.html";
       } else {
         console.error("Error de login:", data.message);
         alert("Error en el login. " + data.message);
