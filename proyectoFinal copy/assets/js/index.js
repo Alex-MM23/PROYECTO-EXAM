@@ -8,18 +8,18 @@ function cargarVacantesPorCategoria(idCategoria) {
 }
 
 fetch(urlFetchAll)
-  .then(res => res.json())
-  .then(categorias => {
-    categorias.forEach(categoria => {
+  .then((res) => res.json())
+  .then((categorias) => {
+    categorias.forEach((categoria) => {
       let pImagen = document.createElement("img");
       pImagen.src = "assets/IMG/" + categoria.imagen;
       pImagen.classList.add("section-imagen");
       let divCategoria = document.createElement("div");
       divCategoria.classList.add("section-categoria");
       let pID = document.createElement("p");
-      pID.classList.add("categoria-nombre")
+      pID.classList.add("categoria-nombre");
       let pDescripcion = document.createElement("p");
-      pDescripcion.classList.add("categoria-descripcion")
+      pDescripcion.classList.add("categoria-descripcion");
 
       divCategoria.addEventListener("click", () => {
         cargarVacantesPorCategoria(categoria.idCategoria);
@@ -33,7 +33,7 @@ fetch(urlFetchAll)
 
       divFCategoria.appendChild(divCategoria);
     });
-  })
+  });
 
 const urlParams = new URLSearchParams(window.location.search);
 const idCategoria = urlParams.get("idCategoria");
@@ -83,7 +83,6 @@ if (idCategoria) {
         divProducto.appendChild(pSalario);
         divProducto.appendChild(pEstatus);
         divProducto.appendChild(pDetalles);
-
 
         divProductos.appendChild(divProducto);
       });
@@ -143,7 +142,6 @@ if (idVacante) {
         divProducto.appendChild(pSalario);
         divProducto.appendChild(pEstatus);
 
-
         divProductos.appendChild(divProducto);
       });
     })
@@ -202,29 +200,37 @@ fetch(urlVacante)
       divProducto.appendChild(pEstatus);
       divProducto.appendChild(pDetalles);
 
-
       divVacantesTodos.appendChild(divProducto);
     });
   });
 
-let urlLogin = `http://localhost:8084/apirest/categoria/login`;
+let urlLogin = "http://localhost:8084/apirest/categoria/login";
 
 function procLogin(username, password) {
-  let datosUsuario = {
-    username: username,
-    password: password,
-  };
+  let urlWithParams = `${urlLogin}?username=${encodeURIComponent(
+    username
+  )}&password=${encodeURIComponent(password)}`;
 
-  fetch(urlLogin, {
-    method: "POST",
+  fetch(urlWithParams, {
+    method: "GET",
     headers: {
-      "Content-Type": "application/json",
+      Accept: "application/json",
     },
-    body: JSON.stringify(datosUsuario),
   })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Error en la solicitud de login");
+      }
+      return response.json();
+    })
     .then((data) => {
-      localStorage.setItem("token", data.token);
-      window.location.href = "inicioUsuario.html";
+      if (data.message === "Login correcto") {
+        localStorage.setItem("token", data.token);
+        window.location.href = "inicioUsuario.html";
+      } else {
+        console.error("Error de login:", data.message);
+        alert("Error en el login. " + data.message);
+      }
     })
     .catch((error) => {
       console.error("Error de login:", error);
@@ -243,6 +249,45 @@ document
     procLogin(username, password);
   });
 
+const urlAltaCategoria =
+  "http://localhost:8084/apirest/categoria/altaCategoria";
+
+function agregarCategoria() {
+  let nombre = document.getElementById("Categoria_nombre").value;
+  let descripcion = document.getElementById("Categoria_descripcion").value;
+  alert(nombre);
+  alert(descripcion);
+
+  let categoria = {
+    nombre: nombre,
+    descripcion: descripcion,
+  };
+
+  fetch(urlAltaCategoria, {
+    method: "POST",
+    headers: {
+      Accept: "aplication/json",
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(categoria),
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Error al dar de alta la categoría");
+      }
+      return response.json();
+    })
+    .then((data) => {
+      console.log("Categoría creada exitosamente:", data);
+    })
+    .catch((error) => {
+      console.error("Error al dar de alta la categoría:", error);
+      alert(
+        "Error al dar de alta la categoría. Por favor, intenta nuevamente."
+      );
+    });
+}
+
 function login() {
   window.location.href = "login.html";
 }
@@ -254,7 +299,3 @@ function registro() {
 function home() {
   window.location.href = "index.html";
 }
-
-
-
-

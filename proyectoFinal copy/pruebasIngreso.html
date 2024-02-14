@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    
+</head>
+<body>
+    <h2>Alta de Categoría</h2>
+    <form id="formulario-alta-categoria">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="Categoria_nombre" name="nombre" required><br><br>
+        
+        <label for="descripcion">Descripción:</label><br>
+        <textarea id="Categoria_descripcion" name="descripcion" rows="4" cols="50" required></textarea><br><br>
+        
+        <button type="submit" onclick="agregarCategoria()">Guardar</button>
+    </form>
+    <script src='assets/js/index.js'></script>
+</body>
+</html>
