@@ -11,5 +11,6 @@ public interface VacanteDao {
 	Vacante insertOne(Vacante vacante);
 	List<Vacante> findByCategoria(int idCategoria);
 	List<Vacante> vacantePorDetalle(int idVacante);
+	List<Vacante> vacanteCreada();
 	
 }

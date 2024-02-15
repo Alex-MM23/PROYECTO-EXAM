@@ -52,7 +52,7 @@ public class HomeRestController {
 	
 	@GetMapping("/todosVacantes")
 	public List<Vacante>  todosVacantes(){
-		return vdao.findAll();
+		return vdao.vacanteCreada();
 		
 	}
 	

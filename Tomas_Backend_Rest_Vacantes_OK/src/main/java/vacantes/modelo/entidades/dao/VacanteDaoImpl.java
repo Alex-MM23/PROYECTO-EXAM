@@ -48,4 +48,10 @@ public class VacanteDaoImpl implements VacanteDao{
 		return vrepo.vacanteDetalle(idVacante);
 	}
 
+	@Override
+	public List<Vacante> vacanteCreada() {
+		// TODO Auto-generated method stub
+		return vrepo.obtenerVacantesCreadas();
+	}
+
 }
