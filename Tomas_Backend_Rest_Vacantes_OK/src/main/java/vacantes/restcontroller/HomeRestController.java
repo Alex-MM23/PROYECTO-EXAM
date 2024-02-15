@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import vacantes.modelo.entidades.Categoria;
+import vacantes.modelo.entidades.Perfil;
 import vacantes.modelo.entidades.Usuario;
 import vacantes.modelo.entidades.Vacante;
 import vacantes.modelo.entidades.dao.CategoriaDao;
@@ -82,10 +83,30 @@ public class HomeRestController {
 	public ResponseEntity<?> login(@RequestParam("username") String username, @RequestParam("password") String password) {
 	    Usuario usuario = urepo.findByUsernameAndPassword(username, password);
 	    if (usuario != null) {
-	        return ResponseEntity.ok().body("{\"message\": \"Login correcto\"}");
+	        List<Perfil> perfiles = usuario.getPerfiles();
+	        if (!perfiles.isEmpty()) {
+	            String tipoUsuario = null;
+	            for (Perfil perfil : perfiles) {
+	                if (perfil.getNombre().equals("USU_ADMIN")) {
+	                    tipoUsuario = "admin";
+	                    break;
+	                } else if (perfil.getNombre().equals("USU_CLIENTE")) {
+	                    tipoUsuario = "cliente";
+	                    break;
+	                }
+	            }
+	            if (tipoUsuario != null) {
+	                return ResponseEntity.ok().body("{\"message\": \"Login correcto\", \"tipoUsuario\": \"" + tipoUsuario + "\"}");
+	            } else {
+	                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("{\"message\": \"El usuario no tiene perfil de admin o cliente\"}");
+	            }
+	        } else {
+	            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("{\"message\": \"El usuario no tiene perfiles asociados\"}");
+	        }
 	    } else {
 	        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("{\"message\": \"Contraseña o nombre de usuario incorrecto\"}");
 	    }
 	}
+
 	 
 }

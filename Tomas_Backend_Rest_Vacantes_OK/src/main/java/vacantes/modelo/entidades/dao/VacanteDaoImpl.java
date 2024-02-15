@@ -54,4 +54,16 @@ public class VacanteDaoImpl implements VacanteDao{
 		return vrepo.obtenerVacantesCreadas();
 	}
 
+	@Override
+	public int modificarOne(Vacante vacante) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int eliminarOne(int idVacante) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
 }

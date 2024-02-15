@@ -12,5 +12,7 @@ public interface VacanteDao {
 	List<Vacante> findByCategoria(int idCategoria);
 	List<Vacante> vacantePorDetalle(int idVacante);
 	List<Vacante> vacanteCreada();
+	int modificarOne(Vacante vacante);
+	int eliminarOne(int idVacante);
 	
 }
