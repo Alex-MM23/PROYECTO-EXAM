@@ -288,6 +288,10 @@ function agregarCategoria() {
     });
 }
 
+function cerrar() {
+  window.location.href = "index.html";
+}
+
 function login() {
   window.location.href = "login.html";
 }

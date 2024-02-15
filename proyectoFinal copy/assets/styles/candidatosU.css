@@ -11,7 +11,7 @@
 body {
     min-height: 100vh;
     background-color: #ffffff;
-    
+
 }
 
 header {
@@ -46,8 +46,8 @@ header ul li a {
 }
 
 .logo {
-    margin-left: -9%;
-    height: 30px;
+    margin-left: -10%;
+    height: 26px;
 }
 
 .cerrar-btn {
@@ -60,28 +60,48 @@ header ul li a {
     font-size: 16px;
     cursor: pointer;
     border-radius: 10px;
-    margin-left: 54%;
+    margin-left: 30%;
 }
 
 .cerrar-btn:hover {
     background-color: #2980b9;
 }
 
-.volver-btn {
-    background-color: #3498db;
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 10px;
-    margin-left: 2%;
+nav {
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 25%;
+    font-size: 10px;
+    height: 79vh;
+    padding: 20px;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-left: 8%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
 }
 
-.volver-btn:hover {
-    background-color: #2980b9;
+.checkbox {
+    margin-right: 9px;
+}
+
+.search-box {
+    display: flex;
+    font-size: 16px;
+    margin-left: 1%;
+    margin-bottom: 0px;
+}
+
+#search {
+    margin-left: 0.2%;
+    margin-top: 1px;
+    height: 40px;
+    width: 200px;
+}
+
+.category-checkbox {
+    margin-right: 5px;
 }
 
 nav {
@@ -98,18 +118,6 @@ nav {
     flex-direction: column;
 }
 
-.checkbox {
-    margin-right: 5px;
-}
-
-.search-box {
-    margin-bottom: 10px;
-}
-
-.category-checkbox {
-    margin-right: 5px;
-}
-
 section {
     margin-left: 37%;
     width: 50%;
@@ -124,46 +132,46 @@ section {
 }
 
 .section-vacante {
-    height: 100%; 
+    height: 100%;
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     margin-top: 2%;
     margin-left: 1%;
 }
 
-.section-descripcion {   
+.section-descripcion {
     margin-left: 20%;
 }
 
-.section-nombre{
-    font-size: 30px ;
+.section-nombre {
+    font-size: 30px;
     margin-top: -13%;
     margin-left: 20%;
 }
 
-.section-fecha{
+.section-fecha {
     margin-bottom: 2%;
     margin-top: 4.7%;
     margin-left: 2%;
 }
 
-.section-salario{
+.section-salario {
     margin-bottom: 2%;
     margin-left: 2%;
 }
 
-.section-estatus{
+.section-estatus {
     margin-left: 2%;
     margin-bottom: 2%;
 }
 
-.section-imagen{
+.section-imagen {
     margin-left: 2%;
     margin-top: 2%;
     width: 120px;
 }
 
-.section-detalles{
+.section-detalles {
     margin-left: 2%;
     margin-top: -1%;
     margin-bottom: 7%;
@@ -195,8 +203,8 @@ section {
         font-size: 13px;
         display: flex;
         text-decoration: none;
-        margin-top: 20%;
-        margin-left: 5%;
+        margin-top: 10%;
+        margin-left: -50%;
     }
 
     .menu {
@@ -204,8 +212,8 @@ section {
     }
 
     .logo {
-        margin-left: 1%;
-        height: 40px;
+        margin-left: 8%;
+        height: 26px;
     }
 
     .cerrar-btn {
@@ -218,13 +226,13 @@ section {
         font-size: 16px;
         cursor: pointer;
         border-radius: 10px;
-        margin-left: 40%;
+        margin-left: 18%;
     }
-    
+
     .cerrar-btn:hover {
         background-color: #2980b9;
     }
-    
+
     nav {
         background-color: white;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -239,83 +247,88 @@ section {
         display: flex;
         flex-direction: column;
     }
-    
+
     .checkbox {
-        margin-right: 5px;
-    }
-    
-    .search-box {
-        margin-bottom: 10px;
+        margin-right: 9px;
     }
 
-    #search{
-        width: 100%;
+    .search-box {
+        display: flex;
+        font-size: 9px;
+        margin-left: 1%;
+        margin-bottom: 0px;
     }
-    
+
+    #search {
+        margin-top: -10px;
+        margin-left: 10px;
+        width: 100px;
+    }
+
     .category-checkbox {
         margin-right: 5px;
     }
-    
+
     section {
         margin-left: 34%;
         margin-top: -85%;
         width: 65%;
     }
-    
+
     #vacantesTodos {
         margin-left: -5%;
         margin-top: -64.6%;
         width: 99%;
         color: rgb(0, 0, 0);
     }
-    
+
     .section-vacante {
-        height: 100%; 
+        height: 100%;
         background-color: white;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         margin-top: 2%;
         margin-left: 1%;
     }
-    
-    .section-descripcion {   
+
+    .section-descripcion {
         margin-top: 0%;
         margin-left: 37%;
         font-size: 10px;
     }
-    
-    .section-nombre{
-        font-size: 15px ;
+
+    .section-nombre {
+        font-size: 15px;
         margin-top: -21%;
         margin-left: 37%;
     }
-    
-    .section-fecha{
+
+    .section-fecha {
         margin-bottom: 2%;
         font-size: 12px;
         margin-top: 10%;
         margin-left: 2%;
     }
-    
-    .section-salario{
+
+    .section-salario {
         margin-bottom: 2%;
         font-size: 12px;
         margin-left: 2%;
     }
-    
-    .section-estatus{
+
+    .section-estatus {
         margin-left: 2%;
         font-size: 12px;
         margin-bottom: 2%;
     }
-    
-    .section-imagen{
+
+    .section-imagen {
         margin-left: 2%;
         font-size: 12px;
         margin-top: 2%;
         width: 120px;
     }
-    
-    .section-detalles{
+
+    .section-detalles {
         margin-left: 2%;
         font-size: 12px;
         margin-top: -1%;

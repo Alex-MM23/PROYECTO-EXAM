@@ -46,10 +46,9 @@ header ul li a {
 }
 
 .logo {
-    margin-left: 26%;
+    margin-left: -5%;
     height: 30px;
 }
-
 
 .cerrar-btn {
     background-color: #3498db;
@@ -61,7 +60,7 @@ header ul li a {
     font-size: 16px;
     cursor: pointer;
     border-radius: 10px;
-    margin-left: 63%;
+    margin-left: 1%;
 }
 
 .cerrar-btn:hover {
@@ -84,7 +83,18 @@ header ul li a {
 .volver-btn:hover {
     background-color: #2980b9;
 }
+.checkbox {
+    margin-right: 5px;
+}
 
+.search-box {
+    margin-left: 10%;
+    margin-bottom: 10px;
+}
+
+.category-checkbox {
+    margin-right: 5px;
+}
 nav {
     background-color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -99,27 +109,15 @@ nav {
     flex-direction: column;
 }
 
-.checkbox {
-    margin-right: 5px;
-}
-
-.search-box {
-    margin-bottom: 10px;
-}
-
-.category-checkbox {
-    margin-right: 5px;
-}
-
 section {
-    margin-left: 36%;
-    margin-top: -38.8%;
+    margin-left: 23%;
+    margin-top: 2%;
     width: 860px;
 }
 
 #vacantesTodos {
     margin-left: -5%;
-    margin-top: -64.6%;
+    margin-top: 14.6%;
     width: 90%;
     color: rgb(0, 0, 0);
 }
@@ -196,8 +194,8 @@ section {
         font-size: 13px;
         display: flex;
         text-decoration: none;
-        margin-top: 20%;
-        margin-left: 5%;
+        margin-top: 10%;
+        margin-left: -50%;
     }
 
     .menu {
@@ -205,8 +203,8 @@ section {
     }
 
     .logo {
-        margin-left: -12%;
-        height: 40px;
+        margin-left: 8%;
+        height: 26px;
     }
 
     .cerrar-btn {
@@ -219,7 +217,7 @@ section {
         font-size: 16px;
         cursor: pointer;
         border-radius: 10px;
-        margin-left: 40%;
+        margin-left: 18%;
     }
     
     .cerrar-btn:hover {
@@ -242,15 +240,20 @@ section {
     }
     
     .checkbox {
-        margin-right: 5px;
+        margin-right: 9px;
     }
     
     .search-box {
-        margin-bottom: 10px;
+        display: flex;
+        font-size: 9px;
+        margin-left: 1%;
+        margin-bottom: 0px;
     }
 
     #search{
-        width: 100%;
+        margin-top: -10px;
+        margin-left: 10px;
+        width: 100px;
     }
     
     .category-checkbox {
@@ -265,8 +268,8 @@ section {
     }
     
     #vacantesTodosU {
-        margin-left: -5%;
-        margin-top: -60.1%;
+        margin-left: -20%;
+        margin-top: 120%;
         width: 90%;
         color: rgb(0, 0, 0);
     }

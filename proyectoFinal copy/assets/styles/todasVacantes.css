@@ -46,8 +46,27 @@ header ul li a {
 }
 
 .logo {
-    margin-left: 21%;
+    margin-left: 9%;
+    margin-bottom: -1%;
     height: 30px;
+}
+
+.volver-btn {
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-bottom: 10%;
+    margin-left: 2%;
+}
+
+.volver-btn:hover {
+    background-color: #2980b9;
 }
 
 .accede-btn {
@@ -60,7 +79,7 @@ header ul li a {
     font-size: 12px;
     cursor: pointer;
     border-radius: 10px;
-    margin-left: 52%;
+    margin-left: 12%;
 }
 
 .accede-btn:hover {
@@ -78,28 +97,20 @@ header ul li a {
     font-size: 16px;
     cursor: pointer;
     border-radius: 10px;
-    margin-left: 2%;
+    margin-left: 1%;
 }
 
 .registro-btn:hover {
     background-color: #2980b9;
 }
 
-.volver-btn {
-    background-color: #3498db;
-    color: #ffffff;
-    border: none;
-    padding: 10px 20px;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 10px;
-    margin-left: 2%;
+.search-box {
+    margin-left: 8%;
+    margin-bottom: 1px;
 }
 
-.volver-btn:hover {
-    background-color: #2980b9;
+.category-checkbox {
+    margin-right: 5px;
 }
 
 nav {
@@ -116,21 +127,9 @@ nav {
     flex-direction: column;
 }
 
-.checkbox {
-    margin-right: 5px;
-}
-
-.search-box {
-    margin-bottom: 10px;
-}
-
-.category-checkbox {
-    margin-right: 5px;
-}
-
 section {
-    margin-left: 40%;
-    margin-top: -30%;
+    margin-left: 20%;
+    margin-top: 55%;
    
 }
 
@@ -150,18 +149,18 @@ section {
 }
 
 .section-descripcion {   
-    margin-left: 18%;
+    margin-left: 15%;
 }
 
 .section-nombre{
     font-size: 30px ;
-    margin-top: -13%;
-    margin-left: 18%;
+    margin-top: -9%;
+    margin-left: 15%;
 }
 
 .section-fecha{
     margin-bottom: 2%;
-    margin-top: 4.7%;
+    margin-top: 2.7%;
     margin-left: 2%;
 }
 
@@ -213,8 +212,8 @@ section {
         font-size: 13px;
         display: flex;
         text-decoration: none;
-        margin-top: 20%;
-        margin-left: 5%;
+        margin-top: 10%;
+        margin-left: -7%;
     }
 
     .menu {
@@ -222,8 +221,8 @@ section {
     }
 
     .logo {
-        margin-left: -12%;
-        height: 40px;
+        margin-left: -10%;
+        height: 26px;
     }
 
     .accede-btn {
@@ -235,7 +234,7 @@ section {
         font-size: 10px;
         cursor: pointer;
         border-radius: 10px;
-        margin-left: 23%;
+        margin-left: 1%;
         width: 10%;
         height: 45%;
     }
@@ -279,15 +278,19 @@ section {
     }
     
     .checkbox {
-        margin-right: 5px;
+        margin-right: 9px;
     }
     
     .search-box {
-        margin-bottom: 10px;
+        display: flex;
+        font-size: 9px;
+        margin-left: -4%;
+        margin-bottom: 0px;
     }
 
     #search{
-        width: 100%;
+        margin-top: -5px;
+        width: 200px;
     }
     
     .category-checkbox {
@@ -295,8 +298,8 @@ section {
     }
     
     section {
-        margin-left: 40%;
-        margin-top: -85%;
+        margin-left: 15%;
+        margin-top: 60%;
        
     }
     
@@ -317,14 +320,14 @@ section {
     
     .section-descripcion {   
         margin-top: 0%;
-        margin-left: 41%;
+        margin-left: 31%;
         font-size: 10px;
     }
     
     .section-nombre{
         font-size: 15px ;
-        margin-top: -26%;
-        margin-left: 41%;
+        margin-top: -17%;
+        margin-left: 31%;
     }
     
     .section-fecha{

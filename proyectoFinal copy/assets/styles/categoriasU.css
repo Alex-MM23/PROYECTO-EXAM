@@ -49,7 +49,6 @@ header ul li a {
     height: 30px;
 }
 
-
 .cerrar-btn {
     background-color: #3498db;
     color: #ffffff;
@@ -97,9 +96,6 @@ nav {
     flex-direction: column;
 }
 
-
-
-
 section {
     margin-left: 50%;
     margin-top: -20%;
@@ -141,6 +137,8 @@ h2 {
     text-align: center;
     color: #000000;
 }
+
+
 
 
 @media only screen and (max-width: 600px) {
