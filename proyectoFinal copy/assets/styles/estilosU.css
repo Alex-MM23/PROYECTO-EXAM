@@ -41,29 +41,11 @@ header ul li a {
 }
 
 .logo {
-    margin-left: -167%;
+    margin-left: -46%;
     height: 30px;
 }
 
-.accede-btn {
-    border: 2px solid #3498db;
-    background-color: #FFFFFF;
-    color: #3498db;
-    padding: 10px 20px;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-    border-radius: 10px;
-    margin-left: 30%;
-}
-
-.accede-btn:hover {
-    background-color: #3498db;
-    color: #FFFFFF;
-}
-
-.registro-btn {
+.cerrar-btn {
     background-color: #3498db;
     color: #ffffff;
     border: none;
@@ -73,10 +55,10 @@ header ul li a {
     font-size: 16px;
     cursor: pointer;
     border-radius: 10px;
-    margin-left: 2%;
+    margin-left: 40%;
 }
 
-.registro-btn:hover {
+.cerrar-btn:hover {
     background-color: #2980b9;
 }
 
@@ -174,7 +156,6 @@ footer {
     body {
         min-height: 100vh;
         background-color: #ffffff;
-
     }
 
     header {
@@ -184,7 +165,6 @@ footer {
         display: flex;
         justify-content: center;
         align-items: center;
-
     }
 
     header ul {
@@ -203,54 +183,31 @@ footer {
         text-decoration: none;
         margin-top: 10%;
         margin-left: -8%;
-
     }
 
     .menu {
         margin-top: 1%;
-
     }
 
     .logo {
-        margin-left: -5%;
+        margin-left: -2%;
         height: 40px;
-
     }
 
-    .accede-btn {
-        border: 2px solid #3498db;
-        background-color: #FFFFFF;
-        color: #3498db;
-        padding-top: 5px;
-        padding-left: 7px;
-        font-size: 10px;
-        cursor: pointer;
-        border-radius: 10px;
-        margin-left: 23%;
-        width: 10%;
-        height: 45%;
-    }
-
-    .accede-btn:hover {
-        background-color: #3498db;
-        color: #FFFFFF;
-    }
-
-    .registro-btn {
+    .cerrar-btn {
         background-color: #3498db;
         color: #ffffff;
         border: none;
+        padding: 10px 20px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
         cursor: pointer;
         border-radius: 10px;
-        margin-left: 1%;
-        padding-top: 6px;
-        padding-left: 9px;
-        font-size: 10px;
-        width: 10%;
-        height: 45%;
+        margin-left: 32%;
     }
-
-    .registro-btn:hover {
+    
+    .cerrar-btn:hover {
         background-color: #2980b9;
     }
 

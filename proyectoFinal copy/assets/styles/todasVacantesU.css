@@ -46,29 +46,12 @@ header ul li a {
 }
 
 .logo {
-    margin-left: 21%;
+    margin-left: 26%;
     height: 30px;
 }
 
-.accede-btn {
-    border: 2px solid #3498db;
-    background-color: #FFFFFF;
-    color: #3498db;
-    padding: 10px 20px;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
-    cursor: pointer;
-    border-radius: 10px;
-    margin-left: 52%;
-}
 
-.accede-btn:hover {
-    background-color: #3498db;
-    color: #FFFFFF;
-}
-
-.registro-btn {
+.cerrar-btn {
     background-color: #3498db;
     color: #ffffff;
     border: none;
@@ -78,10 +61,10 @@ header ul li a {
     font-size: 16px;
     cursor: pointer;
     border-radius: 10px;
-    margin-left: 2%;
+    margin-left: 63%;
 }
 
-.registro-btn:hover {
+.cerrar-btn:hover {
     background-color: #2980b9;
 }
 
@@ -129,9 +112,9 @@ nav {
 }
 
 section {
-    margin-left: 40%;
-    margin-top: -30%;
-   
+    margin-left: 36%;
+    margin-top: -38.8%;
+    width: 860px;
 }
 
 #vacantesTodos {
@@ -155,7 +138,7 @@ section {
 
 .section-nombre{
     font-size: 30px ;
-    margin-top: -13%;
+    margin-top: -11%;
     margin-left: 18%;
 }
 
@@ -226,40 +209,20 @@ section {
         height: 40px;
     }
 
-    .accede-btn {
-        border: 2px solid #3498db;
-        background-color: #FFFFFF;
-        color: #3498db;
-        padding-top: 5px;
-        padding-left: 7px;
-        font-size: 10px;
-        cursor: pointer;
-        border-radius: 10px;
-        margin-left: 23%;
-        width: 10%;
-        height: 45%;
-    }
-
-    .accede-btn:hover {
-        background-color: #3498db;
-        color: #FFFFFF;
-    }
-
-    .registro-btn {
+    .cerrar-btn {
         background-color: #3498db;
         color: #ffffff;
         border: none;
+        padding: 10px 20px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
         cursor: pointer;
         border-radius: 10px;
-        margin-left: 1%;
-        padding-top: 6px;
-        padding-left: 6px;
-        font-size: 10px;
-        width: 10%;
-        height: 45%;
+        margin-left: 40%;
     }
-
-    .registro-btn:hover {
+    
+    .cerrar-btn:hover {
         background-color: #2980b9;
     }
     
@@ -272,7 +235,7 @@ section {
         padding: 20px;
         box-sizing: border-box;
         padding: 10px;
-        margin-left: 8%;
+        margin-left: 3%;
         margin-top: 30px;
         display: flex;
         flex-direction: column;
@@ -295,19 +258,20 @@ section {
     }
     
     section {
-        margin-left: 40%;
+        width: 75%;
+        margin-left: 35%;
         margin-top: -85%;
        
     }
     
-    #vacantesTodos {
+    #vacantesTodosU {
         margin-left: -5%;
-        margin-top: -64.6%;
+        margin-top: -60.1%;
         width: 90%;
         color: rgb(0, 0, 0);
     }
     
-    .section-vacante {
+    .section-vacante{
         height: 100%; 
         background-color: white;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -317,20 +281,20 @@ section {
     
     .section-descripcion {   
         margin-top: 0%;
-        margin-left: 41%;
+        margin-left: 35%;
         font-size: 10px;
     }
     
     .section-nombre{
         font-size: 15px ;
-        margin-top: -26%;
-        margin-left: 41%;
+        margin-top: -21%;
+        margin-left: 35%;
     }
     
     .section-fecha{
         margin-bottom: 2%;
         font-size: 12px;
-        margin-top: 7.7%;
+        margin-top: 5.9%;
         margin-left: 2%;
     }
     

@@ -203,3 +203,11 @@ fetch(urlVacante)
       divVacantesTodos.appendChild(divProducto);
     });
   });
+
+function cerrar() {
+  window.location.href = "index.html";
+}
+
+function homeU() {
+  window.location.href = "indexU.html";
+}

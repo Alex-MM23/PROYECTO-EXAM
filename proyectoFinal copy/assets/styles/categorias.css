@@ -45,7 +45,7 @@ header ul li a {
 }
 
 .logo {
-    margin-left: -70%;
+    margin-left: -32%;
     height: 30px;
 }
 
@@ -59,7 +59,7 @@ header ul li a {
     font-size: 12px;
     cursor: pointer;
     border-radius: 10px;
-    margin-left: 40%;
+    margin-left: 62%;
 }
 
 .accede-btn:hover {
@@ -113,9 +113,6 @@ nav {
     display: flex;
     flex-direction: column;
 }
-
-
-
 
 section {
     margin-left: 50%;
@@ -195,7 +192,7 @@ h2{
     }
 
     .logo {
-        margin-left: -14%;
+        margin-left: -17%;
         height: 40px;
     }
 

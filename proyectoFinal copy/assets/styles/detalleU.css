@@ -41,25 +41,7 @@ header ul li a {
     height: 30px;
 }
 
-.accede-btn {
-    border: 2px solid #3498db;
-    background-color: #FFFFFF;
-    color: #3498db;
-    padding: 10px 20px;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 12px;
-    cursor: pointer;
-    border-radius: 10px;
-    margin-left: 32%;
-}
-
-.accede-btn:hover {
-    background-color: #3498db;
-    color: #FFFFFF;
-}
-
-.registro-btn {
+.cerrar-btn {
     background-color: #3498db;
     color: #ffffff;
     border: none;
@@ -69,10 +51,10 @@ header ul li a {
     font-size: 16px;
     cursor: pointer;
     border-radius: 10px;
-    margin-left: 2%;
+    margin-left: 40%;
 }
 
-.registro-btn:hover {
+.cerrar-btn:hover {
     background-color: #2980b9;
 }
 
@@ -93,7 +75,7 @@ header ul li a {
     background-color: #2980b9;
 }
 
-#detalle {
+#detalleU {
     max-width: 800px;
     margin: 50px auto;
     padding: 20px;
@@ -103,33 +85,33 @@ header ul li a {
 
 .section-nombre {
     font-size: 30px;
-    margin-top: -13%;
-    margin-left: 22%;
+    margin-top: -10%;
+    margin-left: 29%;
 }
 
 .section-descripcion {
-    margin-top: -1%;
-    margin-left: 22%;
+    margin-top: -3%;
+    margin-left: 29%;
 }
 
 .section-fecha {
     margin-bottom: 2%;
     margin-top: 3.7%;
-    margin-left: 2%;
+    margin-left: 12%;
 }
 
 .section-salario {
     margin-bottom: 2%;
-    margin-left: 2%;
+    margin-left: 12%;
 }
 
 .section-estatus {
-    margin-left: 2%;
+    margin-left: 12%;
     margin-bottom: 2%;
 }
 
 .section-imagen {
-    margin-left: 2%;
+    margin-left: 12%;
     margin-top: 2%;
     width: 120px;
 }
@@ -144,13 +126,12 @@ header ul li a {
     font-size: 16px;
     cursor: pointer;
     border-radius: 10px;
-    margin-left: 70%;
+    margin-left: 71%;
 }
 
 .solicitar-btn:hover {
     background-color: #2980b9;
 }
-
 
 @media only screen and (max-width: 600px) {
 
@@ -187,49 +168,28 @@ header ul li a {
     }
 
     .logo {
-        margin-left: -33%;
+        margin-left: -29%;
         height: 40px;
     }
 
-    .accede-btn {
-        border: 2px solid #3498db;
-        background-color: #FFFFFF;
-        color: #3498db;
-        padding-top: 7px;
-        padding-left: 7px;
-        font-size: 10px;
-        cursor: pointer;
-        border-radius: 10px;
-        margin-left: 18%;
-        width: 10%;
-        height: 45%;
-    }
-
-    .accede-btn:hover {
-        background-color: #3498db;
-        color: #FFFFFF;
-    }
-
-    .registro-btn {
+    .cerrar-btn {
         background-color: #3498db;
         color: #ffffff;
         border: none;
+        padding: 10px 20px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
         cursor: pointer;
         border-radius: 10px;
-        margin-left: 9px;
-        padding-top: 8px;
-        padding-left: 3px;
-        font-size: 10px;
-        width: 10%;
-        height: 45%;
+        margin-left: 37%;
     }
-
-    .registro-btn:hover {
+    
+    .cerrar-btn:hover {
         background-color: #2980b9;
     }
 
-
-    #detalle {
+    #detalleU {
         max-width: 80%;
         margin: 50px auto;
         padding: 20px;
@@ -268,5 +228,22 @@ header ul li a {
         margin-left: 2%;
         margin-top: 2%;
         width: 120px;
+    }
+
+    .solicitar-btn {
+        background-color: #3498db;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 10px;
+        margin-left: 77%;
+    }
+    
+    .solicitar-btn:hover {
+        background-color: #2980b9;
     }
 }
