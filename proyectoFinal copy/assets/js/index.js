@@ -207,46 +207,50 @@ fetch(urlVacante)
 let urlLogin = "http://localhost:8084/apirest/categoria/login";
 
 function procLogin(username, password) {
-  let urlWithParams = `${urlLogin}?username=${encodeURIComponent(
-    username
-  )}&password=${encodeURIComponent(password)}`;
+  let urlWithParams = `${urlLogin}?username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`;
 
   fetch(urlWithParams, {
-    method: "GET",
-    headers: {
-      Accept: "application/json",
-    },
+      method: "GET",
+      headers: {
+          Accept: "application/json",
+      },
   })
-    .then((response) => {
+  .then((response) => {
       if (!response.ok) {
-        throw new Error("Error en la solicitud de login");
+          throw new Error("Error en la solicitud de login");
       }
       return response.json();
-    })
-    .then((data) => {
+  })
+  .then((data) => {
       if (data.message === "Login correcto") {
-        localStorage.setItem("token", data.token);
-        window.location.href = "indexU.html";
+          let tipoUsuario = data.tipoUsuario;
+          if (tipoUsuario === "admin") {
+              window.location.href = "indexA.html";
+          } else if (tipoUsuario === "cliente") {
+              window.location.href = "indexU.html";
+          } else {
+              alert("Error: tipo de usuario desconocido");
+          }
       } else {
-        console.error("Error de login:", data.message);
-        alert("Error en el login. " + data.message);
+          console.error("Error de login:", data.message);
+          alert("Error en el login. " + data.message);
       }
-    })
-    .catch((error) => {
+  })
+  .catch((error) => {
       console.error("Error de login:", error);
       alert("Error en el login. Verifica tus credenciales e intenta de nuevo.");
-    });
+  });
 }
 
 document
   .getElementById("formulario-login")
   .addEventListener("submit", function (event) {
-    event.preventDefault();
+      event.preventDefault();
 
-    let username = document.getElementById("username").value;
-    let password = document.getElementById("password").value;
+      let username = document.getElementById("username").value;
+      let password = document.getElementById("password").value;
 
-    procLogin(username, password);
+      procLogin(username, password);
   });
 
 const urlAltaCategoria =
@@ -286,10 +290,6 @@ function agregarCategoria() {
         "Error al dar de alta la categoría. Por favor, intenta nuevamente."
       );
     });
-}
-
-function cerrar() {
-  window.location.href = "index.html";
 }
 
 function login() {
