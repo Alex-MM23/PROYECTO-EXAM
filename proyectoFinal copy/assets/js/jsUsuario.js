@@ -211,3 +211,7 @@ function cerrar() {
 function homeU() {
   window.location.href = "indexU.html";
 }
+
+function homeA() {
+  window.location.href = "indexA.html";
+}

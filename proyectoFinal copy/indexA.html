@@ -1,14 +1,61 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
+
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='main.js'></script>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InfoJobs - Bolsa de trabajo, ofertas</title>
+    <link rel="stylesheet" href="assets/styles/estilosU.css" />
+
+    <script src="assets/js/script.js" defer></script>
 </head>
+
 <body>
-    <h1>Hola Admin</h1>
+    <header class="menu">
+        <ul>
+            <img class="logo" src="assets/IMG/logo.png" alt="logo" > 
+            <li><a onclick="candidatos()" href="candidatosA.html">Zona Candidatos</a></li>
+        </ul>
+        <button onclick="cerrar()" class="cerrar-btn">Cerrar</button>
+    </header>
+
+    <section class="section">
+        <div class="empresas">
+            <h1>InfoJobs Empresa</h1>
+            <p> Encuentra a tu </p>
+            <p> candidato de forma</p>
+            <p> rápida, fácil y segura.</p>
+            <a href="todosVancatesA.html" class="button-empresa">BUSCO TRABAJO</a>
+        </div>
+        <div class="banner">
+            <img src="assets/IMG/home.png" alt="banner">
+        </div>
+        <div class="informacion">
+            <p class="titulo">Encuentra al mejor profesional</p>
+        </div>
+        <div class="container">
+            <div class="cuadrado cuadrado1">
+                <img src="assets/IMG/descripcion.png">
+                <h2>Describe el puesto de trabajo</h2>
+                <p>Detalla los requisitos que debe tener el candidato y publica tu oferta.</p>
+            </div>
+            <div class="cuadrado cuadrado2">
+                <img src="assets/IMG/usuario.png">
+                <h2>Recibe CVs en minutos</h2>
+                <p>Avisaremos a los candidatos que mejor se ajusten al perfil.</p>
+            </div>
+            <div class="cuadrado cuadrado3">
+                <img src="assets/IMG/corazon.png">
+                <h2>Selecciona fácilmente</h2>
+                <p>Filtra entre los inscritos y contacta con los que más te interesen.</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>¿Eres una empresa? Contáctanos por WhatsApp. De lunes a jueves de 9 a 18 horas y viernes de 9 a 15 horas</p>
+    </footer>
+    <script src="assets/js/index.js"></script>
 </body>
+
 </html>

@@ -303,3 +303,7 @@ function registro() {
 function home() {
   window.location.href = "index.html";
 }
+
+function cerrar() {
+  window.location.href = "index.html";
+}
