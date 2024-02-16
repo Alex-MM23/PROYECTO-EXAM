@@ -207,7 +207,7 @@ fetch(urlVacante)
 
 let urlLogin = "http://localhost:8084/apirest/categoria/login";
 
-function procLogin(username, password) {
+function procLogin(username, password) { 
   let urlWithParams = `${urlLogin}?username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`;
 
   fetch(urlWithParams, {
