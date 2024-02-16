@@ -4,7 +4,7 @@ let urlFetchAll = "http://localhost:8084/apirest/categoria/todos";
 
 function cargarVacantesPorCategoria(idCategoria) {
   // Realizar redirección a la nueva página pasando el ID de la familia
-  window.location.href = `categoriasU.html?idCategoria=${idCategoria}`;
+  window.location.href = `categoriasA.html?idCategoria=${idCategoria}`;
 }
 
 fetch(urlFetchAll)
