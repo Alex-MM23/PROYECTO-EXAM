@@ -99,7 +99,7 @@ if (idCategoria) {
 
 function cargarDetalleVacante(idVacante) {
   // Realizar redirección a la nueva página pasando el ID de la familia
-  window.location.href = `DetalleU.html?idVacante=${idVacante}`;
+  window.location.href = `DetalleA.html?idVacante=${idVacante}`;
 }
 
 const idVacante = urlParams.get("idVacante");
