@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .modal-container {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal {
+            background-color: #3498db; /* Color azul */
+            padding: 20px;
+            border-radius: 10px;
+            color: #fff;
+        }
+
+        .close {
+            color: #fff;
+            float: right;
+            font-size: 20px;
+            cursor: pointer;
+        }
+
+        .close:hover {
+            color: #000;
+        }
+    </style>
+    <title>Modal Cuadrado</title>
+</head>
+<body>
+
+<button id="openModal">Abrir Modal</button>
+
+<div class="modal-container" id="modal">
+    <div class="modal">
+        <span class="close" id="closeModal">&times;</span>
+        <p>Contenido del modal</p>
+    </div>
+</div>
+
+<script>
+    document.getElementById('openModal').addEventListener('click', function() {
+        document.getElementById('modal').style.display = 'flex';
+    });
+
+    document.getElementById('closeModal').addEventListener('click', function() {
+        document.getElementById('modal').style.display = 'none';
+    });
+
+    // Cerrar el modal si se hace clic fuera de él
+    window.addEventListener('click', function(event) {
+        if (event.target === document.getElementById('modal')) {
+            document.getElementById('modal').style.display = 'none';
+        }
+    });
+</script>
+
+</body>
+</html>

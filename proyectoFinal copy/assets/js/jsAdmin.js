@@ -204,6 +204,23 @@ fetch(urlVacante)
     });
   });
 
+function modal() {
+  document.getElementById('solicitar-btn').addEventListener('click', function () {
+    document.getElementById('modal').style.display = 'flex';
+  });
+
+  document.getElementById('cerrarModal').addEventListener('click', function () {
+    document.getElementById('modal').style.display = 'none';
+  });
+
+  // Cerrar el modal si se hace clic fuera de él
+  window.addEventListener('click', function (event) {
+    if (event.target === document.getElementById('modal')) {
+      document.getElementById('modal').style.display = 'none';
+    }
+  });
+}
+
 function cerrar() {
   window.location.href = "index.html";
 }

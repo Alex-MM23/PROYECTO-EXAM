@@ -116,7 +116,7 @@ header ul li a {
     width: 120px;
 }
 
-.solicitar-btn {
+#solicitar-btn {
     background-color: #3498db;
     color: #ffffff;
     border: none;
@@ -129,8 +129,65 @@ header ul li a {
     margin-left: 71%;
 }
 
-.solicitar-btn:hover {
+#solicitar-btn:hover {
     background-color: #2980b9;
+}
+
+
+form {
+    margin-top: 15%;
+    margin-left: 26%;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+input {
+    padding: 8px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+}
+
+#file{
+    margin-left: 13%;
+    width: 70%;
+}
+
+.modal-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+    align-items: center;
+    justify-content: center;
+}
+
+.modal {
+    background-color: rgba(52, 152, 219, 0.8);
+    padding: 20px;
+    height: 40%;
+    width: 30%;
+    border-radius: 10px;
+    color: #fff;
+}
+
+.cerrar {
+    color: #fff;
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.cerrar:hover {
+    color: #000;
 }
 
 

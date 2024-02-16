@@ -127,7 +127,7 @@ if (idVacante) {
         pSalario.classList.add("section-salario");
         let pEstatus = document.createElement("p");
         pEstatus.classList.add("section-estatus");
-        
+
 
         pImagen.innerHTML = `${vacante.imagen}`;
         pNombre.innerHTML = `${vacante.nombre}`;
@@ -211,47 +211,47 @@ function procLogin(username, password) {
   let urlWithParams = `${urlLogin}?username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`;
 
   fetch(urlWithParams, {
-      method: "GET",
-      headers: {
-          Accept: "application/json",
-      },
+    method: "GET",
+    headers: {
+      Accept: "application/json",
+    },
   })
-  .then((response) => {
+    .then((response) => {
       if (!response.ok) {
-          throw new Error("Error en la solicitud de login");
+        throw new Error("Error en la solicitud de login");
       }
       return response.json();
-  })
-  .then((data) => {
+    })
+    .then((data) => {
       if (data.message === "Login correcto") {
-          let tipoUsuario = data.tipoUsuario;
-          if (tipoUsuario === "admin") {
-              window.location.href = "indexA.html";
-          } else if (tipoUsuario === "cliente") {
-              window.location.href = "indexU.html";
-          } else {
-              alert("Error: tipo de usuario desconocido");
-          }
+        let tipoUsuario = data.tipoUsuario;
+        if (tipoUsuario === "admin") {
+          window.location.href = "indexA.html";
+        } else if (tipoUsuario === "cliente") {
+          window.location.href = "indexU.html";
+        } else {
+          alert("Error: tipo de usuario desconocido");
+        }
       } else {
-          console.error("Error de login:", data.message);
-          alert("Error en el login. " + data.message);
+        console.error("Error de login:", data.message);
+        alert("Error en el login. " + data.message);
       }
-  })
-  .catch((error) => {
+    })
+    .catch((error) => {
       console.error("Error de login:", error);
       alert("Error en el login. Verifica tus credenciales e intenta de nuevo.");
-  });
+    });
 }
 
 document
   .getElementById("formulario-login")
   .addEventListener("submit", function (event) {
-      event.preventDefault();
+    event.preventDefault();
 
-      let username = document.getElementById("username").value;
-      let password = document.getElementById("password").value;
+    let username = document.getElementById("username").value;
+    let password = document.getElementById("password").value;
 
-      procLogin(username, password);
+    procLogin(username, password);
   });
 
 const urlAltaCategoria =
@@ -294,6 +294,23 @@ function agregarCategoria() {
 }
 
 const urlSolicitud = "";
+
+function modal() {
+  document.getElementById('solicitar-btn').addEventListener('click', function () {
+    document.getElementById('modal').style.display = 'flex';
+  });
+
+  document.getElementById('cerrarModal').addEventListener('click', function () {
+    document.getElementById('modal').style.display = 'none';
+  });
+
+  // Cerrar el modal si se hace clic fuera de él
+  window.addEventListener('click', function (event) {
+    if (event.target === document.getElementById('modal')) {
+      document.getElementById('modal').style.display = 'none';
+    }
+  });
+}
 
 function login() {
   window.location.href = "login.html";

@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='assets/styles/detalle.css'>
-    
+
 </head>
+
 <body>
     <header class="menu">
-        
+
         <ul>
             <img class="logo" src="assets/IMG/logo.png" alt="logo" onclick="home()" href="index.html">
             <li><a href="todosVancates.html">Volver</a></li>
@@ -18,12 +20,24 @@
 
         <button onclick="login()" class="accede-btn">ACCESO</button>
         <button onclick="registro()" class="registro-btn">REGISTRO</button>
+    </header>
     
-</header>
     <div id="detalle">
 
     </div>
-    <button class="solicitar-btn">Solicitar</button>
+    <button id="solicitar-btn" onclick="modal()">Solicitar</button>
+    <div class="modal-container" id="modal">
+        <div class="modal">
+            <span class="cerrar" id="cerrarModal">&times;</span>
+            <form>
+                <label id="miCampo">Ingrese texto:</label>
+                <input type="text" id="miCampo" name="miCampo" placeholder="Escribe aquí...">
+            </form>
+            <input id="file" type="file">
+            <label id="file" for=""></label>
+        </div>
+    </div>
     <script src='assets/js/index.js'></script>
 </body>
+
 </html>
