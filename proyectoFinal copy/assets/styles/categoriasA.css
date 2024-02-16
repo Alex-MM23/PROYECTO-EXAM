@@ -1,0 +1,199 @@
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #ffffff;
+    color: black;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul {
+    list-style-type: none;
+    display: flex;
+}
+
+header ul li {
+    padding: 0 15px;
+}
+
+header ul li a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.menu {
+    margin-top: 1%;
+    margin-left: 2%;
+    font-size: 15px;
+    text-align: center;
+    align-items: center;
+}
+
+.logo {
+    margin-left: -25%;
+    height: 30px;
+}
+
+.cerrar-btn {
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 72%;
+}
+
+.cerrar-btn:hover {
+    background-color: #2980b9;
+}
+
+.volver-btn {
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 2%;
+}
+
+.volver-btn:hover {
+    background-color: #2980b9;
+}
+
+nav {
+    background-color: #9c9c9c;
+    width: 20%;
+    height: 80vh;
+    padding: 20px;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-left: 15%;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+section {
+    margin-left: 50%;
+    margin-top: -20%;
+}
+
+.categorias {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 60%;
+    margin-left: -100%;
+
+}
+
+.section-categoria {
+    width: 30%;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    margin: 10px;
+    cursor: pointer;
+}
+
+.categoria-nombre {
+    font-size: 24px;
+    color: blue;
+    margin-bottom: 20px;
+}
+
+.categoria-descripcion {
+    text-align: center;
+    color: black;
+}
+
+h2 {
+    font-size: 50px;
+    text-align: center;
+    color: #000000;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+
+    header {
+        background-color: #ffffff;
+        color: black;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    header ul {
+        list-style-type: none;
+        display: flex;
+    }
+
+    header ul li {
+        padding: 0 15px;
+    }
+
+    header ul li a {
+        color: #000000;
+        font-size: 13px;
+        display: flex;
+        text-decoration: none;
+        margin-top: 20%;
+        margin-left: 5%;
+    }
+
+    .menu {
+        margin-top: 1%;
+    }
+
+    .logo {
+        margin-left: -11%;
+        height: 40px;
+    }
+
+    .cerrar-btn {
+        background-color: #3498db;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 10px;
+        margin-left: 43%;
+    }
+    
+    .cerrar-btn:hover {
+        background-color: #2980b9;
+    }
+}
