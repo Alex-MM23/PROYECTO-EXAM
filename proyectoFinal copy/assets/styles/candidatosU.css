@@ -68,8 +68,6 @@ header ul li a {
 }
 
 nav {
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     width: 25%;
     font-size: 10px;
     height: 79vh;
@@ -105,8 +103,6 @@ nav {
 }
 
 nav {
-    background-color: white;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     width: 20%;
     height: 79vh;
     padding: 20px;
