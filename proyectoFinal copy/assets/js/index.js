@@ -207,7 +207,7 @@ fetch(urlVacante)
 
 let urlLogin = "http://localhost:8084/apirest/categoria/login";
 
-function procLogin(username, password) { 
+function procLogin(username, password) {
   let urlWithParams = `${urlLogin}?username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`;
 
   fetch(urlWithParams, {
@@ -252,6 +252,53 @@ document
     let password = document.getElementById("password").value;
 
     procLogin(username, password);
+  });
+
+let urlRegistro = "http://localhost:8084/apirest/categoria/registro";
+
+function procRegistro(username, password) {
+  let requestData = {
+    username: username,
+    password: password
+  };
+
+  fetch(urlRegistro, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify(requestData)
+  })
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Error en la solicitud de registro");
+      }
+      return response.json();
+    })
+    .then((data) => {
+      if (data.message === "Usuario registrado correctamente") {
+        alert("Registro exitoso. Ahora puedes iniciar sesión.");
+        // Puedes redirigir a la página de inicio de sesión si lo deseas
+      } else {
+        console.error("Error de registro:", data.message);
+        alert("Error en el registro. " + data.message);
+      }
+    })
+    .catch((error) => {
+      console.error("Error de registro:", error);
+      alert("Error en el registro. Verifica tus datos e intenta de nuevo.");
+    });
+}
+
+document
+  .getElementById("formulario-registro")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    let username = document.getElementById("reg-username").value;
+    let password = document.getElementById("reg-password").value;
+
+    procRegistro(username, password);
   });
 
 const urlAltaCategoria =

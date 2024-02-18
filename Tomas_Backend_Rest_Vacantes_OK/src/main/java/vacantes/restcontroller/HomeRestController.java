@@ -1,6 +1,7 @@
 package vacantes.restcontroller;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -107,6 +108,34 @@ public class HomeRestController {
 	        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).body("{\"message\": \"Contraseña o nombre de usuario incorrecto\"}");
 	    }
 	}
+	
+	@PostMapping("/registro")
+	public ResponseEntity<?> registrarUsuario(@RequestBody Usuario registroUsuario) {
+	    try {
+	        // Verificar si el nombre de usuario ya existe
+	        Optional<Usuario> existingUser = urepo.findByUsername(registroUsuario.getUsername());
+	        if (existingUser.isPresent()) {
+	            return ResponseEntity.status(HttpStatus.BAD_REQUEST)
+	                    .body("{\"message\": \"El nombre de usuario ya está en uso\"}");
+	        }
+
+	        // Crear un nuevo usuario
+	        Usuario nuevoUsuario = new Usuario();
+	        nuevoUsuario.setUsername(registroUsuario.getUsername());
+	        nuevoUsuario.setPassword(registroUsuario.getPassword());
+
+	        // Puedes establecer otros campos del usuario según tus necesidades
+
+	        // Guardar el nuevo usuario en la base de datos
+	        urepo.save(nuevoUsuario);
+
+	        return ResponseEntity.ok().body("{\"message\": \"Usuario registrado correctamente\"}");
+	    } catch (Exception e) {
+	        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
+	                .body("{\"message\": \"Error al registrar el usuario\"}");
+	    }
+	}
+
 
 	 
 }
