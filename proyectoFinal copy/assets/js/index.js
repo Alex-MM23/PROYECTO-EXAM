@@ -269,13 +269,13 @@ function procRegistro(username, password) {
     },
     body: JSON.stringify(requestData)
   })
-    .then((response) => {
+    .then(response => {
       if (!response.ok) {
         throw new Error("Error en la solicitud de registro");
       }
       return response.json();
     })
-    .then((data) => {
+    .then(data => {
       if (data.message === "Usuario registrado correctamente") {
         alert("Registro exitoso. Ahora puedes iniciar sesión.");
         // Puedes redirigir a la página de inicio de sesión si lo deseas
@@ -284,8 +284,8 @@ function procRegistro(username, password) {
         alert("Error en el registro. " + data.message);
       }
     })
-    .catch((error) => {
-      console.error("Error de registro:", error);
+    .catch(error => {
+      console.error("Error de registro:", error.message);
       alert("Error en el registro. Verifica tus datos e intenta de nuevo.");
     });
 }
@@ -298,8 +298,15 @@ document
     let username = document.getElementById("reg-username").value;
     let password = document.getElementById("reg-password").value;
 
+    // Validación básica, asegúrate de agregar más según tus requisitos
+    if (!username || !password) {
+      alert("Por favor, completa todos los campos.");
+      return;
+    }
+
     procRegistro(username, password);
   });
+
 
 const urlAltaCategoria =
   "http://localhost:8084/apirest/categoria/altaCategoria";

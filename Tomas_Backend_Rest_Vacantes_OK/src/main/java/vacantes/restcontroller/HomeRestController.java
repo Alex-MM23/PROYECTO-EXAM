@@ -135,6 +135,21 @@ public class HomeRestController {
 	                .body("{\"message\": \"Error al registrar el usuario\"}");
 	    }
 	}
+	
+	private boolean usuarioExistente(String username) {
+        Optional<Usuario> existingUser = urepo.findByUsername(username);
+        return existingUser.isPresent();
+    }
+
+    private Usuario crearNuevoUsuario(Usuario registroUsuario) {
+        Usuario nuevoUsuario = new Usuario();
+        nuevoUsuario.setUsername(registroUsuario.getUsername());
+        nuevoUsuario.setPassword(registroUsuario.getPassword());
+
+        // Puedes establecer otros campos del usuario según tus necesidades
+
+        return nuevoUsuario;
+    }
 
 
 	 
