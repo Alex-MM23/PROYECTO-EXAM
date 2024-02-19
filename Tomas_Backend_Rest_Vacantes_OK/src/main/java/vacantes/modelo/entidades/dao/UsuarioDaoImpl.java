@@ -33,15 +33,15 @@ public class UsuarioDaoImpl implements UsuarioDao{
 	}
 
 	@Override
-	public int insertOne(Usuario usuario) {
+	public Usuario insertOne(Usuario usuario) {
 		// TODO Auto-generated method stub
 		try {
-			urepo.save(usuario);
-			return 1;
+			 return urepo.save(usuario);
+			
 		} catch (Exception e) {
-			// TODO: handle exception
+			System.err.println(e.getMessage());
 			 
-			return 0;
+			return null;
 			}
 		}
 	}
