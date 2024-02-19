@@ -9,14 +9,24 @@
 <body>
     <form action="" method="post" class="registro-form">
         <h1 class="registro-title">Registro</h1>
+        <label class="registro-label" for="username">Introduzca Username:</label>
+        <p><input type="text" name="username" id="registro_username" class="registro-input"></p>
+
         <label class="registro-label" for="nombre">Introduzca Nombre:</label>
         <p><input type="text" name="nombre" id="registro_nombre" class="registro-input"></p>
-        <label class="registro-label" for="alias">Introduzca Alias:</label>
-        <p><input type="text" name="alias" id="registro_alias" class="registro-input"></p>
+
+        <label class="registro-label" for="apellidos">Introduzca Apellidos:</label>
+        <p><input type="text" name="apellidos" id="registro_apellidos" class="registro-input"></p>
+
+        <label class="registro-label" for="email">Introduzca Email:</label>
+        <p><input type="text" name="email" id="registro_email" class="registro-input"></p>
+
         <label class="registro-label" for="password">Introduzca Password:</label>
         <p><input type="text" name="password" id="registro_password" class="registro-input"></p>
+        
         <p><input type="button" value="Registrarse" class="registro-submit"></p>
         <p><a href="login.html" class="registro-link">Volver al Login</a></p>
     </form>
+    <script src="assets/js/index.js"></script>
 </body>
 </html>

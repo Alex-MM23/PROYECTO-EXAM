@@ -1,5 +1,6 @@
 package vacantes.restcontroller;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -22,6 +23,8 @@ import vacantes.modelo.entidades.Perfil;
 import vacantes.modelo.entidades.Usuario;
 import vacantes.modelo.entidades.Vacante;
 import vacantes.modelo.entidades.dao.CategoriaDao;
+import vacantes.modelo.entidades.dao.PerfilServicioDao;
+import vacantes.modelo.entidades.dao.UsuarioDao;
 import vacantes.modelo.entidades.dao.VacanteDao;
 import vacantes.modelo.repository.CategoriaRepository;
 import vacantes.modelo.repository.UsuarioRepository;
@@ -42,6 +45,12 @@ public class HomeRestController {
 	
 	@Autowired
 	private UsuarioRepository urepo;
+	
+	@Autowired
+	private PerfilServicioDao pdao;
+	
+	@Autowired
+	private UsuarioDao udao;
 	
 	@Autowired
 	private ModelMapper modelMapper;
@@ -110,46 +119,18 @@ public class HomeRestController {
 	}
 	
 	@PostMapping("/registro")
-	public ResponseEntity<?> registrarUsuario(@RequestBody Usuario registroUsuario) {
-	    try {
-	        // Verificar si el nombre de usuario ya existe
-	        Optional<Usuario> existingUser = urepo.findByUsername(registroUsuario.getUsername());
-	        if (existingUser.isPresent()) {
-	            return ResponseEntity.status(HttpStatus.BAD_REQUEST)
-	                    .body("{\"message\": \"El nombre de usuario ya está en uso\"}");
-	        }
-
-	        // Crear un nuevo usuario
-	        Usuario nuevoUsuario = new Usuario();
-	        nuevoUsuario.setUsername(registroUsuario.getUsername());
-	        nuevoUsuario.setPassword(registroUsuario.getPassword());
-
-	        // Puedes establecer otros campos del usuario según tus necesidades
-
-	        // Guardar el nuevo usuario en la base de datos
-	        urepo.save(nuevoUsuario);
-
-	        return ResponseEntity.ok().body("{\"message\": \"Usuario registrado correctamente\"}");
-	    } catch (Exception e) {
-	        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR)
-	                .body("{\"message\": \"Error al registrar el usuario\"}");
+	public Usuario registrarUsuario(@RequestBody Usuario usuario) {
+	    usuario.setEnabled(1);
+	    usuario.setFecha_Registro(new Date());
+	    usuario.addPerfil(pdao.findById(2));
+	    System.err.println(usuario);
+	    if(udao.insertOne(usuario) != null) {
+	    	return usuario;
 	    }
+	    return null;
 	}
 	
-	private boolean usuarioExistente(String username) {
-        Optional<Usuario> existingUser = urepo.findByUsername(username);
-        return existingUser.isPresent();
-    }
-
-    private Usuario crearNuevoUsuario(Usuario registroUsuario) {
-        Usuario nuevoUsuario = new Usuario();
-        nuevoUsuario.setUsername(registroUsuario.getUsername());
-        nuevoUsuario.setPassword(registroUsuario.getPassword());
-
-        // Puedes establecer otros campos del usuario según tus necesidades
-
-        return nuevoUsuario;
-    }
+	
 
 
 	 

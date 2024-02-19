@@ -256,56 +256,40 @@ document
 
 let urlRegistro = "http://localhost:8084/apirest/categoria/registro";
 
-function procRegistro(username, password) {
-  let requestData = {
-    username: username,
-    password: password
-  };
+function procRegistro() {
+  let registroUsername = document.getElementById("registro-username");
+  let registroNombre = document.getElementById("registro-nombre");
+  let registroApellidos = document.getElementById("registro-apellidos");
+  let registroEmail = document.getElementById("registro-email");
+  let registroPassword = document.getElementById("registro-password");
+
+  let usuario = {
+    "username": registroUsername.value,
+    "nombre": registroNombre.value,
+    "apellidos": registroApellidos.value,
+    "email": registroEmail.value,
+    "password": registroPassword.value,
+  }
 
   fetch(urlRegistro, {
-    method: "POST",
-    headers: {
+    "headers": {
+      "Accept": "applicaton/json",
       "Content-Type": "application/json"
     },
-    body: JSON.stringify(requestData)
+    "method": "POST",
+    "body": JSON.stringify(usuario)
   })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error("Error en la solicitud de registro");
-      }
-      return response.json();
-    })
-    .then(data => {
-      if (data.message === "Usuario registrado correctamente") {
-        alert("Registro exitoso. Ahora puedes iniciar sesión.");
-        // Puedes redirigir a la página de inicio de sesión si lo deseas
-      } else {
-        console.error("Error de registro:", data.message);
-        alert("Error en el registro. " + data.message);
-      }
-    })
-    .catch(error => {
-      console.error("Error de registro:", error.message);
-      alert("Error en el registro. Verifica tus datos e intenta de nuevo.");
-    });
+    .then(response =>  response.json())
+    .then(textoResponse => console.log(textoResponse));
+
+  //Vaciar el campo de texto al registrar
+  registroUsername.value = "";
+  registroNombre.value = "";
+  registroEmail.value = "";
+  
+  registroPassword.value = "";
+  window.location = "index.html";
 }
-
-document
-  .getElementById("formulario-registro")
-  .addEventListener("submit", function (event) {
-    event.preventDefault();
-
-    let username = document.getElementById("reg-username").value;
-    let password = document.getElementById("reg-password").value;
-
-    // Validación básica, asegúrate de agregar más según tus requisitos
-    if (!username || !password) {
-      alert("Por favor, completa todos los campos.");
-      return;
-    }
-
-    procRegistro(username, password);
-  });
 
 
 const urlAltaCategoria =
