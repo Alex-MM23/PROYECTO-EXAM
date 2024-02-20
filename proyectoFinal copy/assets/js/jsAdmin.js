@@ -220,6 +220,111 @@ function modal() {
     }
   });
 }
+let urlAgregarV = "http://localhost:8084/vacantes/agregarVacante";
+
+function AgregarV() {
+  let idCategoria = document.getElementById("idCategoria");
+  let nombreInput = document.getElementById("nombreInput");
+  let descripcionInput = document.getElementById("descripcionInput");
+  let detallesInput = document.getElementById("detalleInput");
+  let salarioInput = document.getElementById("salarioInput");
+  let imagenInput = document.getElementById("imagenInput");
+
+  let nuevaV = {
+    "idCategoria": idCategoria.value,
+    "nombre": nombreInput.value,
+    "descripcion": descripcionInput.value,
+    "detalles": detallesInput.value,
+    "salario": salarioInput.value,
+    "imagen": imagenInput.value
+  
+  }
+
+  // Limpiar los campos del formulario después de agregar la vacante
+  idCategoria.value = "";
+  nombreInput.value = "";
+  descripcionInput.value = "";
+  detallesInput.value = "";
+  salarioInput.value = "";
+  imagenInput.value = "";
+  
+  console.log(nuevaV);
+
+  fetch(urlAgregarV, {
+    headers: {
+      "Accept": "application/json",
+      "Content-Type": "application/json"
+    },
+    method: "POST",
+    body: JSON.stringify(nuevaV)
+  })
+  .then(response => response.text())
+  .then(textoResponse => console.log(textoResponse));
+}
+
+let urlModificarV = "http://localhost:8084/vacantes/modificarVacante/" + idVacante;
+
+function ModificarV() {
+  // Obtener el ID de la vacante a modificar
+  let idVacanteModificar = document.getElementById("idVacanteModificar");
+  let idCategoria = document.getElementById("idCategoriaModificar");
+  let nombreInput = document.getElementById("nombreInputModificar");
+  let descripcionInput = document.getElementById("descripcionInputModificar");
+  let detallesInput = document.getElementById("detalleInputModificar");
+  let salarioInput = document.getElementById("salarioInputModificar");
+  let imagenInput = document.getElementById("imagenInputModificar");
+
+  let idVacante = idVacanteModificar.value;
+
+  // Limpiar los campos del formulario después de obtener el ID
+  idVacanteModificar.value = "";
+  idCategoria.value = "";
+  nombreInput.value = "";
+  descripcionInput.value = "";
+  detallesInput.value = "";
+  salarioInput.value = "";
+  imagenInput.value = "";
+
+  // Verificar si se proporcionó un ID válido
+  if (!idVacante) {
+    console.log("Por favor, ingrese un ID de vacante válido");
+    return;
+  }
+
+  // Construir el objeto con los datos modificados
+  let vacanteModificada = {
+    "idCategoria": idCategoria.value,
+    "nombre": nombreInput.value,
+    "descripcion": descripcionInput.value,
+    "detalles": detallesInput.value,
+    "salario": salarioInput.value,
+    "imagen": imagenInput.value
+  }
+
+  console.log(vacanteModificada);
+
+  fetch(urlModificarV, {
+    headers: {
+      "Accept": "application/json",
+      "Content-Type": "application/json"
+    },
+    method: "PUT", // Utilizamos PUT para las solicitudes de modificación
+    body: JSON.stringify(vacanteModificada)
+  })
+  .then(response => response.text())
+  .then(textoResponse => console.log(textoResponse))
+  .catch(error => console.error("Error al modificar la vacante:", error));
+}
+
+// Función para abrir/cerrar el modal
+function modal() {
+  let modalContainer = document.getElementById("modal");
+  modalContainer.style.display = (modalContainer.style.display === "block") ? "none" : "block";
+}
+
+// Evento para cerrar el modal al hacer clic en la 'x'
+let cerrarModalBtn = document.getElementById("cerrarModal");
+cerrarModalBtn.addEventListener("click", modal);
 
 function fUsuario(){
   // Recuperar el nombre de usuario del localStorage

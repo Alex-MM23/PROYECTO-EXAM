@@ -56,8 +56,17 @@ public class VacanteDaoImpl implements VacanteDao{
 
 	@Override
 	public int modificarOne(Vacante vacante) {
-		// TODO Auto-generated method stub
-		return 0;
+		try {
+			if (findById(vacante.getIdVacante())!= null) {
+				vrepo.save(vacante);
+				return 1;
+				else
+					return 0;
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			return 0;
+		}
 	}
 
 	@Override

@@ -28,6 +28,7 @@ import vacantes.modelo.entidades.dao.UsuarioDao;
 import vacantes.modelo.entidades.dao.VacanteDao;
 import vacantes.modelo.repository.CategoriaRepository;
 import vacantes.modelo.repository.UsuarioRepository;
+import vacantes.modelo.repository.VacanteRepository;
 
 @RestController
 @CrossOrigin(origins = "*")
@@ -54,6 +55,9 @@ public class HomeRestController {
 	
 	@Autowired
 	private ModelMapper modelMapper;
+	
+	@Autowired
+    private VacanteRepository vrepo;
 	
 	@GetMapping("/todos")
 	public List<Categoria>  todos(){
@@ -129,6 +133,11 @@ public class HomeRestController {
 	    }
 	    return null;
 	}
+	
+	
+	
+	
+
 	
 	
 

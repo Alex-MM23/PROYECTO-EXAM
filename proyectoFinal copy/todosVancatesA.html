@@ -16,10 +16,60 @@
         <ul>
             <img class="logo" src="assets/IMG/logo.png" alt="logo" onclick="homeA()" href="indexA.html">
             <li><a href="indexA.html">Volver</a></li>
-            <li><a  href="candidatosA.html">Agregar</a></li>
-            <li><a  href="candidatosA.html">Eliminar</a></li>
+            <button id="solicitar-btn" onclick="modal()">Agregar</button>
+            <div class="modal-container" id="modal">
+                <div class="modal">
+                    <span class="cerrar" id="cerrarModal">&times;</span>
+                    <form id="formularioNuevaVacante">
+                        <label for="idCategoria">ID de Categoría:</label>
+                        <input type="text" id="idCategoria" required>
+
+                        <label for="nombreInput">Nombre:</label>
+                        <input type="text" id="nombreInput" required>
+
+                        <label for="descripcionInput">Descripción:</label>
+                        <input type="text" id="descripcionInput" required>
+
+                        <label for="detalleInput">Detalles:</label>
+                        <textarea id="detalleInput" required></textarea>
+
+                        <label for="salarioInput">Salario Anual:</label>
+                        <input type="number" id="salarioInput" required>
+
+                        <label for="imagenInput">Imagen:</label>
+                        <input type="text" id="imagenInput" required>
+
+                    </form>
+                    <button id="enviar-btn" onclick="AgregarV()">Enviar</button>
+                </div>
+            </div>
+            <button id="solicitar-btn" onclick="modal()">Editar</button>
+            <div class="modal-container" id="modal">
+                <div class="modal">
+                    <span class="cerrar" id="cerrarModal">&times;</span>
+                    <form id="formularioNuevaVacante">
+                        <label for="idCategoria">ID de Categoría:</label>
+                        <input type="text" id="idCategoria" required>
+
+                        <label for="nombreInput">Nombre:</label>
+                        <input type="text" id="nombreInput" required>
+
+                        <label for="descripcionInput">Descripción:</label>
+                        <input type="text" id="descripcionInput" required>
+
+                        <label for="detalleInput">Detalles:</label>
+                        <textarea id="detalleInput" required></textarea>
+
+                        <label for="salarioInput">Salario Anual:</label>
+                        <input type="number" id="salarioInput" required>
+
+                        <label for="imagenInput">Imagen:</label>
+                        <input type="text" id="imagenInput" required>
+                    </form>
+                    <button id="enviar-btn" onclick="ModificarV()">Enviar</button>
+                </div>
         </ul>
-        
+
         <button onclick="cerrar()" class="cerrar-btn">Cerrar</button>
     </header>
     <section>
