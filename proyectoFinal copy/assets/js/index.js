@@ -290,7 +290,7 @@ function procRegistro() {
   
   console.log(usuario);
 
-  fetch(urlRegistro, {
+  fetch("http://localhost:8084/apirest/categoria/registro", {
     "headers": {
       "Accept": "applicaton/json",
       "Content-Type": "application/json"

@@ -221,6 +221,19 @@ function modal() {
   });
 }
 
+function fUsuario(){
+  // Recuperar el nombre de usuario del localStorage
+  const username = localStorage.getItem('username');
+  
+  // Mostrar el nombre de usuario en un párrafo
+  const usernameDElement = document.getElementById('usernameD');
+  if (username) {
+    usernameDElement.textContent = `Usuario: ${username}`;
+    console.log(username);
+  } else {
+    usernameDElement.textContent = 'Usuario no encontrado';
+  }
+}
 function cerrar() {
   window.location.href = "index.html";
 }
