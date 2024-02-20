@@ -257,11 +257,11 @@ document
 let urlRegistro = "http://localhost:8084/apirest/categoria/registro";
 
 function procRegistro() {
-  let registroUsername = document.getElementById("registro-username");
-  let registroNombre = document.getElementById("registro-nombre");
-  let registroApellidos = document.getElementById("registro-apellidos");
-  let registroEmail = document.getElementById("registro-email");
-  let registroPassword = document.getElementById("registro-password");
+  let registroUsername = document.getElementById("registro_username");
+  let registroNombre = document.getElementById("registro_nombre");
+  let registroApellidos = document.getElementById("registro_apellidos");
+  let registroEmail = document.getElementById("registro_email");
+  let registroPassword = document.getElementById("registro_password");
 
   let usuario = {
     "username": registroUsername.value,
@@ -270,8 +270,10 @@ function procRegistro() {
     "email": registroEmail.value,
     "password": registroPassword.value,
   }
+  
+  console.log(usuario);
 
-  fetch(urlRegistro, {
+  fetch("http://localhost:8084/apirest/categoria/registro", {
     "headers": {
       "Accept": "applicaton/json",
       "Content-Type": "application/json"
@@ -279,14 +281,16 @@ function procRegistro() {
     "method": "POST",
     "body": JSON.stringify(usuario)
   })
-    .then(response =>  response.json())
+
+    .then(response => response.json())
     .then(textoResponse => console.log(textoResponse));
 
   //Vaciar el campo de texto al registrar
   registroUsername.value = "";
   registroNombre.value = "";
+  registroApellidos = "";
   registroEmail.value = "";
-  
+
   registroPassword.value = "";
   window.location = "index.html";
 }
