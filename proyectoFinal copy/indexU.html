@@ -11,16 +11,16 @@
     <script src="assets/js/script.js" defer></script>
 </head>
 
-<body>
+<body onload="fUsuario()">
     <header class="menu">
         <ul>
             <img class="logo" src="assets/IMG/logo.png" alt="logo" > 
             <li><a onclick="candidatos()" href="candidatosU.html">Zona Candidatos</a></li>
         </ul>
-        
+        <p id="usernameD"></p>
         <button onclick="cerrar()" class="cerrar-btn">Cerrar</button>
     </header>
-    <p id="usernameDisplay"></p>
+
     <section class="section">
         <div class="empresas">
             <h1>InfoJobs Empresa</h1>

@@ -257,15 +257,18 @@ fetch(urlVacante)
       procLogin(username, password);
     });
   
+function fUsuario(){
 // Recuperar el nombre de usuario del localStorage
 const username = localStorage.getItem('username');
 
 // Mostrar el nombre de usuario en un párrafo
-const usernameDisplayElement = document.getElementById('usernameDisplay');
+const usernameDElement = document.getElementById('usernameD');
 if (username) {
-  usernameDisplayElement.textContent = `Usuario: ${username}`;
+  usernameDElement.textContent = `Usuario: ${username}`;
+  console.log(username);
 } else {
-  usernameDisplayElement.textContent = 'Usuario no encontrado';
+  usernameDElement.textContent = 'Usuario no encontrado';
+}
 }
 
 let urlRegistro = "http://localhost:8084/apirest/categoria/registro";
