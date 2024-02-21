@@ -275,7 +275,7 @@ function formSolicitud() {
         "categoria": null
       }
   };
-
+ 
   fetch("http://localhost:8084/vacantes/solicitudes", {
     "headers": {
       "Accept": "applicaton/json",
