@@ -60,7 +60,7 @@ public class VacanteDaoImpl implements VacanteDao{
 			if (findById(vacante.getIdVacante())!= null) {
 				vrepo.save(vacante);
 				return 1;
-				else
+			}else
 					return 0;
 			
 		} catch (Exception e) {
