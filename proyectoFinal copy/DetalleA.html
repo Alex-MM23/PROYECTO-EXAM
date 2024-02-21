@@ -20,17 +20,36 @@
 
     </div>
     <button id="solicitar-btn" onclick="modal()">Editar</button>
+
     <div class="modal-container" id="modal">
+        
         <div class="modal">
             <span class="cerrar" id="cerrarModal">&times;</span>
-            <form>
-                <label id="miCampo">Ingrese texto:</label>
-                <input type="text" id="miCampo" name="miCampo" placeholder="Escribe aquí...">
-                
+            <form id="formularioNuevaVacante">
+                <label for="editIdCategoria"></label>
+                <input type="hidden" id="editIdCategoria" required>
+
+                <label for="editIdVacante"></label>
+                <input type="hidden" id="editIdVacante" required>
+
+                <label for="editNombreInput">Nombre:</label>
+                <input type="text" id="editNombreInput" required>
+
+                <label for="editDescripcionInput">Descripción:</label>
+                <input type="text" id="editDescripcionInput" required>
+
+                <label for="editDetalleInput">Detalles:</label>
+                <input type="text" id="editDetalleInput" required>
+
+                <label for="editSalarioInput">Salario Anual:</label>
+                <input type="number" id="editSalarioInput" required>
+
+                <label for="editImagenInput">Imagen:</label>
+                <input type="text" id="editImagenInput" required>
             </form>
             
-            <input id="file" type="file">
-            <label id="file" for=""></label>
+            <button id="editar-btn" onclick="ModificarV()">Enviar</button>
+        
         </div>
     </div>
     <script src='assets/js/jsAdmin.js'></script>

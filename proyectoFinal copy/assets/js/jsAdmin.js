@@ -128,6 +128,12 @@ if (idVacante) {
         let pEstatus = document.createElement("p");
         pEstatus.classList.add("section-estatus");
 
+        document.getElementById("editNombreInput").value = vacante.nombre;
+        document.getElementById("editDescripcionInput").value = vacante.descripcion;
+        document.getElementById("editDetalleInput").value = vacante.detalles;
+        document.getElementById("editSalarioInput").value = vacante.salario;
+        document.getElementById("editImagenInput").value = vacante.imagen;
+
         pImagen.innerHTML = `${vacante.imagen}`;
         pNombre.innerHTML = `${vacante.nombre}`;
         pDescripcion.innerHTML = `${vacante.descripcion}`;
@@ -262,61 +268,61 @@ function AgregarV() {
   .then(textoResponse => console.log(textoResponse));
 }
 
-let urlModificarV = "http://localhost:8084/vacantes/modificarVacante/{id}";
+// let urlModificarV = "http://localhost:8084/vacantes/modificarVacante/{id}";
 
 
-function ModificarV() {
+// function ModificarV() {
   
-  // Obtener el ID de la vacante a modificar
-  let idVacanteModificar = document.getElementById("idVacanteModificar");
-  let idCategoria = document.getElementById("idCategoriaModificar");
-  let nombreInput = document.getElementById("nombreInputModificar");
-  let descripcionInput = document.getElementById("descripcionInputModificar");
-  let detallesInput = document.getElementById("detalleInputModificar");
-  let salarioInput = document.getElementById("salarioInputModificar");
-  let imagenInput = document.getElementById("imagenInputModificar");
+//   // Obtener el ID de la vacante a modificar
+//   let idVacanteModificar = document.getElementById("idVacanteModificar");
+//   let idCategoria = document.getElementById("idCategoriaModificar");
+//   let nombreInput = document.getElementById("nombreInputModificar");
+//   let descripcionInput = document.getElementById("descripcionInputModificar");
+//   let detallesInput = document.getElementById("detalleInputModificar");
+//   let salarioInput = document.getElementById("salarioInputModificar");
+//   let imagenInput = document.getElementById("imagenInputModificar");
 
-  let idVacante = idVacanteModificar.value;
+//   let idVacante = idVacanteModificar.value;
 
-  // Limpiar los campos del formulario después de obtener el ID
-  idVacanteModificar.value = "";
-  idCategoria.value = "";
-  nombreInput.value = "";
-  descripcionInput.value = "";
-  detallesInput.value = "";
-  salarioInput.value = "";
-  imagenInput.value = "";
+//   // Limpiar los campos del formulario después de obtener el ID
+//   idVacanteModificar.value = "";
+//   idCategoria.value = "";
+//   nombreInput.value = "";
+//   descripcionInput.value = "";
+//   detallesInput.value = "";
+//   salarioInput.value = "";
+//   imagenInput.value = "";
 
-  // Verificar si se proporcionó un ID válido
-  if (!idVacante) {
-    console.log("Por favor, ingrese un ID de vacante válido");
-    return;
-  }
+//   // Verificar si se proporcionó un ID válido
+//   if (!idVacante) {
+//     console.log("Por favor, ingrese un ID de vacante válido");
+//     return;
+//   }
 
-  // Construir el objeto con los datos modificados
-  let vacanteModificada = {
-    "idCategoria": idCategoria.value,
-    "nombre": nombreInput.value,
-    "descripcion": descripcionInput.value,
-    "detalles": detallesInput.value,
-    "salario": salarioInput.value,
-    "imagen": imagenInput.value
-  }
+//   // Construir el objeto con los datos modificados
+//   let vacanteModificada = {
+//     "idCategoria": idCategoria.value,
+//     "nombre": nombreInput.value,
+//     "descripcion": descripcionInput.value,
+//     "detalles": detallesInput.value,
+//     "salario": salarioInput.value,
+//     "imagen": imagenInput.value
+//   }
 
-  console.log(vacanteModificada);
+//   console.log(vacanteModificada);
 
-  fetch(urlModificarV, {
-    headers: {
-      "Accept": "application/json",
-      "Content-Type": "application/json"
-    },
-    method: "PUT", // Utilizamos PUT para las solicitudes de modificación
-    body: JSON.stringify(vacanteModificada)
-  })
-  .then(response => response.text())
-  .then(textoResponse => console.log(textoResponse))
-  .catch(error => console.error("Error al modificar la vacante:", error));
-}
+//   fetch(urlModificarV, {
+//     headers: {
+//       "Accept": "application/json",
+//       "Content-Type": "application/json"
+//     },
+//     method: "PUT", // Utilizamos PUT para las solicitudes de modificación
+//     body: JSON.stringify(vacanteModificada)
+//   })
+//   .then(response => response.text())
+//   .then(textoResponse => console.log(textoResponse))
+//   .catch(error => console.error("Error al modificar la vacante:", error));
+// }
 
 // Función para abrir/cerrar el modal
 function modal() {
