@@ -24,11 +24,21 @@
         <div class="modal">
             <span class="cerrar" id="cerrarModal">&times;</span>
             <form>
-                <label id="miCampo">Ingrese texto:</label>
-                <input type="text" id="miCampo" name="miCampo" placeholder="Escribe aquí...">
+                <label id="Ncomentario">Ingrese Comentario:</label>
+                <input type="text" id="comentario" name="comentario" placeholder="Escribe aquí...">
+                <label id="Narchivo">Ingrese Nombre de Archivo:</label>
+                <input type="text" id="archivo" name="archivo" placeholder="Escribe aquí...">
+                <input type="hidden" id="idVacante" name="idVacante">
+                <input type="hidden" id="nombreVacante" name="nombreVacante">
+                <input type="hidden" id="descripcionVacante" name="descripcionVacante">
+                <input type="hidden" id="fechaVacante" name="fechaVacante">
+                <input type="hidden" id="salarioVacante" name="salarioVacante">
+                <input type="hidden" id="estatusVacante" name="estatusVacante">
+                <input type="hidden" id="destacadoVacante" name="destacadoVacante">
+                <input type="hidden" id="imagenVacante" name="imagenVacante">
+                <input type="hidden" id="detalleVacante" name="detalleVacante">
+                <input type="submit" id="solictud-input" value="Enviar" onclick="formSolicitud()">
             </form>
-            <input id="file" type="file">
-            <label id="file" for=""></label>
         </div>
     </div>
     <script src='assets/js/jsUsuario.js'></script>
