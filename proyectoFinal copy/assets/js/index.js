@@ -208,68 +208,79 @@ fetch(urlVacante)
   let urlLogin = "http://localhost:8084/apirest/categoria/login";
 
   function procLogin(username, password) {
-    let urlWithParams = `${urlLogin}?username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`;
+      let urlWithParams = `${urlLogin}?username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`;
   
-    fetch(urlWithParams, {
-      method: "GET",
-      headers: {
-        Accept: "application/json",
-      },
-    })
+      fetch(urlWithParams, {
+          method: "GET",
+          headers: {
+              Accept: "application/json",
+          },
+      })
       .then((response) => {
-        if (!response.ok) {
-          throw new Error("Error en la solicitud de login");
-        }
-        return response.json();
+          if (!response.ok) {
+              throw new Error("Error en la solicitud de login");
+          }
+          return response.json();
       })
       .then((data) => {
-        if (data.message === "Login correcto") {
-          // Guardar el nombre de usuario en el localStorage
-          localStorage.setItem('username', username);
-  
-          let tipoUsuario = data.tipoUsuario;
-          if (tipoUsuario === "admin") {
-            window.location.href = "indexA.html";
-          } else if (tipoUsuario === "cliente") {
-            window.location.href = "indexU.html";
+          if (data.message === "Login correcto") {
+              // Guardar los datos del usuario en localStorage
+              localStorage.setItem('userData', JSON.stringify(data.userData));
+              localStorage.setItem('tipoUsuario', data.tipoUsuario);
+              // Redirigir según el tipo de usuario
+              if (data.tipoUsuario === "admin") {
+                  window.location.href = "indexA.html";
+              } else if (data.tipoUsuario === "cliente") {
+                  window.location.href = "indexU.html";
+              } else {
+                  alert("Error: tipo de usuario desconocido");
+              }
           } else {
-            alert("Error: tipo de usuario desconocido");
+              console.error("Error de login:", data.message);
+              alert("Error en el login. " + data.message);
           }
-        } else {
-          console.error("Error de login:", data.message);
-          alert("Error en el login. " + data.message);
-        }
       })
       .catch((error) => {
-        console.error("Error de login:", error);
-        alert("Error en el login. Verifica tus credenciales e intenta de nuevo.");
+          console.error("Error de login:", error);
+          alert("Error en el login. Verifica tus credenciales e intenta de nuevo.");
       });
   }
   
-  document
-    .getElementById("formulario-login")
-    .addEventListener("submit", function (event) {
+  document.getElementById("formulario-login").addEventListener("submit", function (event) {
       event.preventDefault();
   
       let username = document.getElementById("username").value;
       let password = document.getElementById("password").value;
   
       procLogin(username, password);
-    });
+  });
   
-function fUsuario(){
-// Recuperar el nombre de usuario del localStorage
-const username = localStorage.getItem('username');
+  // Obtener los datos del usuario del localStorage
+  let userData = JSON.parse(localStorage.getItem('userData'));
+  let tipoUsuario = localStorage.getItem('tipoUsuario');
+  
+  if (userData) {
+      // Utilizar los datos del usuario según sea necesario
+      console.log(userData);
+  } else {
+      console.error("No se han encontrado datos del usuario en localStorage.");
+  }
+  
+  
+  function fUsuario() {
+    // Obtener los datos del usuario del localStorage
+    let userData = JSON.parse(localStorage.getItem('userData'));
 
-// Mostrar el nombre de usuario en un párrafo
-const usernameDElement = document.getElementById('usernameD');
-if (username) {
-  usernameDElement.textContent = `Usuario: ${username}`;
-  console.log(username);
-} else {
-  usernameDElement.textContent = 'Usuario no encontrado';
+    // Mostrar el nombre de usuario en un párrafo
+    const usernameDElement = document.getElementById('usernameD');
+    if (userData && userData.username) {
+        usernameDElement.textContent = `Usuario: ${userData.username}`;
+        console.log(userData.username);
+    } else {
+        usernameDElement.textContent = 'Usuario no encontrado';
+    }
 }
-}
+
 
 let urlRegistro = "http://localhost:8084/apirest/categoria/registro";
 
@@ -352,7 +363,6 @@ function agregarCategoria() {
     });
 }
 
-const urlSolicitud = "";
 
 function modal() {
   document.getElementById('solicitar-btn').addEventListener('click', function () {

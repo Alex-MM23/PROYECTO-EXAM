@@ -135,6 +135,16 @@ if (idVacante) {
         pSalario.innerHTML = `Salario Anual: ${vacante.salario}€`;
         pEstatus.innerHTML = `${vacante.estatus}`;
 
+        document.getElementById("idVacante").value = vacante.idVacante;
+        document.getElementById("nombreVacante").value = vacante.nombre;
+        document.getElementById("descripcionVacante").value = vacante.descripcion;
+        document.getElementById("fechaVacante").value = vacante.fecha;
+        document.getElementById("salarioVacante").value = vacante.salario;
+        document.getElementById("estatusVacante").value = vacante.estatus;
+        document.getElementById("destacadoVacante").value = vacante.destacado;
+        document.getElementById("imagenVacante").value = vacante.imagen;
+        document.getElementById("detalleVacante").value = vacante.detalles;
+
         divProducto.appendChild(pImagen);
         divProducto.appendChild(pNombre);
         divProducto.appendChild(pDescripcion);
@@ -220,6 +230,75 @@ function modal() {
     }
   });
 }
+
+const urlSolicitud = "http://localhost:8084/vacantes/solicitudes";
+
+function formSolicitud() {
+  let userData = JSON.parse(localStorage.getItem('userData'));
+
+  // Obtener los valores de los campos del formulario
+  const comentario = document.getElementById("comentario").value;
+  const archivo = document.getElementById("archivo").value;
+  const idVacante = document.getElementById("idVacante").value;
+  const nombreVacante = document.getElementById("nombreVacante").value;
+  const descripcionVacante = document.getElementById("descripcionVacante").value;
+  const fecha = document.getElementById("fechaVacante").value;
+  const salario = document.getElementById("salarioVacante").value;
+  const estatus = document.getElementById("estatusVacante").value;
+  const destacado = document.getElementById("destacadoVacante").value;
+  const imagen = document.getElementById("imagenVacante").value;
+  const detalle = document.getElementById("detalleVacante").value;
+
+  const solicitud = {
+    "archivo": archivo,
+    "comentarios": comentario,
+    "usuario": {
+      "username": userData.username,
+        "apellidos": userData.apellidos,
+        "email": userData.email,
+        "enabled": userData.enabled,
+        "fecha_Registro": userData.fecha_Registro,
+        "nombre": userData.nombre,
+        "password": userData.password,
+        "perfiles": null
+      },
+      "vacante": {
+        "idVacante": idVacante,
+      "descripcion": descripcionVacante,
+      "destacado": destacado,
+      "detalles": detalle,
+      "estatus": estatus,
+      "fecha": fecha,
+      "imagen": imagen,
+      "nombre": nombreVacante,
+      "salario": salario,
+        "categoria": null
+      }
+  };
+
+  fetch("http://localhost:8084/vacantes/solicitudes", {
+    "headers": {
+      "Accept": "applicaton/json",
+      "Content-Type": "application/json"
+    },
+    "method": "POST",
+    "body": JSON.stringify(solicitud)
+  })
+  .then(response => {
+      if (!response.ok) {
+          throw new Error("Error al enviar la solicitud");
+      }
+      return response.json();
+  })
+  .then(data => {
+      // Manejar la respuesta del servidor si es necesario
+      console.log("Solicitud enviada con éxito:", data);
+  })
+  .catch(error => {
+      console.error("Error al enviar la solicitud:", error);
+  });
+};
+
 
 function cerrar() {
   window.location.href = "index.html";
