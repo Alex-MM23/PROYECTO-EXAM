@@ -7,8 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>InfoJobs - Bolsa de trabajo, ofertas</title>
     <link rel="stylesheet" href="assets/styles/todasVacantesA.css" />
-
-
 </head>
 
 <body>
@@ -43,12 +41,12 @@
                     <button id="enviar-btn" onclick="AgregarV()">Enviar</button>
                 </div>
             </div>
-            <button id="solicitar-btn" onclick="modal()">Editar</button>
-            <div class="modal-container" id="modal">
+            
+            <!-- <div class="modal-container" id="modal">
                 <div class="modal">
                     <span class="cerrar" id="cerrarModal">&times;</span>
                     <form id="formularioNuevaVacante">
-                        <label for="idCategoria">ID de Vacante:</label>
+                        <label for="idCategoria">ID de Categoría:</label>
                         <input type="text" id="idCategoria" required>
 
                         <label for="nombreInput">Nombre:</label>
@@ -66,15 +64,18 @@
                         <label for="imagenInput">Imagen:</label>
                         <input type="text" id="imagenInput" required>
                     </form>
+                    
                     <button id="enviar-btn" onclick="ModificarV()">Enviar</button>
-                </div>
+                </div> -->
         </ul>
 
         <button onclick="cerrar()" class="cerrar-btn">Cerrar</button>
     </header>
     <section>
         <div id="div-vacantes">
-            <div id="vacantesTodosA">
+            
+            <div id="vacantesTodosA" >
+                <button id="editar-btn" onclick="modal()">Editar</button>
             </div>
         </div>
 

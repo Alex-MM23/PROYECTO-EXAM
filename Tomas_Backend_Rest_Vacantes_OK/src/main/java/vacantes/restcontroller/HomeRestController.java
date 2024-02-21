@@ -1,8 +1,11 @@
 package vacantes.restcontroller;
 
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,6 +20,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
 import vacantes.modelo.entidades.Categoria;
 import vacantes.modelo.entidades.Perfil;
@@ -110,7 +116,26 @@ public class HomeRestController {
 	                }
 	            }
 	            if (tipoUsuario != null) {
-	                return ResponseEntity.ok().body("{\"message\": \"Login correcto\", \"tipoUsuario\": \"" + tipoUsuario + "\"}");
+	                ObjectMapper mapper = new ObjectMapper();
+	                Map<String, Object> userData = new HashMap<>();
+	                userData.put("username", usuario.getUsername());
+	                userData.put("apellidos", usuario.getApellidos());
+	                userData.put("email", usuario.getEmail());
+	                userData.put("enabled", usuario.getEnabled());
+	                userData.put("fecha_Registro", usuario.getFecha_Registro());
+	                userData.put("nombre", usuario.getNombre());
+	                userData.put("password", usuario.getPassword());
+	                List<String> perfilesUsuario = perfiles.stream().map(Perfil::getNombre).collect(Collectors.toList());
+	                userData.put("perfiles", perfilesUsuario);
+
+	                String userDataJson;
+	                try {
+	                    userDataJson = mapper.writeValueAsString(userData);
+	                } catch (JsonProcessingException e) {
+	                    return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("{\"message\": \"Error al procesar los datos del usuario\"}");
+	                }
+
+	                return ResponseEntity.ok().body("{\"message\": \"Login correcto\", \"userData\": " + userDataJson + ", \"tipoUsuario\": \"" + tipoUsuario + "\"}");
 	            } else {
 	                return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("{\"message\": \"El usuario no tiene perfil de admin o cliente\"}");
 	            }

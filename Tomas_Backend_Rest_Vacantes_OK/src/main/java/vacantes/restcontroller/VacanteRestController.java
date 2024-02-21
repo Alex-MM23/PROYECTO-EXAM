@@ -55,9 +55,9 @@ public class VacanteRestController {
 		}
 	}
 
-	@PutMapping("/modificarVacante/{idVacante}")
-	public ResponseEntity<?> modificar(@PathVariable int idVacante, @RequestBody VacanteDto vacanteDto) {
-	    Vacante 
+	@PutMapping("/modificarVacante/{id}")
+	public ResponseEntity<?> modificar(@PathVariable int id, @RequestBody VacanteDto vacanteDto) {
+	    Optional<Vacante> optionalVacante = vrepo.findById(id);
 
 	    if (optionalVacante.isPresent()) {
 	        Vacante vacante = optionalVacante.get();

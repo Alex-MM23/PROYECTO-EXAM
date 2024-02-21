@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>InfoJobs - Bolsa de trabajo, ofertas</title>
+    <link rel="stylesheet" href="assets/styles/estilosU.css" />
+
+    <script src="assets/js/script.js" defer></script>
+</head>
+
+<body onload="fUsuario()">
+    <header class="menu">
+        <ul>
+            <img class="logo" src="assets/IMG/logo.png" alt="logo" onclick="homeA()" href="indexA.html">
+            <li><a href="indexA.html">Volver</a></li>
+            <li><a onclick="candidatos()" href="candidatosA.html">Zona Candidatos</a></li>
+        </ul>
+        <p id="usernameD"></p>
+        <button onclick="cerrar()" class="cerrar-btn">Cerrar</button>
+    </header>
+
+    <div id="solicitudes"></div>
+    <script src="assets/js/indexA.js"></script>
+</body>
+
+</html>

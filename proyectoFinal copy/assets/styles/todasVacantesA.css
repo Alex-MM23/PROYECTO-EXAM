@@ -96,6 +96,25 @@ header ul li a {
     border-radius: 10px;
     margin-left: 1%;
 }
+#solicitar-btn:hover {
+    background-color: #2980b9;
+}
+
+#editar-btn {
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 1%;
+}
+#editar-btn:hover {
+    background-color: #2980b9;
+}
 
 
 #enviar-btn {
