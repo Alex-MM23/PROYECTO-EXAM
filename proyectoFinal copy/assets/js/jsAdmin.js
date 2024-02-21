@@ -262,9 +262,11 @@ function AgregarV() {
   .then(textoResponse => console.log(textoResponse));
 }
 
-let urlModificarV = "http://localhost:8084/vacantes/modificarVacante/" + idVacante;
+let urlModificarV = "http://localhost:8084/vacantes/modificarVacante/{id}";
+
 
 function ModificarV() {
+  
   // Obtener el ID de la vacante a modificar
   let idVacanteModificar = document.getElementById("idVacanteModificar");
   let idCategoria = document.getElementById("idCategoriaModificar");
