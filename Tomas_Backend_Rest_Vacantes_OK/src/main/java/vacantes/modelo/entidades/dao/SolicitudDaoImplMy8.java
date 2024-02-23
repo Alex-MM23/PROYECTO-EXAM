@@ -48,4 +48,10 @@ public class SolicitudDaoImplMy8 implements SolicitudDao{
 		// TODO Auto-generated method stub
 		return srepo.findById(idSolicitud).orElse(null);
 	}
+
+	@Override
+	public List<Solicitud> buscarPorUsuarioUsername(String username) {
+		// TODO Auto-generated method stub
+		return srepo.findAllByUsuarioUsername(username);
+	}
 }

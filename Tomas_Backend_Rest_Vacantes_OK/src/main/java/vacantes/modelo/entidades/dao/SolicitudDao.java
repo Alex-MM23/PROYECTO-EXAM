@@ -10,4 +10,6 @@ public interface SolicitudDao {
 	List<Solicitud> findAll();
 	Solicitud insertOne(Solicitud solicitud);
 	int modificar(Solicitud solicitud);
+	List<Solicitud> buscarPorUsuarioUsername(String username);
+	
 }

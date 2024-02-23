@@ -158,14 +158,5 @@ public class HomeRestController {
 	    }
 	    return null;
 	}
-	
-	
-	
-	
-
-	
-	
-
-
 	 
 }

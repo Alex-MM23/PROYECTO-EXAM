@@ -311,3 +311,79 @@ function homeU() {
 function homeA() {
   window.location.href = "indexA.html";
 }
+
+let userData = JSON.parse(localStorage.getItem('userData'));
+const username = userData.username;
+let urlSolicitudPorID = `http://localhost:8084/vacantes/BuscarSolicitudes?username=${encodeURIComponent(username)}`;
+let divFSolicitud = document.getElementById("divSolicitudes");
+
+fetch(urlSolicitudPorID)
+  .then((res) => res.json())
+  .then((solicitudes) => {
+    solicitudes.forEach((solicitud) => {
+      let divSolicitud = document.createElement("div");
+      let sID = document.createElement("p");
+      let sFecha = document.createElement("p");
+      let sArchivo = document.createElement("p");
+      let sComentario = document.createElement("p");
+      let sNombreVacante = document.createElement("p");
+      let sUsername = document.createElement("p");
+
+      divSolicitud.addEventListener("click", () => {
+        cargarVacantesPorCategoria(solicitud.idSolictud);
+      });
+
+      sID.innerHTML = `${solicitud.idSolicitud}`;
+      sFecha.innerHTML = solicitud.fecha;
+      sArchivo.innerHTML = solicitud.archivo;
+      sComentario.innerHTML = solicitud.comentarios;
+      sNombreVacante.innerHTML = solicitud.vacante.nombre;
+      sUsername.innerHTML = solicitud.username;
+
+      divSolicitud.appendChild(sID);
+      divSolicitud.appendChild(sFecha);
+      divSolicitud.appendChild(sArchivo);
+      divSolicitud.appendChild(sComentario);
+      divSolicitud.appendChild(sNombreVacante);
+      divSolicitud.appendChild(sUsername);
+
+      divFSolicitud.appendChild(divSolicitud);
+    });
+  });
+
+  let urlSolicitudes = `http://localhost:8084/vacantes/todasSolicitudes`;
+let divGSolicitud = document.getElementById("divS");
+
+fetch(urlSolicitudes)
+  .then((res) => res.json())
+  .then((solicitudes) => {
+    solicitudes.forEach((solicitud) => {
+      let divSolicitud = document.createElement("div");
+      let sID = document.createElement("p");
+      let sFecha = document.createElement("p");
+      let sArchivo = document.createElement("p");
+      let sComentario = document.createElement("p");
+      let sNombreVacante = document.createElement("p");
+      let sUsername = document.createElement("p");
+
+      divSolicitud.addEventListener("click", () => {
+        cargarVacantesPorCategoria(solicitud.idSolictud);
+      });
+
+      sID.innerHTML = `${solicitud.idSolicitud}`;
+      sFecha.innerHTML = solicitud.fecha;
+      sArchivo.innerHTML = solicitud.archivo;
+      sComentario.innerHTML = solicitud.comentarios;
+      sNombreVacante.innerHTML = solicitud.vacante.nombre;
+      sUsername.innerHTML = solicitud.username;
+
+      divSolicitud.appendChild(sID);
+      divSolicitud.appendChild(sFecha);
+      divSolicitud.appendChild(sArchivo);
+      divSolicitud.appendChild(sComentario);
+      divSolicitud.appendChild(sNombreVacante);
+      divSolicitud.appendChild(sUsername);
+
+      divGSolicitud.appendChild(divSolicitud);
+    });
+  });
