@@ -37,7 +37,7 @@ header ul li a {
 }
 
 .logo {
-    margin-left: -50%;
+    margin-left: -47%;
     height: 30px;
 }
 
@@ -51,7 +51,7 @@ header ul li a {
     font-size: 16px;
     cursor: pointer;
     border-radius: 10px;
-    margin-left: 31%;
+    margin-left: 33%;
 }
 
 .cerrar-btn:hover {
@@ -148,14 +148,10 @@ label {
 input {
     padding: 8px;
     font-size: 16px;
+    margin-bottom: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     width: 200px;
-}
-
-#file{
-    margin-left: 13%;
-    width: 70%;
 }
 
 .modal-container {
@@ -188,6 +184,21 @@ input {
 
 .cerrar:hover {
     color: #000;
+}
+
+#solictud-input {
+    background-color: orange;
+    color: white;
+    margin-top: 2%;
+    margin-left: 2.6%;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#solictud-input:hover {
+    background-color: darkorange;
 }
 
 @media only screen and (max-width: 600px) {

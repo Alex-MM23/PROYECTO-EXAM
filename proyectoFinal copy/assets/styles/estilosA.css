@@ -37,16 +37,18 @@ header ul li a {
 }
 
 .menu-izq {
-    margin-top: 1%;
-    margin-left: -9%;
+    margin-top: 2%;
 }
 
 .menu-dech {
+    margin-top: 2%;
     display: flex;
-    margin-left: 34%;
+    margin-left: 27%;
 }
 
 .logo {
+    margin-top: 30px;
+    margin-left: -6%;
     height: 30px;
 }
 

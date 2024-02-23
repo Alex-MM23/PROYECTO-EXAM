@@ -46,8 +46,27 @@ header ul li a {
 }
 
 .logo {
-    margin-left: -10%;
-    height: 26px;
+    margin-left: -32%;
+    margin-bottom: -1%;
+    height: 30px;
+}
+
+.volver-btn {
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-bottom: 10%;
+    margin-left: 2%;
+}
+
+.volver-btn:hover {
+    background-color: #2980b9;
 }
 
 .cerrar-btn {
@@ -60,33 +79,19 @@ header ul li a {
     font-size: 16px;
     cursor: pointer;
     border-radius: 10px;
-    margin-left: 30%;
+    margin-left: 33.3%;
 }
 
 .cerrar-btn:hover {
     background-color: #2980b9;
 }
 
-.checkbox {
-    margin-right: 9px;
-}
 
-.search-box {
+h2{
     display: flex;
-    font-size: 16px;
-    margin-left: 1%;
-    margin-bottom: 0px;
-}
-
-#search {
-    margin-left: 0.2%;
-    margin-top: 1px;
-    height: 40px;
-    width: 200px;
-}
-
-.category-checkbox {
-    margin-right: 5px;
+    width: 300%;
+    margin-bottom: 10%;
+    margin-left: 20%;
 }
 
 nav {
@@ -95,22 +100,72 @@ nav {
     padding: 20px;
     box-sizing: border-box;
     padding: 10px;
-    margin-left: 15%;
-    margin-top: 30px;
+    margin-left: 17%;
+    margin-top: 1%;
+    margin-bottom: 10%;
     display: flex;
     flex-direction: column;
 }
 
+.rectangulo {
+    background-color: rgba(52, 152, 219, 0.8);
+    padding: 20px;
+    margin-top: -5%;
+    margin-left: 20%;
+    height: 20%;
+    width: 300%;
+    border-radius: 10px;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.search-box {
+    display: flex;
+    flex-direction: column;
+    margin-top: -3%;
+    margin-right: 10px; 
+}
+
+.rectangulo .search-box input {
+    color: grey;
+    margin-right: 10px;
+    border-radius: 5px;
+    height: 40px; 
+    width: 267%;
+    padding-left: 10px;
+    padding-right: 20px; 
+}
+
+.boton-buscar {
+    background-color: orange;
+    color: white;
+    margin-left: 65%;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.boton-buscar:hover {
+    background-color: darkorange;
+}
+
+#search{
+    width: 390%;
+}
+
 section {
-    margin-left: 37%;
-    width: 50%;
-    margin-top: -38.2%;
+    margin-left: 34%;
+    margin-top: -34%;
+    width: 414px;
 }
 
 #vacantesU {
-    margin-left: 1%;
-    margin-top: -56.6%;
-    width: 70%;
+    margin-left: 28%;
+    margin-top: 14.6%;
+    width: 90%;
     color: rgb(0, 0, 0);
 }
 
@@ -122,39 +177,39 @@ section {
     margin-left: -40%;
 }
 
-.section-descripcion {
-    margin-left: 20%;
+.section-descripcion {   
+    margin-left: 27%;
 }
 
-.section-nombre {
-    font-size: 30px;
-    margin-top: -13%;
-    margin-left: 20%;
+.section-nombre{
+    font-size: 23px ;
+    margin-top: -19%;
+    margin-left: 27%;
 }
 
-.section-fecha {
+.section-fecha{
     margin-bottom: 2%;
     margin-top: 4.7%;
     margin-left: 2%;
 }
 
-.section-salario {
+.section-salario{
     margin-bottom: 2%;
     margin-left: 2%;
 }
 
-.section-estatus {
+.section-estatus{
     margin-left: 2%;
     margin-bottom: 2%;
 }
 
-.section-imagen {
+.section-imagen{
     margin-left: 2%;
     margin-top: 2%;
     width: 120px;
 }
 
-.section-detalles {
+.section-detalles{
     margin-left: 2%;
     margin-top: -1%;
     margin-bottom: 7%;
