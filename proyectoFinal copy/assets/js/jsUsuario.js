@@ -254,16 +254,16 @@ function formSolicitud() {
     "comentarios": comentario,
     "usuario": {
       "username": userData.username,
-        "apellidos": userData.apellidos,
-        "email": userData.email,
-        "enabled": userData.enabled,
-        "fecha_Registro": userData.fecha_Registro,
-        "nombre": userData.nombre,
-        "password": userData.password,
-        "perfiles": null
-      },
-      "vacante": {
-        "idVacante": idVacante,
+      "apellidos": userData.apellidos,
+      "email": userData.email,
+      "enabled": userData.enabled,
+      "fecha_Registro": userData.fecha_Registro,
+      "nombre": userData.nombre,
+      "password": userData.password,
+      "perfiles": null
+    },
+    "vacante": {
+      "idVacante": idVacante,
       "descripcion": descripcionVacante,
       "destacado": destacado,
       "detalles": detalle,
@@ -272,10 +272,10 @@ function formSolicitud() {
       "imagen": imagen,
       "nombre": nombreVacante,
       "salario": salario,
-        "categoria": null
-      }
+      "categoria": null
+    }
   };
- 
+
   fetch("http://localhost:8084/vacantes/solicitudes", {
     "headers": {
       "Accept": "applicaton/json",
@@ -284,19 +284,19 @@ function formSolicitud() {
     "method": "POST",
     "body": JSON.stringify(solicitud)
   })
-  .then(response => {
+    .then(response => {
       if (!response.ok) {
-          throw new Error("Error al enviar la solicitud");
+        throw new Error("Error al enviar la solicitud");
       }
       return response.json();
-  })
-  .then(data => {
+    })
+    .then(data => {
       // Manejar la respuesta del servidor si es necesario
       console.log("Solicitud enviada con éxito:", data);
-  })
-  .catch(error => {
+    })
+    .catch(error => {
       console.error("Error al enviar la solicitud:", error);
-  });
+    });
 };
 
 
@@ -322,12 +322,21 @@ fetch(urlSolicitudPorID)
   .then((solicitudes) => {
     solicitudes.forEach((solicitud) => {
       let divSolicitud = document.createElement("div");
+      divSolicitud.className = "solicitud";
+
       let sID = document.createElement("p");
       let sFecha = document.createElement("p");
       let sArchivo = document.createElement("p");
       let sComentario = document.createElement("p");
       let sNombreVacante = document.createElement("p");
       let sUsername = document.createElement("p");
+
+      let divBotonCancelar = document.createElement("div");
+      divBotonCancelar.className = "boton-cancelar";
+
+      let btnCancelar = document.createElement("button");
+      btnCancelar.className = "boton boton-cancelar";
+      btnCancelar.innerHTML = "Cancelar";
 
       divSolicitud.addEventListener("click", () => {
         cargarVacantesPorCategoria(solicitud.idSolictud);
@@ -340,18 +349,26 @@ fetch(urlSolicitudPorID)
       sNombreVacante.innerHTML = solicitud.vacante.nombre;
       sUsername.innerHTML = solicitud.username;
 
+      btnCancelar.addEventListener("click", () => {
+        // Lógica para la acción de cancelar
+        console.log("Cancelar acción para ID: ", solicitud.idSolicitud);
+      });
+
+      divBotonCancelar.appendChild(btnCancelar);
+
       divSolicitud.appendChild(sID);
       divSolicitud.appendChild(sFecha);
       divSolicitud.appendChild(sArchivo);
       divSolicitud.appendChild(sComentario);
       divSolicitud.appendChild(sNombreVacante);
       divSolicitud.appendChild(sUsername);
+      divSolicitud.appendChild(divBotonCancelar);
 
       divFSolicitud.appendChild(divSolicitud);
     });
   });
 
-  let urlSolicitudes = `http://localhost:8084/vacantes/todasSolicitudes`;
+let urlSolicitudes = `http://localhost:8084/vacantes/todasSolicitudes`;
 let divGSolicitud = document.getElementById("divS");
 
 fetch(urlSolicitudes)
@@ -359,12 +376,25 @@ fetch(urlSolicitudes)
   .then((solicitudes) => {
     solicitudes.forEach((solicitud) => {
       let divSolicitud = document.createElement("div");
+      divSolicitud.className = "solicitud";
+
       let sID = document.createElement("p");
       let sFecha = document.createElement("p");
       let sArchivo = document.createElement("p");
       let sComentario = document.createElement("p");
       let sNombreVacante = document.createElement("p");
       let sUsername = document.createElement("p");
+
+      let divBotones = document.createElement("div");
+      divBotones.className = "botones";
+
+      let btnInsertar = document.createElement("button");
+      btnInsertar.className = "boton-insertar";
+      btnInsertar.innerHTML = "Insertar";
+
+      let btnEliminar = document.createElement("button");
+      btnEliminar.className = "boton-eliminar";
+      btnEliminar.innerHTML = "Eliminar";
 
       divSolicitud.addEventListener("click", () => {
         cargarVacantesPorCategoria(solicitud.idSolictud);
@@ -377,13 +407,28 @@ fetch(urlSolicitudes)
       sNombreVacante.innerHTML = `Nombre de la Vacante: ${solicitud.vacante.nombre}`;
       sUsername.innerHTML = `Username: ${solicitud.username}`;
 
+      btnInsertar.addEventListener("click", () => {
+        // Lógica para la acción de insertar
+        console.log("Insertar acción para ID: ", solicitud.idSolicitud);
+      });
+
+      btnEliminar.addEventListener("click", () => {
+        // Lógica para la acción de eliminar
+        console.log("Eliminar acción para ID: ", solicitud.idSolicitud);
+      });
+
+      divBotones.appendChild(btnInsertar);
+      divBotones.appendChild(btnEliminar);
+
       divSolicitud.appendChild(sID);
       divSolicitud.appendChild(sFecha);
       divSolicitud.appendChild(sArchivo);
       divSolicitud.appendChild(sComentario);
       divSolicitud.appendChild(sNombreVacante);
       divSolicitud.appendChild(sUsername);
+      divSolicitud.appendChild(divBotones);
 
       divGSolicitud.appendChild(divSolicitud);
     });
   });
+

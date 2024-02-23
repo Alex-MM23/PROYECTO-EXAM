@@ -145,51 +145,11 @@ nav {
     background-color: darkorange;
 }
 
-.boton-eliminar {
-    background-color: #ed3300;
-    color: white;
-    margin-left: 5%;
-    margin-bottom: 10px;
-    margin-top: 10px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.boton-eliminar:hover {
-    background-color: #fe6363;
-}
-
-.boton-insertar {
-    background-color: #00ed5b;
-    color: white;
-    margin-left: 5%;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.boton-insertar:hover {
-    background-color: #3eff03;
-}
-
-#search {
-    width: 390%;
-}
-
-section {
-    margin-left: 40%;
-    margin-top: -34%;
-    width: 580px;
-}
-
-#divS {
+#divSolicitudes {
     display: table;
     width: 100%;
     border-collapse: collapse;
-    margin-top: -35%;
+    margin-top: -30%;
 }
 
 .solicitud {
@@ -201,7 +161,6 @@ section {
 .solicitud p {
     display: table-cell;
     padding: 8px;
-    font-size: 10px;
     border-right: 1px solid #ddd;
 }
 
@@ -209,59 +168,29 @@ section {
     border-right: none;
 }
 
-.botones {
+.boton-cancelar {
     display: table-cell;
     white-space: nowrap;
 }
 
 .boton {
+    background-color: #d9534f;
+    color: white;
     margin-right: 5px;
-    padding: 5px 10px;
+    margin-left: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-.section-vacante {
-    height: 100%;
-    margin-top: 2%;
-    margin-left: 1%;
+
+.boton:hover {
+    filter: brightness(85%);
 }
 
-.section-descripcion {
-    margin-left: 27%;
-}
-
-.sNombreVacante {
-    font-size: 23px;
-    margin-top: -17%;
-    margin-left: 27%;
-}
-
-.section-fecha {
-    margin-bottom: 2%;
-    margin-top: 4.7%;
-    margin-left: 2%;
-}
-
-.section-salario {
-    margin-bottom: 2%;
-    margin-left: 2%;
-}
-
-.section-estatus {
-    margin-left: 2%;
-    margin-bottom: 2%;
-}
-
-.section-imagen {
-    margin-left: 2%;
-    margin-top: 2%;
-    width: 120px;
-}
-
-.section-detalles {
-    margin-left: 2%;
-    margin-top: -1%;
-    margin-bottom: 7%;
+#search {
+    width: 390%;
 }
 
 @media only screen and (max-width: 600px) {

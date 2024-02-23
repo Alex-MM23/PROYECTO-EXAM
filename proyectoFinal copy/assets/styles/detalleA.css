@@ -126,7 +126,7 @@ header ul li a {
     font-size: 16px;
     cursor: pointer;
     border-radius: 10px;
-    margin-left: 71%;
+    margin-left: 72%;
 }
 
 #solicitar-btn:hover {
@@ -145,7 +145,6 @@ input {
     border-radius: 4px;
     width: 200px;
 }
-
 
 .modal-container {
     display: none;
@@ -170,16 +169,7 @@ input {
     color: #fff;
 }
 
-.cerrar {
-    color: #fff;
-    float: right;
-    font-size: 20px;
-    cursor: pointer;
-}
 
-.cerrar:hover {
-    color: #000;
-}
 
 #editar-btn {
     background-color: orange;
@@ -270,8 +260,6 @@ input {
 .cerrar:hover {
     color: #000;
 }
-
-
 
 @media only screen and (max-width: 600px) {
 
