@@ -75,4 +75,10 @@ public class VacanteDaoImpl implements VacanteDao{
 		return 0;
 	}
 
+	@Override
+	public List<Vacante> barraDeBusqueda(String keyword) {
+		// TODO Auto-generated method stub
+		return vrepo.findByNombreOrDescripcionContaining(keyword);
+	}
+
 }

@@ -17,4 +17,8 @@ public interface VacanteRepository extends JpaRepository<Vacante, Integer> {
 	
 	@Query("SELECT v FROM Vacante v WHERE v.idVacante = ?1")
 	public List<Vacante> vacanteDetalle(int idVacante);
+
+	@Query("SELECT v FROM Vacante v WHERE v.nombre LIKE %:keyword% OR v.descripcion LIKE %:keyword%")
+    List<Vacante> findByNombreOrDescripcionContaining(String keyword);
+	
 }

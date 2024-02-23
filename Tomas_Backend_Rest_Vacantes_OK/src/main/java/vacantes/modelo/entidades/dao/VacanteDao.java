@@ -14,5 +14,6 @@ public interface VacanteDao {
 	List<Vacante> vacanteCreada();
 	int modificarOne(Vacante vacante);
 	int eliminarOne(int idVacante);
+	List<Vacante> barraDeBusqueda(String keyword);
 	
 }
