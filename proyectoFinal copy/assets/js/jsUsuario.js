@@ -370,12 +370,12 @@ fetch(urlSolicitudes)
         cargarVacantesPorCategoria(solicitud.idSolictud);
       });
 
-      sID.innerHTML = `${solicitud.idSolicitud}`;
-      sFecha.innerHTML = solicitud.fecha;
-      sArchivo.innerHTML = solicitud.archivo;
-      sComentario.innerHTML = solicitud.comentarios;
-      sNombreVacante.innerHTML = solicitud.vacante.nombre;
-      sUsername.innerHTML = solicitud.username;
+      sID.innerHTML = `ID Solicitud: ${solicitud.idSolicitud}`;
+      sFecha.innerHTML = `Fecha de Solicitud: ${solicitud.fecha}`;
+      sArchivo.innerHTML = `Archivo: ${solicitud.archivo}`;
+      sComentario.innerHTML = `Comentarios: ${solicitud.comentarios}`;
+      sNombreVacante.innerHTML = `Nombre de la Vacante: ${solicitud.vacante.nombre}`;
+      sUsername.innerHTML = `Username: ${solicitud.username}`;
 
       divSolicitud.appendChild(sID);
       divSolicitud.appendChild(sFecha);

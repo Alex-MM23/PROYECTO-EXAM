@@ -1,0 +1,371 @@
+/* Google Fonts - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #ffffff;
+    
+}
+
+header {
+    background-color: #ffffff;
+    color: black;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header ul {
+    list-style-type: none;
+    display: flex;
+}
+
+header ul li {
+    padding: 0 15px;
+}
+
+header ul li a {
+    color: #000000;
+    text-decoration: none;
+}
+
+.menu {
+    margin-top: 1%;
+    margin-left: 2%;
+    font-size: 15px;
+    text-align: center;
+    align-items: center;
+}
+
+.logo {
+    margin-left: -19%;
+    height: 30px;
+}
+
+.cerrar-btn {
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 22%;
+}
+
+.cerrar-btn:hover {
+    background-color: #2980b9;
+}
+
+.volver-btn {
+    background-color: #3498db;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 10px;
+    margin-left: 2%;
+}
+
+h2{
+    display: flex;
+    width: 300%;
+    margin-bottom: 10%;
+    margin-left: 20%;
+}
+
+nav {
+    width: 20%;
+    height: 79vh;
+    padding: 20px;
+    box-sizing: border-box;
+    padding: 10px;
+    margin-left: 17%;
+    margin-top: 1%;
+    margin-bottom: 10%;
+    display: flex;
+    flex-direction: column;
+}
+
+.rectangulo {
+    background-color: rgba(52, 152, 219, 0.8);
+    padding: 20px;
+    margin-top: -5%;
+    margin-left: 20%;
+    height: 20%;
+    width: 300%;
+    border-radius: 10px;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.search-box {
+    display: flex;
+    flex-direction: column;
+    margin-top: -3%;
+    margin-right: 10px; 
+}
+
+.rectangulo .search-box input {
+    color: grey;
+    margin-right: 10px;
+    border-radius: 5px;
+    height: 40px; 
+    width: 267%;
+    padding-left: 10px;
+    padding-right: 20px; 
+}
+
+.boton-buscar {
+    background-color: orange;
+    color: white;
+    margin-left: 65%;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.boton-buscar:hover {
+    background-color: darkorange;
+}
+
+#search{
+    width: 390%;
+}
+
+section {
+    margin-left: 40%;
+    margin-top: -34%;
+    width: 580px;
+}
+
+#divS {
+    margin-left: 35%;
+    margin-top: -30%;
+    padding-top: 2%;
+    padding-left: 5%;
+    width: 35%;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    color: rgb(0, 0, 0);
+}
+
+.section-vacante {
+    height: 100%;   
+    margin-top: 2%;
+    margin-left: 1%;
+}
+
+.section-descripcion {   
+    margin-left: 27%;
+}
+
+.sNombreVacante{
+    font-size: 23px ;
+    margin-top: -17%;
+    margin-left: 27%;
+}
+
+.section-fecha{
+    margin-bottom: 2%;
+    margin-top: 4.7%;
+    margin-left: 2%;
+}
+
+.section-salario{
+    margin-bottom: 2%;
+    margin-left: 2%;
+}
+
+.section-estatus{
+    margin-left: 2%;
+    margin-bottom: 2%;
+}
+
+.section-imagen{
+    margin-left: 2%;
+    margin-top: 2%;
+    width: 120px;
+}
+
+.section-detalles{
+    margin-left: 2%;
+    margin-top: -1%;
+    margin-bottom: 7%;
+}
+
+@media only screen and (max-width: 600px) {
+
+    header {
+        background-color: #ffffff;
+        color: black;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    header ul {
+        list-style-type: none;
+        display: flex;
+    }
+
+    header ul li {
+        padding: 0 15px;
+    }
+
+    header ul li a {
+        color: #000000;
+        font-size: 13px;
+        display: flex;
+        text-decoration: none;
+        margin-top: 10%;
+        margin-left: -50%;
+    }
+
+    .menu {
+        margin-top: 1%;
+    }
+
+    .logo {
+        margin-left: 8%;
+        height: 26px;
+    }
+
+    .cerrar-btn {
+        background-color: #3498db;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 10px;
+        margin-left: 18%;
+    }
+    
+    .cerrar-btn:hover {
+        background-color: #2980b9;
+    }
+    
+    nav {
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        width: 25%;
+        font-size: 10px;
+        height: 79vh;
+        padding: 20px;
+        box-sizing: border-box;
+        padding: 10px;
+        margin-left: 3%;
+        margin-top: 30px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .checkbox {
+        margin-right: 9px;
+    }
+    
+    .search-box {
+        display: flex;
+        font-size: 9px;
+        margin-left: 1%;
+        margin-bottom: 0px;
+    }
+
+    #search{
+        margin-top: -10px;
+        margin-left: 10px;
+        width: 100px;
+    }
+    
+    .category-checkbox {
+        margin-right: 5px;
+    }
+    
+    section {
+        width: 75%;
+        margin-left: 35%;
+        margin-top: -85%;
+       
+    }
+    
+    #vacantesTodosU {
+        margin-left: -20%;
+        margin-top: 120%;
+        width: 90%;
+        color: rgb(0, 0, 0);
+    }
+    
+    .section-vacante{
+        height: 100%; 
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        margin-top: 2%;
+        margin-left: 1%;
+    }
+    
+    .section-descripcion {   
+        margin-top: 0%;
+        margin-left: 35%;
+        font-size: 10px;
+    }
+    
+    .section-nombre{
+        font-size: 15px ;
+        margin-top: -21%;
+        margin-left: 35%;
+    }
+    
+    .section-fecha{
+        margin-bottom: 2%;
+        font-size: 12px;
+        margin-top: 5.9%;
+        margin-left: 2%;
+    }
+    
+    .section-salario{
+        margin-bottom: 2%;
+        font-size: 12px;
+        margin-left: 2%;
+    }
+    
+    .section-estatus{
+        margin-left: 2%;
+        font-size: 12px;
+        margin-bottom: 2%;
+    }
+    
+    .section-imagen{
+        margin-left: 2%;
+        font-size: 12px;
+        margin-top: 2%;
+        width: 120px;
+    }
+    
+    .section-detalles{
+        margin-left: 2%;
+        font-size: 12px;
+        margin-top: -1%;
+        margin-bottom: 7%;
+    }
+}
