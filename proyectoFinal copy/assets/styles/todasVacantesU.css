@@ -216,14 +216,18 @@ section {
 
 @media only screen and (max-width: 600px) {
 
+    body {
+        min-height: 100vh;
+        background-color: #ffffff;
+    }
+
     header {
         background-color: #ffffff;
         color: black;
-        height: 60px;
+        height: 80px;
         display: flex;
         justify-content: center;
         align-items: center;
-
     }
 
     header ul {
@@ -232,16 +236,12 @@ section {
     }
 
     header ul li {
-        padding: 0 15px;
+        margin-top: 15px;
     }
 
     header ul li a {
         color: #000000;
-        font-size: 13px;
-        display: flex;
         text-decoration: none;
-        margin-top: 10%;
-        margin-left: -50%;
     }
 
     .menu {
@@ -249,78 +249,95 @@ section {
     }
 
     .logo {
-        margin-left: 8%;
-        height: 26px;
-    }
-
-    .cerrar-btn {
-        background-color: #3498db;
-        color: #ffffff;
-        border: none;
-        padding: 10px 20px;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        cursor: pointer;
-        border-radius: 10px;
-        margin-left: 18%;
-    }
-    
-    .cerrar-btn:hover {
-        background-color: #2980b9;
+        margin-left: -12%;
+        margin-top: 10px;
+        height: 40px;
     }
     
     nav {
-        background-color: white;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         width: 25%;
         font-size: 10px;
         height: 79vh;
         padding: 20px;
         box-sizing: border-box;
         padding: 10px;
-        margin-left: 3%;
+        margin-left: 8%;
         margin-top: 30px;
         display: flex;
         flex-direction: column;
     }
     
-    .checkbox {
-        margin-right: 9px;
-    }
-    
-    .search-box {
+    h2 {
         display: flex;
-        font-size: 9px;
-        margin-left: 1%;
-        margin-bottom: 0px;
+        width: 900%;
+        margin-top: -20%;
+        margin-left: -20%;
+        font-size: 20px;
     }
 
-    #search{
-        margin-top: -10px;
-        margin-left: 10px;
-        width: 100px;
+    .rectangulo {
+        background-color: rgba(52, 152, 219, 0.8);
+        padding: 20px;
+        margin-top: -10%;
+        margin-left: -20%;
+        height: 20%;
+        width: 410%;
+        border-radius: 10px;
+        color: #fff;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
     }
-    
-    .category-checkbox {
-        margin-right: 5px;
+
+    .search-box {
+        flex-direction: column;
+        margin-top: -3%;
+        margin-right: 10px;
     }
-    
+
+    .etiqueta {
+        display: block;
+        width: 100%;
+    }
+
+    .rectangulo .search-box input {
+        color: grey;
+        margin-right: 10px;
+        margin-top: -20%;
+        border-radius: 5px;
+        height: 40px;
+        width: 90%;
+        padding-left: 10px;
+        padding-right: 20px;
+    }
+
+    .boton-buscar {
+        background-color: orange;
+        color: white;
+        margin-left: 67%;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .boton-buscar:hover {
+        background-color: darkorange;
+    }
+
     section {
-        width: 75%;
-        margin-left: 35%;
-        margin-top: -85%;
-       
+        margin-left: 15%;
+        margin-top: 60%; 
     }
     
     #vacantesTodosU {
-        margin-left: -20%;
-        margin-top: 120%;
+        margin-left: -9.5%;
+        margin-top: -122%;
         width: 90%;
         color: rgb(0, 0, 0);
     }
     
-    .section-vacante{
+    .section-vacante {
         height: 100%; 
         background-color: white;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -330,20 +347,20 @@ section {
     
     .section-descripcion {   
         margin-top: 0%;
-        margin-left: 35%;
-        font-size: 10px;
+        margin-left: 28%;
+        font-size: 12px;
     }
     
     .section-nombre{
-        font-size: 15px ;
-        margin-top: -21%;
-        margin-left: 35%;
+        font-size: 20px ;
+        margin-top: -17%;
+        margin-left: 28%;
     }
     
     .section-fecha{
         margin-bottom: 2%;
         font-size: 12px;
-        margin-top: 5.9%;
+        margin-top: 7.7%;
         margin-left: 2%;
     }
     

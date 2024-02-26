@@ -133,7 +133,6 @@ header ul li a {
     background-color: #2980b9;
 }
 
-
 form {
     margin-top: 15%;
     margin-left: 26%;
@@ -313,5 +312,72 @@ input {
     
     .solicitar-btn:hover {
         background-color: #2980b9;
+    }
+
+    form {
+        margin-top: 7%;
+        margin-left: 26%;
+        margin-bottom: 20px;
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+    
+    input {
+        padding: 8px;
+        font-size: 16px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 200px;
+    }
+    
+    .modal-container {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .modal {
+        background-color: rgba(52, 152, 219, 0.8);
+        padding: 20px;
+        height: 40%;
+        width: 70%;
+        border-radius: 10px;
+        color: #fff;
+    }
+    
+    .cerrar {
+        color: #fff;
+        float: right;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    
+    .cerrar:hover {
+        color: #000;
+    }
+    
+    #solictud-input {
+        background-color: orange;
+        color: white;
+        margin-top: 2%;
+        margin-left: 2.6%;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    #solictud-input:hover {
+        background-color: darkorange;
     }
 }

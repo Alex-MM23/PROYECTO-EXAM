@@ -265,7 +265,7 @@ section {
 }
 
 @media only screen and (max-width: 600px) {
-
+    
     header {
         background-color: #ffffff;
         color: black;
@@ -273,7 +273,6 @@ section {
         display: flex;
         justify-content: center;
         align-items: center;
-
     }
 
     header ul {
@@ -287,20 +286,38 @@ section {
 
     header ul li a {
         color: #000000;
-        font-size: 13px;
-        display: flex;
         text-decoration: none;
-        margin-top: 10%;
-        margin-left: -50%;
     }
 
     .menu {
         margin-top: 1%;
+        margin-left: 2%;
+        font-size: 15px;
+        text-align: center;
+        align-items: center;
     }
 
     .logo {
-        margin-left: 8%;
-        height: 26px;
+        margin-left: -10%;
+        margin-bottom: -1%;
+        height: 30px;
+    }
+
+    .volver-btn {
+        background-color: #3498db;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 10px;
+        margin-left: 2%;
+    }
+
+    .volver-btn:hover {
+        background-color: #2980b9;
     }
 
     .cerrar-btn {
@@ -313,113 +330,129 @@ section {
         font-size: 16px;
         cursor: pointer;
         border-radius: 10px;
-        margin-left: 18%;
+        margin-left: 14.3%;
     }
-
+    
     .cerrar-btn:hover {
         background-color: #2980b9;
     }
 
+    h2 {
+        display: flex;
+        width: 900%;
+        margin-bottom: 10%;
+        margin-left: -80%;
+        font-size: 20px;
+    }
+
     nav {
-        background-color: white;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        width: 25%;
-        font-size: 10px;
+        width: 20%;
         height: 79vh;
         padding: 20px;
         box-sizing: border-box;
         padding: 10px;
-        margin-left: 3%;
-        margin-top: 30px;
+        margin-left: 17%;
+        margin-top: 1%;
+        margin-bottom: 10%;
         display: flex;
         flex-direction: column;
     }
 
-    .checkbox {
-        margin-right: 9px;
+    .rectangulo {
+        background-color: rgba(52, 152, 219, 0.8);
+        padding: 20px;
+        margin-top: -5%;
+        margin-left: -90%;
+        height: 20%;
+        width: 555%;
+        border-radius: 10px;
+        color: #fff;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
     }
 
     .search-box {
-        display: flex;
-        font-size: 9px;
-        margin-left: 1%;
-        margin-bottom: 0px;
+        flex-direction: column;
+        margin-top: -3%;
+        margin-right: 10px;
     }
 
-    #search {
-        margin-top: -10px;
-        margin-left: 10px;
+    .etiqueta {
+        display: block;
+        width: 100%;
+    }
+
+    .rectangulo .search-box input {
+        color: grey;
+        margin-right: 10px;
+        margin-top: -80%;
+        border-radius: 5px;
+        height: 40px;
         width: 100px;
+        padding-left: 10px;
+        padding-right: 20px;
     }
 
-    .category-checkbox {
-        margin-right: 5px;
+    .boton-buscar {
+        background-color: orange;
+        color: white;
+        margin-left: 67%;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
     }
 
-    section {
-        width: 75%;
-        margin-left: 35%;
-        margin-top: -85%;
-
+    .boton-buscar:hover {
+        background-color: darkorange;
     }
-
-    #vacantesTodosU {
-        margin-left: -20%;
-        margin-top: 120%;
+    
+    #divS {
+        display: table;
         width: 90%;
-        color: rgb(0, 0, 0);
+        border-collapse: collapse;
+        margin-top: -30%;
     }
-
-    .section-vacante {
-        height: 100%;
-        background-color: white;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        margin-top: 2%;
-        margin-left: 1%;
+    
+    .solicitud {
+        display: table-row;
+        cursor: pointer;
+        border-bottom: 1px solid #ddd;
     }
-
-    .section-descripcion {
-        margin-top: 0%;
-        margin-left: 35%;
-        font-size: 10px;
+    
+    .solicitud p {
+        display: table-cell;
+        padding: 8px;
+        border-right: 1px solid #ddd;
     }
-
-    .section-nombre {
-        font-size: 15px;
-        margin-top: -21%;
-        margin-left: 35%;
+    
+    .solicitud p:last-child {
+        border-right: none;
     }
-
-    .section-fecha {
-        margin-bottom: 2%;
-        font-size: 12px;
-        margin-top: 5.9%;
-        margin-left: 2%;
+    
+    .boton-cancelar {
+        display: table-cell;
+        white-space: nowrap;
     }
-
-    .section-salario {
-        margin-bottom: 2%;
-        font-size: 12px;
-        margin-left: 2%;
+    
+    .boton {
+        background-color: #d9534f;
+        color: white;
+        margin-right: 5px;
+        margin-left: 10px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
     }
-
-    .section-estatus {
-        margin-left: 2%;
-        font-size: 12px;
-        margin-bottom: 2%;
+    
+    .boton:hover {
+        filter: brightness(85%);
     }
-
-    .section-imagen {
-        margin-left: 2%;
-        font-size: 12px;
-        margin-top: 2%;
-        width: 120px;
+    
+    #search {
+        width: 390%;
     }
-
-    .section-detalles {
-        margin-left: 2%;
-        font-size: 12px;
-        margin-top: -1%;
-        margin-bottom: 7%;
-    }
+    
 }

@@ -126,7 +126,7 @@ if (idVacante) {
         let pSalario = document.createElement("p");
         pSalario.classList.add("section-salario");
         let pEstatus = document.createElement("p");
-        pEstatus.classList.add("section-estatus");
+        pEstatus.classList.add("section-estatus"); 
 
 
         pImagen.innerHTML = `${vacante.imagen}`;

@@ -302,7 +302,6 @@ section {
         display: flex;
         justify-content: center;
         align-items: center;
-
     }
 
     header ul {
@@ -316,20 +315,38 @@ section {
 
     header ul li a {
         color: #000000;
-        font-size: 13px;
-        display: flex;
         text-decoration: none;
-        margin-top: 10%;
-        margin-left: -50%;
     }
 
     .menu {
         margin-top: 1%;
+        margin-left: 2%;
+        font-size: 15px;
+        text-align: center;
+        align-items: center;
     }
 
     .logo {
-        margin-left: 8%;
-        height: 26px;
+        margin-left: -17%;
+        margin-bottom: -1%;
+        height: 30px;
+    }
+
+    .volver-btn {
+        background-color: #3498db;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 10px;
+        margin-left: 2%;
+    }
+
+    .volver-btn:hover {
+        background-color: #2980b9;
     }
 
     .cerrar-btn {
@@ -342,59 +359,92 @@ section {
         font-size: 16px;
         cursor: pointer;
         border-radius: 10px;
-        margin-left: 18%;
+        margin-left: 40.3%;
     }
-
+    
     .cerrar-btn:hover {
         background-color: #2980b9;
     }
 
+    h2 {
+        display: flex;
+        width: 900%;
+        margin-bottom: 10%;
+        margin-left: -80%;
+        font-size: 20px;
+    }
+
     nav {
-        background-color: white;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        width: 25%;
-        font-size: 10px;
+        width: 20%;
         height: 79vh;
         padding: 20px;
         box-sizing: border-box;
         padding: 10px;
-        margin-left: 8%;
-        margin-top: 30px;
+        margin-left: 17%;
+        margin-top: 1%;
+        margin-bottom: 10%;
         display: flex;
         flex-direction: column;
     }
 
-    .checkbox {
-        margin-right: 9px;
+    .rectangulo {
+        background-color: rgba(52, 152, 219, 0.8);
+        padding: 20px;
+        margin-top: -5%;
+        margin-left: -90%;
+        height: 20%;
+        width: 555%;
+        border-radius: 10px;
+        color: #fff;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
     }
 
     .search-box {
-        display: flex;
-        font-size: 9px;
-        margin-left: 1%;
-        margin-bottom: 0px;
+        flex-direction: column;
+        margin-top: -3%;
+        margin-right: 10px;
     }
 
-    #search {
-        margin-top: -10px;
-        margin-left: 10px;
+    .etiqueta {
+        display: block;
+        width: 100%;
+    }
+
+    .rectangulo .search-box input {
+        color: grey;
+        margin-right: 10px;
+        margin-top: -80%;
+        border-radius: 5px;
+        height: 40px;
         width: 100px;
+        padding-left: 10px;
+        padding-right: 20px;
     }
 
-    .category-checkbox {
-        margin-right: 5px;
+    .boton-buscar {
+        background-color: orange;
+        color: white;
+        margin-left: 67%;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    .boton-buscar:hover {
+        background-color: darkorange;
     }
 
     section {
-        margin-left: 34%;
-        margin-top: -85%;
-        width: 65%;
+        margin-left: 51.5%;
     }
 
-    #vacantesTodos {
-        margin-left: -5%;
-        margin-top: -64.6%;
-        width: 99%;
+    #vacantesA {
+        margin-left: -145%;
+        margin-top: 19.6%;
+        width: 260%;
         color: rgb(0, 0, 0);
     }
 
@@ -402,51 +452,45 @@ section {
         height: 100%;
         background-color: white;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-        margin-top: 2%;
-        margin-left: 1%;
+        margin-top: -70%;
+        margin-left: 7%;
     }
 
     .section-descripcion {
-        margin-top: 0%;
-        margin-left: 37%;
-        font-size: 10px;
+        margin-left: 34%;
+        font-size: 15px;
     }
 
     .section-nombre {
-        font-size: 15px;
-        margin-top: -21%;
-        margin-left: 37%;
+        font-size: 20px;
+        margin-top: -22%;
+        margin-left: 34%;
     }
 
     .section-fecha {
         margin-bottom: 2%;
-        font-size: 12px;
-        margin-top: 10%;
+        margin-top: 4.7%;
         margin-left: 2%;
     }
 
     .section-salario {
         margin-bottom: 2%;
-        font-size: 12px;
         margin-left: 2%;
     }
 
     .section-estatus {
         margin-left: 2%;
-        font-size: 12px;
         margin-bottom: 2%;
     }
 
     .section-imagen {
         margin-left: 2%;
-        font-size: 12px;
         margin-top: 2%;
         width: 120px;
     }
 
     .section-detalles {
         margin-left: 2%;
-        font-size: 12px;
         margin-top: -1%;
         margin-bottom: 7%;
     }

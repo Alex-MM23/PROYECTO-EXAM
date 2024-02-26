@@ -196,4 +196,46 @@ h2 {
     .cerrar-btn:hover {
         background-color: #2980b9;
     }
+
+    section {
+        margin-left: 50%;
+        margin-top: -20%;
+    }
+    
+    .categorias {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 60%;
+        margin-left: -100%;
+    
+    }
+    
+    .section-categoria {
+        width: 30%;
+        padding: 20px;
+        border-radius: 10px;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        text-align: center;
+        margin: 10px;
+        cursor: pointer;
+    }
+    
+    .categoria-nombre {
+        font-size: 20px;
+        color: blue;
+        margin-bottom: 20px;
+    }
+    
+    .categoria-descripcion {
+        text-align: center;
+        color: black;
+    }
+    
+    h2{
+        font-size: 50px;
+        text-align: center;
+        color: #000000;
+    }
 }

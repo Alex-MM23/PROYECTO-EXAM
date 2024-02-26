@@ -199,8 +199,14 @@ footer {
     }
 
     .logo {
-        margin-left: -2%;
+        margin-left: 23%;
+        margin-top: 10px;
         height: 40px;
+    }
+
+    #usernameD{
+        margin-top: 10px;
+        margin-left: -40%;
     }
 
     .cerrar-btn {
@@ -213,7 +219,7 @@ footer {
         font-size: 16px;
         cursor: pointer;
         border-radius: 10px;
-        margin-left: 32%;
+        margin-left: -16%;
     }
     
     .cerrar-btn:hover {

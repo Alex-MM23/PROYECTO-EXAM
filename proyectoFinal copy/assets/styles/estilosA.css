@@ -178,22 +178,11 @@ footer {
         align-items: center;
     }
 
-    header ul {
-        list-style-type: none;
-        display: flex;
-    }
-
-    header ul li {
-        padding: 0 15px;
-    }
-
     header ul li a {
         color: #000000;
         font-size: 13px;
         display: flex;
-        text-decoration: none;
         margin-top: 10%;
-        margin-left: -8%;
     }
 
     .menu {
@@ -201,8 +190,25 @@ footer {
     }
 
     .logo {
-        margin-left: -2%;
-        height: 40px;
+        margin-left: 15%;
+        margin-top: 10px;
+        height: 37px;
+    }
+
+    #usernameD{
+        margin-top: 12px;
+        margin-left: -62%;
+        font-size: 13px;
+    }
+
+    .candidatosA{
+        font-size: 12px;
+        margin-left: -17px;
+    }
+
+    .solicitudesA{
+        margin-top: 12px;
+        margin-left: -30%;
     }
 
     .cerrar-btn {
@@ -215,7 +221,7 @@ footer {
         font-size: 16px;
         cursor: pointer;
         border-radius: 10px;
-        margin-left: 32%;
+        margin-left: -18%;
     }
     
     .cerrar-btn:hover {
@@ -233,7 +239,6 @@ footer {
         border-radius: 4px;
         margin-top: 2%;
         margin-left: -8%;
-        
     }
 
     .button-empresa:hover {
