@@ -122,8 +122,13 @@ public class Solicitud implements Serializable {
 				+ ", estado=" + estado + ", fecha=" + fecha + ", usuario=" + usuario + ", vacante=" + vacante + "]";
 	}
 
-	
-	
+	public int obtenerIdVacante() {
+        return this.vacante.getIdVacante();
+    }
+
+    public void modificarEstado(int nuevoEstado) {
+        this.estado = nuevoEstado;
+    }
 	
 
 }

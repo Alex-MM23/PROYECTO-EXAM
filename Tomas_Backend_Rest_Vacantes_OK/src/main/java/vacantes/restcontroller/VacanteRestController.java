@@ -11,6 +11,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -112,6 +113,43 @@ public class VacanteRestController {
 	@GetMapping("/BuscarSolicitudes")
 	public List<Solicitud> findAllByUsuarioUsername(@RequestParam("username") String username) {
         return srepo.findAllByUsuarioUsername(username);
+    }
+	
+	@DeleteMapping("/{id}")
+    public ResponseEntity<?> eliminarSolicitud(@PathVariable int id) {
+        try {
+            srepo.deleteById(id);
+            return ResponseEntity.ok().body("Solicitud eliminada exitosamente");
+        } catch (Exception e) {
+            String mensajeError = "Error al eliminar la solicitud con ID: " + id;
+            return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(mensajeError);
+        }
+    }
+	
+	@PutMapping("altaVacante/{idSolicitud}")
+	public ResponseEntity<?> modificarEstadoSolicitud(@PathVariable int idSolicitud) {
+
+        Optional<Solicitud> solicitudOptional = srepo.findById(idSolicitud);
+        if (solicitudOptional.isPresent()) {
+            Solicitud solicitud = solicitudOptional.get();
+            solicitud.modificarEstado(1);
+
+            int idVacante = solicitud.obtenerIdVacante();
+            Optional<Vacante> vacanteOptional = vrepo.findById(idVacante);
+            if (vacanteOptional.isPresent()) {
+                Vacante vacante = vacanteOptional.get();
+                vacante.setEstatus(EstatusVacante.CUBIERTA);
+
+                srepo.save(solicitud);
+                vrepo.save(vacante);
+
+                return ResponseEntity.ok().build();
+            } else {
+                return ResponseEntity.notFound().build();
+            }
+        } else {
+            return ResponseEntity.notFound().build();
+        }
     }
 	
 	@GetMapping("/todasSolicitudes")

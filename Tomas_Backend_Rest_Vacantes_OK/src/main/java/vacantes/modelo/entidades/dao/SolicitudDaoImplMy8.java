@@ -54,4 +54,20 @@ public class SolicitudDaoImplMy8 implements SolicitudDao{
 		// TODO Auto-generated method stub
 		return srepo.findAllByUsuarioUsername(username);
 	}
+
+	@Override
+	public int deleteById(int idSolicitud) {
+		// TODO Auto-generated method stub
+		try {
+			if (findById(idSolicitud) != null) {
+				srepo.deleteById(idSolicitud);
+				return 1;
+			}
+			return 0;
+	} catch (Exception e) {
+		//e.printStackTrace();
+		System.err.println(e.getMessage());
+		return -1;
+	}
+	}
 }

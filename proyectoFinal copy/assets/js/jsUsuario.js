@@ -338,20 +338,17 @@ fetch(urlSolicitudPorID)
       btnCancelar.className = "boton boton-cancelar";
       btnCancelar.innerHTML = "Cancelar";
 
-      divSolicitud.addEventListener("click", () => {
-        cargarVacantesPorCategoria(solicitud.idSolictud);
-      });
-
       sID.innerHTML = `${solicitud.idSolicitud}`;
       sFecha.innerHTML = solicitud.fecha;
       sArchivo.innerHTML = solicitud.archivo;
       sComentario.innerHTML = solicitud.comentarios;
       sNombreVacante.innerHTML = solicitud.vacante.nombre;
-      sUsername.innerHTML = solicitud.username;
+      sUsername.innerHTML = solicitud.usuario.username;
 
       btnCancelar.addEventListener("click", () => {
         // Lógica para la acción de cancelar
         console.log("Cancelar acción para ID: ", solicitud.idSolicitud);
+        eliminarSolicitud(solicitud.idSolicitud); // Llamada a la función para eliminar la solicitud
       });
 
       divBotonCancelar.appendChild(btnCancelar);
@@ -381,7 +378,7 @@ fetch(urlSolicitudes)
       let sID = document.createElement("p");
       let sFecha = document.createElement("p");
       let sArchivo = document.createElement("p");
-      let sComentario = document.createElement("p");
+      let sComentario = document.createElement( "p");
       let sNombreVacante = document.createElement("p");
       let sUsername = document.createElement("p");
 
@@ -396,25 +393,19 @@ fetch(urlSolicitudes)
       btnEliminar.className = "boton-eliminar";
       btnEliminar.innerHTML = "Eliminar";
 
-      divSolicitud.addEventListener("click", () => {
-        cargarVacantesPorCategoria(solicitud.idSolictud);
-      });
-
       sID.innerHTML = `ID Solicitud: ${solicitud.idSolicitud}`;
       sFecha.innerHTML = `Fecha de Solicitud: ${solicitud.fecha}`;
       sArchivo.innerHTML = `Archivo: ${solicitud.archivo}`;
       sComentario.innerHTML = `Comentarios: ${solicitud.comentarios}`;
       sNombreVacante.innerHTML = `Nombre de la Vacante: ${solicitud.vacante.nombre}`;
-      sUsername.innerHTML = `Username: ${solicitud.username}`;
+      sUsername.innerHTML = `Username: ${solicitud.usuario.username}`;
 
       btnInsertar.addEventListener("click", () => {
-        // Lógica para la acción de insertar
-        console.log("Insertar acción para ID: ", solicitud.idSolicitud);
+        modificarEstadoSolicitud(solicitud.idSolicitud);
       });
 
       btnEliminar.addEventListener("click", () => {
-        // Lógica para la acción de eliminar
-        console.log("Eliminar acción para ID: ", solicitud.idSolicitud);
+        eliminarSolicitud(solicitud.idSolicitud); // Llamada a la función para eliminar la solicitud
       });
 
       divBotones.appendChild(btnInsertar);
@@ -432,3 +423,107 @@ fetch(urlSolicitudes)
     });
   });
 
+  function barraBusqueda() {
+    let inputBusqueda = document.getElementById("search").value;
+    window.location.href = `busqueda.html?keyword=${inputBusqueda}`;
+  }
+  
+  const keyword = urlParams.get("keyword");
+  
+  if (keyword) {
+    let divBusqueda = document.getElementById("divBusqueda");
+    let urlBusqueda = `http://localhost:8084/vacantes/barraBusqueda?keyword=${keyword}`;
+  
+    fetch(urlBusqueda)
+      .then((res) => res.json())
+      .then((vacantes) => {
+        vacantes.forEach((vacante) => {
+          let pImagen = document.createElement("img");
+          pImagen.src = "assets/IMG/" + vacante.imagen;
+          pImagen.classList.add("section-imagen");
+          let divProducto = document.createElement("div");
+          divProducto.classList.add("section-vacante");
+          let pNombre = document.createElement("p");
+          pNombre.classList.add("section-nombre");
+          let pDescripcion = document.createElement("p");
+          pDescripcion.classList.add("section-descripcion");
+          let pFecha = document.createElement("p");
+          pFecha.classList.add("section-fecha");
+          let pSalario = document.createElement("p");
+          pSalario.classList.add("section-salario");
+          let pEstatus = document.createElement("p");
+          pEstatus.classList.add("section-estatus");
+          let pDetalles = document.createElement("p");
+          pDetalles.classList.add("section-detalles");
+  
+          divProducto.addEventListener("click", () => {
+            cargarDetalleVacante(vacante.idVacante);
+          });
+          pImagen.innerHTML = `${vacante.imagen}`;
+          pNombre.innerHTML = `${vacante.nombre}`;
+          pDescripcion.innerHTML = `${vacante.descripcion}`;
+          pFecha.innerHTML = `Fecha de publicación: ${vacante.fecha}`;
+          pSalario.innerHTML = `Salario Anual: ${vacante.salario}€`;
+          pEstatus.innerHTML = `${vacante.estatus}`;
+  
+          pDetalles.innerHTML = `${vacante.detalles}`;
+  
+          divProducto.appendChild(pImagen);
+          divProducto.appendChild(pNombre);
+          divProducto.appendChild(pDescripcion);
+          divProducto.appendChild(pFecha);
+          divProducto.appendChild(pSalario);
+          divProducto.appendChild(pEstatus);
+          divProducto.appendChild(pDetalles);
+  
+          divBusqueda.appendChild(divProducto);
+        });
+      });
+  }
+
+  function eliminarSolicitud(idSolicitud) {
+    let urlEliminar = `http://localhost:8084/vacantes/${idSolicitud}`;
+  
+    fetch(urlEliminar, {
+      method: 'DELETE',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Error al eliminar la solicitud');
+      }
+      return response.json();
+    })
+    .then(data => {
+      console.log('Solicitud eliminada:', data);
+      // Aquí podrías realizar alguna acción adicional, como actualizar la lista de solicitudes
+    })
+    .catch(error => {
+      console.error('Error al eliminar la solicitud:', error);
+      // Aquí podrías mostrar un mensaje de error al usuario
+    });
+  }
+  
+  function modificarEstadoSolicitud(idSolicitud) {
+    // Endpoint para modificar el estado de la solicitud y la vacante asociada
+    let urlModificarEstado = `http://localhost:8084/vacantes/altaVacante/${idSolicitud}`;
+
+    // Petición PUT para modificar el estado
+    fetch(urlModificarEstado, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Error al modificar el estado de la solicitud');
+        }
+        console.log('Estado de la solicitud y vacante modificado correctamente');
+    })
+    .catch(error => {
+        console.error('Error al modificar el estado de la solicitud:', error);
+    });
+}

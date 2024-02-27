@@ -11,5 +11,6 @@ public interface SolicitudDao {
 	Solicitud insertOne(Solicitud solicitud);
 	int modificar(Solicitud solicitud);
 	List<Solicitud> buscarPorUsuarioUsername(String username);
+	int deleteById(int idSolicitud);
 	
 }
