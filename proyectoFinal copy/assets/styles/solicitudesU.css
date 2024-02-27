@@ -542,9 +542,10 @@ nav {
     
     #divSolicitudes {
         display: table;
+        margin-left: 12%;
         width: 1%;
         border-collapse: collapse;
-        margin-top: -30%;
+        margin-top: -50%;
     }
     
     .solicitud {

@@ -387,7 +387,7 @@ fetch(urlSolicitudes)
 
       let btnInsertar = document.createElement("button");
       btnInsertar.className = "boton-insertar";
-      btnInsertar.innerHTML = "Insertar";
+      btnInsertar.innerHTML = "Editar";
 
       let btnEliminar = document.createElement("button");
       btnEliminar.className = "boton-eliminar";
