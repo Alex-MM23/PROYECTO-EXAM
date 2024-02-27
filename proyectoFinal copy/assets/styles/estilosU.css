@@ -103,8 +103,8 @@ h1 {
 
 .banner {
     height: 30%;
-    margin-top: -15%;
-    margin-left: 35%;
+    margin-top: -9%;
+    margin-left: 17%;
 }
 
 .titulo {
@@ -161,61 +161,71 @@ footer {
     margin-left: 18%;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 360px) {
+
+    body {
+        min-height: 100vh;
+        background-color: #ffffff;
+    }
 
     header {
         background-color: #ffffff;
         color: black;
-        height: 60px;
+        height: 80px;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-    
+
     header ul {
         list-style-type: none;
         display: flex;
     }
-    
+
     header ul li {
-        padding: 0 15px;
+        margin-top: 5px;
     }
-    
+
     header ul li a {
         color: #000000;
-        text-decoration: none;
-    }
-    
-    .menu-izq {
-        margin-top: 1%;
-        margin-left: -7%;
-    }
-    
-    .menu-dech {
         display: flex;
-        margin-left: 31%;
+        text-decoration: none;
+        font-size: 8px;
+        margin-left: -14px;
     }
-    
+
+    .menu {
+        margin-top: 0.5%;
+    }
+
     .logo {
-        height: 30px;
+        margin-left: 30%;
+        margin-top: 10px;
+        height: 20px;
     }
-    
+
+    #usernameD {
+        font-size: 10px;
+        margin-top: 10px;
+        margin-left: -32%;
+    }
+
     .cerrar-btn {
-        background-color: rgb(222, 222, 222);
+        background-color: #3498db;
         color: #ffffff;
         border: none;
-        padding: 10px 20px;
         text-decoration: none;
         display: inline-block;
-        font-size: 16px;
+        font-size: 8px;
         cursor: pointer;
         border-radius: 10px;
+        margin-left: -15%;
     }
-    
+
     .cerrar-btn:hover {
         background-color: #2980b9;
     }
-    
+
     .button-empresa {
         background-color: #3498db;
         color: #ffffff;
@@ -223,96 +233,96 @@ footer {
         padding: 10px 20px;
         text-decoration: none;
         display: inline-block;
-        font-size: 16px;
+        font-size: 10px;
         cursor: pointer;
         border-radius: 4px;
         margin-top: 2%;
     }
-    
+
     .button-empresa:hover {
         background-color: #2980b9;
     }
-    
-    #usernameD {
-        margin-top: 10px;
-        margin-right: 40px;
-    }
-    
+
     h1 {
+        font-size: 19px;
         color: blue;
     }
-    
+
     .section {
-        margin-top: -10%;
+        margin-top: -14%;
     }
-    
+
     .empresas {
         margin-top: 15%;
+        margin-left: 3%;
+    }
+
+    .banner {
+        height: 90%;
+        width: 90%;
+        margin-top: 0%;
+        margin-left: 7%;
+    }
+
+    .titulo {
+        font-size: 18px;
+        margin-top: 1%;
         margin-left: 10%;
     }
-    
-    .banner {
-        height: 30%;
-        margin-top: -15%;
-        margin-left: 35%;
-    }
-    
-    .titulo {
-        font-size: 40px;
-        margin-top: 1%;
-        margin-left: 25%;
-    }
-    
+
     .container {
         display: flex;
+        justify-content: center; 
         align-items: center;
-        margin-left: 13%;
-    }
-    
-    .cuadrado {
-        width: 300px;
-        height: 320px;
-        background-color: white;
-        box-shadow: 10px 0 15px -5px black;
-        margin: 20px;
-        display: inline-block;
-        text-align: center;
-        padding: 20px;
-        border-radius: 10px;
-    }
-    
-    .cuadrado p {
-        font-size: 18px;
-        margin-top: 12%;
-    }
-    
-    .cuadrado img {
-        width: 60px;
+        margin-left: -2px;
     }
     
     .cuadrado1 {
+        width: 26%; 
+        height: 20%;
         background-color: white;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        display: inline-block;
+        text-align: center;
+        padding: 2px;
+        margin: 5px;
+        border-radius: 10px;
     }
     
-    .cuadrado2 {
-        background-color: white;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    }
-    
+    .cuadrado2,
     .cuadrado3 {
+        width: 28%; 
+        height: 1%;
         background-color: white;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        display: inline-block;
+        text-align: center;
+        padding: 2px;
+        margin: 5px;
+        margin-right: 2%;
+        border-radius: 10px;
+    }
+    
+    .cuadrado h2,
+    .cuadrado p {
+        font-size: 9px;
+        margin-top: 7%;
+    }
+    
+    .cuadrado img {
+        margin-top: 10px;
+        width: 60px;
     }
     
     footer {
-        margin-top: 20px;
-        margin-bottom: 20px;
-        margin-left: 18%;
+        font-size: 6px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        margin-left: 4%;
     }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (min-width: 600px) and (max-width: 800px){
 
     body {
         min-height: 100vh;

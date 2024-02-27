@@ -157,16 +157,20 @@ h2 {
 }
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 360px) {
+
+    body {
+        min-height: 100vh;
+        background-color: #ffffff;
+    }
 
     header {
         background-color: #ffffff;
         color: black;
-        height: 60px;
+        height: 80px;
         display: flex;
         justify-content: center;
         align-items: center;
-
     }
 
     header ul {
@@ -175,39 +179,36 @@ h2 {
     }
 
     header ul li {
-        padding: 0 15px;
+        margin-top: 5px;
     }
 
     header ul li a {
         color: #000000;
-        font-size: 13px;
-        display: flex;
         text-decoration: none;
-        margin-top: 20%;
-        margin-left: 5%;
+        font-size: 10px;
     }
 
     .menu {
-        margin-top: 1%;
+        margin-top: 0.5%;
     }
 
     .logo {
-        margin-left: -17%;
-        height: 40px;
+        margin-left: -15%;
+        margin-top: 10px;
+        height: 20px;
     }
 
     .accede-btn {
         border: 2px solid #3498db;
         background-color: #FFFFFF;
         color: #3498db;
-        padding-top: 5px;
-        padding-left: 7px;
-        font-size: 10px;
+        padding: 10px 20px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 7px;
         cursor: pointer;
         border-radius: 10px;
-        margin-left: 33%;
-        width: 10%;
-        height: 45%;
+        margin-left: -2%;
     }
 
     .accede-btn:hover {
@@ -219,14 +220,13 @@ h2 {
         background-color: #3498db;
         color: #ffffff;
         border: none;
+        padding: 10px 20px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 8px;
         cursor: pointer;
         border-radius: 10px;
-        margin-left: 1%;
-        padding-top: 6px;
-        padding-left: 6px;
-        font-size: 10px;
-        width: 10%;
-        height: 45%;
+        margin-left: 2%;
     }
 
     .registro-btn:hover {
@@ -243,13 +243,14 @@ h2 {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        margin-top: 60%;
+        margin-top: 45%;
+        margin-bottom: 10px;
         margin-left: -100%;
 
     }
 
     .section-categoria {
-        width: 30%;
+        width: 50%;
         padding: 20px;
         border-radius: 10px;
         background-color: white;
@@ -260,7 +261,7 @@ h2 {
     }
 
     .categoria-nombre {
-        font-size: 20px;
+        font-size: 15px;
         color: blue;
         margin-bottom: 20px;
     }
@@ -277,7 +278,7 @@ h2 {
     }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (min-width: 600px) and (max-width: 800px) {
 
     header {
         background-color: #ffffff;

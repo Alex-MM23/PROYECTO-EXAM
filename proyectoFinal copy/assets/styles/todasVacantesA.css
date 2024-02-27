@@ -243,6 +243,7 @@ nav {
     background-color: orange;
     color: white;
     margin-left: 65%;
+    margin-top: 1%;
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -316,7 +317,7 @@ section {
     margin-bottom: 7%;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 360px) {
 
     body {
         min-height: 100vh;
@@ -338,38 +339,53 @@ section {
     }
 
     header ul li {
-        margin-top: 15px;
+        margin-top: 5px;
     }
 
     header ul li a {
         color: #000000;
         text-decoration: none;
+        font-size: 10px;
     }
 
     .menu {
-        margin-top: 1%;
+        margin-top: 0.5%;
     }
 
     .logo {
-        margin-left: -16%;
+        margin-left: -14%;
         margin-top: 10px;
-        height: 40px;
+        height: 20px;
     }
 
     #solicitar-btn {
         background-color: #3498db;
         color: #ffffff;
         border: none;
-        padding: 10px 20px;
         text-decoration: none;
         display: inline-block;
-        font-size: 16px;
+        font-size: 8px;
         cursor: pointer;
         border-radius: 10px;
         margin-left: 10%;
     }
     
     #solicitar-btn:hover {
+        background-color: #2980b9;
+    }
+
+    .cerrar-btn {
+        background-color: #3498db;
+        color: #ffffff;
+        border: none;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 8px;
+        cursor: pointer;
+        border-radius: 10px;
+    }
+    
+    .cerrar-btn:hover {
         background-color: #2980b9;
     }
     
@@ -385,21 +401,22 @@ section {
         display: flex;
         flex-direction: column;
     }
-    
+
     h2 {
         display: flex;
-        width: 900%;
-        margin-top: -20%;
-        margin-left: -20%;
-        font-size: 20px;
+        width: 500px;
+        margin-top: -50%;
+        margin-bottom: 50%;
+        margin-left: -10%;
+        font-size: 10px;
     }
 
     .rectangulo {
         background-color: rgba(52, 152, 219, 0.8);
         padding: 20px;
-        margin-top: -10%;
+        margin-top: -40%;
         margin-left: -20%;
-        height: 20%;
+        height: 13%;
         width: 410%;
         border-radius: 10px;
         color: #fff;
@@ -409,8 +426,11 @@ section {
     }
 
     .search-box {
+        display: flex;
         flex-direction: column;
-        margin-top: -3%;
+        height: 30px;
+        width: 50px;
+        margin-top: -33%;
         margin-right: 10px;
     }
 
@@ -422,7 +442,8 @@ section {
     .rectangulo .search-box input {
         color: grey;
         margin-right: 10px;
-        margin-top: -20%;
+        font-size: 10px;
+        margin-top: 70%;
         border-radius: 5px;
         height: 40px;
         width: 90%;
@@ -433,8 +454,9 @@ section {
     .boton-buscar {
         background-color: orange;
         color: white;
-        margin-left: 67%;
-        padding: 10px 20px;
+        font-size: 7px;
+        margin-top: 0%;
+        margin-left: 52%;
         border: none;
         border-radius: 5px;
         cursor: pointer;
@@ -445,14 +467,14 @@ section {
     }
 
     section {
-        margin-left: 15%;
+        margin-left: 16.5%;
         margin-top: 60%; 
     }
     
     #vacantesTodosA {
         margin-left: -9.5%;
-        margin-top: -122%;
-        width: 90%;
+        margin-top: -106%;
+        width: 60%;
         color: rgb(0, 0, 0);
     }
     
@@ -466,20 +488,21 @@ section {
     
     .section-descripcion {   
         margin-top: 0%;
-        margin-left: 28%;
-        font-size: 12px;
+        margin-left: 39%;
+        padding-right: 10px;
+        font-size: 9px;
     }
     
     .section-nombre{
-        font-size: 20px ;
-        margin-top: -17%;
-        margin-left: 28%;
+        font-size: 13px ;
+        margin-top: -22%;
+        margin-left: 39%;
     }
     
     .section-fecha{
         margin-bottom: 2%;
         font-size: 12px;
-        margin-top: 7.7%;
+        margin-top: 5.7%;
         margin-left: 2%;
     }
     
@@ -496,6 +519,7 @@ section {
     }
     
     .section-imagen{
+        padding-top: 10px;
         margin-left: 2%;
         font-size: 12px;
         margin-top: 2%;
@@ -505,12 +529,104 @@ section {
     .section-detalles{
         margin-left: 2%;
         font-size: 12px;
+        padding-bottom: 10px;
         margin-top: -1%;
         margin-bottom: 7%;
     }
+
+    #enviar-btn {
+        background-color: orange;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 10px;
+        margin-left: -4%;
+    }
+    
+    #enviar-btn:hover {
+        background-color: darkorange;
+    }
+    
+    form {
+        margin-top: 15%;
+        margin-left: 36%;
+        margin-bottom: 20px;
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+    
+    input {
+        padding: 8px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 200px;
+    }
+    
+    #nombreInput{
+        margin-bottom: 10px;
+    }
+    
+    #descripcionInput{
+        margin-bottom: 10px;
+    }
+    
+    #salarioInput{
+        margin-bottom: 10px;
+    }
+
+    #detalleInput{
+        width: 200px;
+    }
+    
+    #formularioNuevaVacante{
+        margin-left: -20px;
+        margin-top: 25px;
+    }
+    
+    .modal-container {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .modal {
+        background-color: rgba(52, 152, 219, 0.8);
+        padding: 20px;
+        margin-left: 10.2%;
+        margin-top: 10.5%;
+        height: 55%;
+        width: 40%;
+        border-radius: 10px;
+        color: #fff;
+    }
+    
+    .cerrar {
+        color: #fff;
+        float: right;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    
+    .cerrar:hover {
+        color: #000;
+    }
 }
 
-@media only screen and (max-width: 800px){
+@media only screen and (min-width: 600px) and (max-width: 800px){
 
     body {
         min-height: 100vh;

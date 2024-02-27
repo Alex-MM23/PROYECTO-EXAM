@@ -207,7 +207,7 @@ input {
     color: #000;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 360px) {
 
     header {
         background-color: #ffffff;
@@ -225,16 +225,13 @@ input {
     }
 
     header ul li {
-        padding: 0 15px;
+        margin-top: -1px;
     }
 
     header ul li a {
         color: #000000;
-        font-size: 13px;
-        display: flex;
         text-decoration: none;
-        margin-top: 20%;
-        margin-left: 5%;
+        font-size: 10px;
     }
 
     .menu {
@@ -243,21 +240,20 @@ input {
 
     .logo {
         margin-left: -33%;
-        height: 40px;
+        height: 20px;
     }
 
     .accede-btn {
         border: 2px solid #3498db;
         background-color: #FFFFFF;
         color: #3498db;
-        padding-top: 7px;
-        padding-left: 7px;
-        font-size: 10px;
+        padding: 10px 20px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 7px;
         cursor: pointer;
         border-radius: 10px;
-        margin-left: 18%;
-        width: 10%;
-        height: 45%;
+        margin-left: -2%;
     }
 
     .accede-btn:hover {
@@ -269,20 +265,18 @@ input {
         background-color: #3498db;
         color: #ffffff;
         border: none;
+        padding: 10px 20px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 8px;
         cursor: pointer;
         border-radius: 10px;
-        margin-left: 9px;
-        padding-top: 8px;
-        padding-left: 3px;
-        font-size: 10px;
-        width: 10%;
-        height: 45%;
+        margin-left: 2%;
     }
 
     .registro-btn:hover {
         background-color: #2980b9;
     }
-
 
     #detalle {
         max-width: 80%;
@@ -293,30 +287,34 @@ input {
     }
 
     .section-nombre {
-        font-size: 26px;
-        margin-top: -20%;
-        margin-left: 28%;
+        font-size: 11px;
+        margin-top: -25%;
+        margin-left: 48%;
     }
 
     .section-descripcion {
-        margin-top: -5%;
-        margin-left: 28%;
+        margin-top: -2%;
+        margin-left: 48%;
+        font-size: 10px;
     }
 
     .section-fecha {
         margin-bottom: 2%;
-        margin-top: 7.7%;
+        margin-top: 12.7%;
         margin-left: 2%;
+        font-size: 11px;
     }
 
     .section-salario {
         margin-bottom: 2%;
         margin-left: 2%;
+        font-size: 11px;
     }
 
     .section-estatus {
         margin-left: 2%;
         margin-bottom: 2%;
+        font-size: 11px;
     }
 
     .section-imagen {
@@ -324,9 +322,27 @@ input {
         margin-top: 2%;
         width: 120px;
     }
+
+    #solicitar-btn {
+        background-color: #3498db;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 10px;
+        margin-top: -15%;
+        margin-left: 68%;
+    }
+    
+    #solicitar-btn:hover {
+        background-color: #2980b9;
+    }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (min-width: 600px) and (max-width: 800px) {
 
     header {
         background-color: #ffffff;
@@ -335,7 +351,6 @@ input {
         display: flex;
         justify-content: center;
         align-items: center;
-
     }
 
     header ul {

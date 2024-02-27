@@ -261,7 +261,7 @@ input {
     color: #000;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 360px) {
 
     header {
         background-color: #ffffff;
@@ -279,16 +279,13 @@ input {
     }
 
     header ul li {
-        padding: 0 15px;
+        margin-top: -1px;
     }
 
     header ul li a {
         color: #000000;
-        font-size: 13px;
-        display: flex;
         text-decoration: none;
-        margin-top: 20%;
-        margin-left: 5%;
+        font-size: 10px;
     }
 
     .menu {
@@ -296,8 +293,8 @@ input {
     }
 
     .logo {
-        margin-left: -30%;
-        height: 40px;
+        margin-left: -39%;
+        height: 20px;
     }
 
     .cerrar-btn {
@@ -310,7 +307,7 @@ input {
         font-size: 16px;
         cursor: pointer;
         border-radius: 10px;
-        margin-left: 27%;
+        margin-left: 18%;
     }
     
     .cerrar-btn:hover {
@@ -326,30 +323,34 @@ input {
     }
 
     .section-nombre {
-        font-size: 26px;
-        margin-top: -18%;
-        margin-left: 28%;
+        font-size: 11px;
+        margin-top: -25%;
+        margin-left: 48%;
     }
 
     .section-descripcion {
-        margin-top: -5%;
-        margin-left: 28%;
+        margin-top: -2%;
+        margin-left: 48%;
+        font-size: 10px;
     }
 
     .section-fecha {
         margin-bottom: 2%;
-        margin-top: 7.7%;
+        margin-top: 12.7%;
         margin-left: 2%;
+        font-size: 11px;
     }
 
     .section-salario {
         margin-bottom: 2%;
         margin-left: 2%;
+        font-size: 11px;
     }
 
     .section-estatus {
         margin-left: 2%;
         margin-bottom: 2%;
+        font-size: 11px;
     }
 
     .section-imagen {
@@ -358,7 +359,7 @@ input {
         width: 120px;
     }
 
-    .solicitar-btn {
+    #solicitar-btn {
         background-color: #3498db;
         color: #ffffff;
         border: none;
@@ -368,107 +369,34 @@ input {
         font-size: 16px;
         cursor: pointer;
         border-radius: 10px;
-        margin-left: 77%;
+        margin-top: -15%;
+        margin-left: 72%;
     }
     
-    .solicitar-btn:hover {
+    #solicitar-btn:hover {
         background-color: #2980b9;
     }
 
-    label {
-        display: block;
-        margin-bottom: 10px;
-        margin-left: -14%;
-    }
-    
-    input {
-        padding: 8px;
-        margin-left: -14%;
-        font-size: 16px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        width: 200px;
-    }
-    
-    .modal-container {
-        display: none;
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .modal {
-        background-color: rgba(52, 152, 219, 0.8);
-        padding: 20px;
-        margin-top: 6%;
-        margin-left: 28%;
-        height: 20%;
-        width: 220%;
-        border-radius: 10px;
-        color: #fff;
-    }
-    
-    #editar-btn {
-        background-color: orange;
-        color: #ffffff;
-        border: none;
-        padding: 10px 20px;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        cursor: pointer;
-        border-radius: 10px;
-        margin-left: 40%;
-    
-    }
-    
-    #editar-btn:hover {
-        background-color: darkorange;
-    }
-    
-    #formularioNuevaVacante {
-        margin-top: 10%;
-        margin-left: -10%;
+    form {
+        margin-top: 7%;
+        margin-left: 14%;
         margin-bottom: 20px;
     }
     
     label {
         display: block;
+        margin-left: -20%;
         margin-bottom: 10px;
     }
     
     input {
         padding: 8px;
         font-size: 16px;
+        margin-left: -20%;
+        margin-bottom: 10px;
         border: 1px solid #ccc;
         border-radius: 4px;
         width: 200px;
-    }
-    
-    #editNombreInput{
-        margin-bottom: 10px;
-    }
-    
-    #editDescripcionInput{
-        margin-bottom: 10px;
-    }
-    
-    #editDetalleInput{
-        margin-bottom: 10px;
-    }
-    
-    #editSalarioInput{
-        margin-bottom: 10px;
-    }
-    
-    #formularioNuevaVacante{
-        margin-left: 30%;
-        margin-top: 50px;
     }
     
     .modal-container {
@@ -485,10 +413,10 @@ input {
     
     .modal {
         background-color: rgba(52, 152, 219, 0.8);
-        margin-left: 17%;
+        margin-left: 4.5%;
         padding: 20px;
         height: 80%;
-        width: 60%;
+        width: 80%;
         border-radius: 10px;
         color: #fff;
     }
@@ -503,9 +431,24 @@ input {
     .cerrar:hover {
         color: #000;
     }
+    
+    #solictud-input {
+        background-color: orange;
+        color: white;
+        margin-top: 2%;
+        margin-left: 2.6%;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    #solictud-input:hover {
+        background-color: darkorange;
+    }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (min-width: 600px) and (max-width: 800px) {
 
     header {
         background-color: #ffffff;
