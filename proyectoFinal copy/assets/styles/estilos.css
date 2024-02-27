@@ -119,13 +119,13 @@ h1 {
 .titulo {
     font-size: 40px;
     margin-top: 1%;
-    margin-left: 30%;
+    margin-left: 25%;
 }
 
 .container {
     display: flex;
     align-items: center;
-    margin-left: 17%;
+    margin-left: 13%;
 }
 
 .cuadrado {
@@ -165,8 +165,9 @@ h1 {
 }
 
 footer {
-    margin-top: 40px;
-    margin-left: 20%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 18%;
 }
 
 @media only screen and (max-width: 600px) {
@@ -204,7 +205,7 @@ footer {
     }
 
     .logo {
-        margin-left: -5%;
+        margin-left: 105%;
         margin-top: 10px;
         height: 40px;
     }
@@ -245,7 +246,7 @@ footer {
     }
 
     .button-empresa {
-        background-color: #3498db;
+        background-color: #db34bc;
         color: #ffffff;
         border: none;
         padding: 10px 20px;
@@ -337,5 +338,164 @@ footer {
         margin-top: 10px;
         margin-bottom: 15px;
         margin-left: 6%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    body {
+        min-height: 100vh;
+        background-color: #ffffff;
+    }
+
+    header {
+        background-color: #ffffff;
+        color: black;
+        height: 80px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header ul {
+        list-style-type: none;
+        display: flex;
+    }
+
+    header ul li {
+        margin-top: 15px;
+    }
+
+    header ul li a {
+        color: #000000;
+        text-decoration: none;
+    }
+
+    .menu {
+        margin-top: 1%;
+    }
+
+    .logo {
+        margin-left: -4%;
+        margin-top: 10px;
+        height: 40px;
+    }
+
+    .accede-btn {
+        border: 2px solid #3498db;
+        background-color: #FFFFFF;
+        color: #3498db;
+        padding: 10px 20px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 10px;
+        margin-left: 25%;
+    }
+
+    .accede-btn:hover {
+        background-color: #3498db;
+        color: #FFFFFF;
+    }
+
+    .registro-btn {
+        background-color: #3498db;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 10px;
+        margin-left: 2%;
+    }
+
+    .registro-btn:hover {
+        background-color: #2980b9;
+    }
+
+    .button-empresa {
+        background-color: #3498db;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 4px;
+        margin-top: 2%;
+    }
+
+    .button-empresa:hover {
+        background-color: #2980b9;
+    }
+
+    h1 {
+        color: blue;
+    }
+
+    .section {
+        margin-top: -14%;
+    }
+
+    .empresas {
+        margin-top: 15%;
+        margin-left: 3%;
+    }
+
+    .banner {
+        height: 1%;
+        margin-top: -1%;
+        margin-left: 5%;
+    }
+
+    .titulo {
+        font-size: 30px;
+        margin-top: 1%;
+        margin-left: 20%;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        margin-left: 11%;
+    }
+    
+    .cuadrado1, .cuadrado2, .cuadrado3 {
+        width: 23%; 
+        height: 25%;
+        background-color: white;
+        box-shadow: 5px 0 10px -5px black; 
+        display: inline-block;
+        text-align: center;
+        padding: 10px; 
+        margin: 5px; 
+        margin-left: 4%;
+        border-radius: 10px;
+    }
+    
+    
+    .cuadrado h2, .cuadrado p {
+        font-size: 13px;
+        margin-top: 12%;
+    }
+    
+    .cuadrado img {
+        width: 60px;
+    }
+    
+    .cuadrado1, .cuadrado2, .cuadrado3 {
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    
+    footer {
+        font-size: 9.7px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        margin-left: 17%;
     }
 }

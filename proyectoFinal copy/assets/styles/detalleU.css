@@ -381,3 +381,185 @@ input {
         background-color: darkorange;
     }
 }
+
+@media only screen and (max-width: 800px) {
+
+    header {
+        background-color: #ffffff;
+        color: black;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    header ul {
+        list-style-type: none;
+        display: flex;
+    }
+
+    header ul li {
+        padding: 0 15px;
+    }
+
+    header ul li a {
+        color: #000000;
+        font-size: 13px;
+        display: flex;
+        text-decoration: none;
+        margin-top: 20%;
+        margin-left: 5%;
+    }
+
+    .menu {
+        margin-top: 4%;
+    }
+
+    .logo {
+        margin-left: -35%;
+        height: 40px;
+    }
+
+    .cerrar-btn {
+        background-color: #3498db;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 10px;
+        margin-left: 39%;
+    }
+    
+    .cerrar-btn:hover {
+        background-color: #2980b9;
+    }
+
+    #detalleU {
+        max-width: 80%;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+
+    .section-nombre {
+        font-size: 26px;
+        margin-top: -13%;
+        margin-left: 23%;
+    }
+
+    .section-descripcion {
+        margin-top: -4%;
+        margin-left: 23%;
+    }
+
+    .section-fecha {
+        margin-bottom: 2%;
+        margin-top: 5.7%;
+        margin-left: 2%;
+    }
+
+    .section-salario {
+        margin-bottom: 2%;
+        margin-left: 2%;
+    }
+
+    .section-estatus {
+        margin-left: 2%;
+        margin-bottom: 2%;
+    }
+
+    .section-imagen {
+        margin-left: 2%;
+        margin-top: 2%;
+        width: 120px;
+    }
+
+    #solicitar-btn {
+        background-color: #3498db;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 10px;
+        margin-left: 80%;
+    }
+    
+    #solicitar-btn:hover {
+        background-color: #2980b9;
+    }
+
+    form {
+        margin-top: 7%;
+        margin-left: 29%;
+        margin-bottom: 20px;
+    }
+    
+    label {
+        display: block;
+        margin-bottom: 10px;
+    }
+    
+    input {
+        padding: 8px;
+        font-size: 16px;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        width: 200px;
+    }
+    
+    .modal-container {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .modal {
+        background-color: rgba(52, 152, 219, 0.8);
+        padding: 20px;
+        height: 40%;
+        width: 70%;
+        border-radius: 10px;
+        color: #fff;
+    }
+    
+    .cerrar {
+        color: #fff;
+        float: right;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    
+    .cerrar:hover {
+        color: #000;
+    }
+    
+    #solictud-input {
+        background-color: orange;
+        color: white;
+        margin-top: 2%;
+        margin-left: 2.6%;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    #solictud-input:hover {
+        background-color: darkorange;
+    }
+}

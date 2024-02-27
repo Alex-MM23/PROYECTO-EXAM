@@ -48,7 +48,7 @@ header ul li a {
 
 .logo {
     margin-top: 30px;
-    margin-left: -7%;
+    margin-left: -9%;
     height: 30px;
 }
 
@@ -85,7 +85,7 @@ header ul li a {
     background-color: #2980b9;
 }
 
-#usernameD{
+#usernameD {
     margin-top: 10px;
     margin-right: 40px;
 }
@@ -112,13 +112,13 @@ h1 {
 .titulo {
     font-size: 40px;
     margin-top: 1%;
-    margin-left: 30%;
+    margin-left: 25%;
 }
 
 .container {
     display: flex;
     align-items: center;
-    margin-left: 17%;
+    margin-left: 13%;
 }
 
 .cuadrado {
@@ -158,8 +158,9 @@ h1 {
 }
 
 footer {
-    margin-top: 40px;
-    margin-left: 20%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 18%;
 }
 
 @media only screen and (max-width: 600px) {
@@ -195,18 +196,18 @@ footer {
         height: 37px;
     }
 
-    #usernameD{
+    #usernameD {
         margin-top: 12px;
-        margin-left: -62%;
+        margin-left: -90%;
         font-size: 13px;
     }
 
-    .candidatosA{
+    .candidatosA {
         font-size: 12px;
         margin-left: -17px;
     }
 
-    .solicitudesA{
+    .solicitudesA {
         margin-top: 12px;
         margin-left: -30%;
     }
@@ -221,9 +222,10 @@ footer {
         font-size: 16px;
         cursor: pointer;
         border-radius: 10px;
-        margin-left: -18%;
+        margin-top: 1px;
+        margin-left: 4%;
     }
-    
+
     .cerrar-btn:hover {
         background-color: #2980b9;
     }
@@ -262,7 +264,7 @@ footer {
         margin-top: 15%;
         margin-left: 10%;
     }
-    
+
     .banner {
         height: 1%;
         margin-top: -1%;
@@ -272,33 +274,178 @@ footer {
     .titulo {
         font-size: 30px;
         margin-top: 1%;
-        margin-left: 10%;
+        margin-left: 12%;
     }
 
     .container {
         display: flex;
         align-items: center;
-        margin-left: 1%;
+        margin-left: 8%;
     }
 
-    .cuadrado {
-        width: 70%;
-        height: 70%;
-        background-color: white;
-        box-shadow: 10px 0 15px -5px black;
-        margin: 20px;
-        display: inline-block;
-        text-align: center;
-        padding: 20px;
-        border-radius: 10px;
-    }
-
-    .cuadrado h2{
+    .cuadrado h2 {
         font-size: 13px;
     }
 
     .cuadrado p {
         font-size: 12px;
+        margin-top: 12%;
+        padding-left: 17px;
+    }
+
+    .cuadrado img {
+        width: 60px;
+    }
+
+    .cuadrado1,
+    .cuadrado2,
+    .cuadrado3 {
+        width: 27%;
+        height: 210px;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        display: inline-block;
+        text-align: center;
+        padding: 10px;
+        margin: 2%;
+        border-radius: 10px;
+    }
+
+    footer {
+        font-size: 9.7px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        margin-left: 13.4%;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+    header {
+        background-color: #ffffff;
+        color: black;
+        height: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header ul {
+        list-style-type: none;
+        display: flex;
+    }
+
+    header ul li {
+        padding: 0 15px;
+    }
+
+    header ul li a {
+        color: #000000;
+        font-size: 13px;
+        display: flex;
+        text-decoration: none;
+        margin-top: 10%;
+        margin-left: -8%;
+    }
+
+    .menu {
+        margin-top: 1%;
+    }
+
+    .logo {
+        margin-left: 1%;
+        margin-top: 10px;
+        height: 40px;
+    }
+
+    #usernameD {
+        margin-top: 10px;
+        margin-left: -25%;
+    }
+
+    .cerrar-btn {
+        background-color: #3498db;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 10px;
+        margin-left: -15%;
+    }
+
+    .cerrar-btn:hover {
+        background-color: #2980b9;
+    }
+
+    .button-empresa {
+        background-color: #3498db;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 4px;
+        margin-top: 2%;
+    }
+
+    .button-empresa:hover {
+        background-color: #2980b9;
+    }
+
+    h1 {
+        color: blue;
+    }
+
+    .section {
+        margin-top: -14%;
+    }
+
+    .empresas {
+        margin-top: 15%;
+        margin-left: 3%;
+    }
+
+    .banner {
+        height: 1%;
+        margin-top: -1%;
+        margin-left: 5%;
+    }
+
+    .titulo {
+        font-size: 30px;
+        margin-top: 1%;
+        margin-left: 20%;
+    }
+
+    .container {
+        display: flex;
+        align-items: center;
+        margin-left: 14%;
+    }
+
+    .cuadrado1,
+    .cuadrado2,
+    .cuadrado3 {
+        width: 21%;
+        height: 25%;
+        background-color: white;
+        box-shadow: 5px 0 10px -5px black;
+        display: inline-block;
+        text-align: center;
+        padding: 10px;
+        margin: 5px;
+        margin-left: 4%;
+        border-radius: 10px;
+    }
+
+    .cuadrado h2,
+    .cuadrado p {
+        font-size: 13px;
         margin-top: 12%;
     }
 
@@ -306,25 +453,17 @@ footer {
         width: 60px;
     }
 
-    .cuadrado1 {
-        background-color: white;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    }
-
-    .cuadrado2 {
-        background-color: white;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    }
-
+    .cuadrado1,
+    .cuadrado2,
     .cuadrado3 {
         background-color: white;
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     }
 
     footer {
-        font-size: 10.7px;
+        font-size: 9.7px;
         margin-top: 10px;
         margin-bottom: 15px;
-        margin-left: 9%;
+        margin-left: 16%;
     }
 }

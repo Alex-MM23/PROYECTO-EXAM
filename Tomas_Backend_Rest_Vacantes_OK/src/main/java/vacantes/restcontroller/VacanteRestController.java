@@ -70,7 +70,7 @@ public class VacanteRestController {
 		}
 	}
 
-	@PostMapping("/editarVacante/{idVacante}")
+	@PutMapping("/editarVacante/{idVacante}")
 	public ResponseEntity<?> editarVacante(@PathVariable int idVacante, @RequestBody VacanteDto vacanteDto) {
 	    Vacante vacante = vdao.findById(idVacante);
 	    
@@ -81,7 +81,7 @@ public class VacanteRestController {
 	    vacante.setDestacado(vacanteDto.getDestacado());
 	    vacante.setDetalles(vacanteDto.getDetalles());
 	    vacante.setEstatus(vacanteDto.getEstatus());
-	    vacante.setFecha(vacanteDto.getFecha());
+	    vacante.setFecha(new Date());
 	    vacante.setImagen(vacanteDto.getImagen());
 	    vacante.setNombre(vacanteDto.getNombre());
 	    vacante.setSalario(vacanteDto.getSalario());

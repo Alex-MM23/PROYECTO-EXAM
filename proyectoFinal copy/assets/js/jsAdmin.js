@@ -283,36 +283,39 @@ function editarVacante() {
   let urlEditarVacante = `http://localhost:8084/apirest/categoria/editarVacante/${IDVacante}`;
 
   const datosVacante = {
-    idVacante: idVacante,
+    idVacante: IDVacante, // Corregir aquí
     nombre: Nombre,
     descripcion: Descripcion,
     salario: Salario,
     detalles: Detalle,
     imagen: Imagen
-};
-
-  let requestOptions = {
-      headers: {
-        "Accept": "application/json",
-        "Content-Type": "application/json"
-      },
-      method: "PUT",
-      body: JSON.stringify(datosVacante) // Convertir los datos de la vacante a JSON
   };
 
-  // Realizar la solicitud para editar la vacante
-  fetch(urlEditarVacante, requestOptions)
-      .then(response => {
-          if (!response.ok) {
-              throw new Error('Error al editar la vacante');
-          }
-          return response.json();
-      })
-      .then(data => {
-          console.log('Vacante editada exitosamente:', data);
-          alert('Vacante editada exitosamente');
-          // Redirigir o actualizar la página según necesites
-      })
+  let requestOptions = {
+    headers: {
+      "Accept": "application/json",
+      "Content-Type": "application/json"
+    },
+    method: "PUT",
+    body: JSON.stringify(datosVacante)
+  };
+
+// Realizar la solicitud para editar la vacante
+fetch(urlEditarVacante, requestOptions)
+    .then(response => {
+        if (!response.ok) {
+            throw new Error(`Error al editar la vacante. Código de estado: ${response.status}`);
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log('Vacante editada exitosamente:', data);
+        alert('Vacante editada exitosamente');
+    })
+    .catch(error => {
+        console.error('Error en la solicitud:', error.message); 
+    });
+
 }
 
 function modal() {
