@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>vacantes</groupId>
-	<artifactId>Tomas_Backend_Rest_Vacantes</artifactId>
+	<artifactId>Manuel_Backend_Rest_Vacantes</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Tomas_Backend_Rest_Vacantes</name>
+	<name>Manuel_Backend_Rest_Vacantes</name>
 	<description>apirest spring bott jpa para app vacantes</description>
 	<properties>
 		<java.version>17</java.version>
