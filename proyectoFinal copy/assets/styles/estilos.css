@@ -170,8 +170,7 @@ footer {
     margin-left: 18%;
 }
 
-@media only screen and (max-width: 600px) {
-
+@media only screen and (max-width: 360px) {
     body {
         min-height: 100vh;
         background-color: #ffffff;
@@ -192,22 +191,23 @@ footer {
     }
 
     header ul li {
-        margin-top: 15px;
+        margin-top: 5px;
     }
 
     header ul li a {
         color: #000000;
         text-decoration: none;
+        font-size: 10px;
     }
 
     .menu {
-        margin-top: 1%;
+        margin-top: 0.5%;
     }
 
     .logo {
-        margin-left: 105%;
+        margin-left: -5%;
         margin-top: 10px;
-        height: 40px;
+        height: 20px;
     }
 
     .accede-btn {
@@ -217,10 +217,10 @@ footer {
         padding: 10px 20px;
         text-decoration: none;
         display: inline-block;
-        font-size: 16px;
+        font-size: 7px;
         cursor: pointer;
         border-radius: 10px;
-        margin-left: 2%;
+        margin-left: -2%;
     }
 
     .accede-btn:hover {
@@ -235,7 +235,7 @@ footer {
         padding: 10px 20px;
         text-decoration: none;
         display: inline-block;
-        font-size: 16px;
+        font-size: 8px;
         cursor: pointer;
         border-radius: 10px;
         margin-left: 2%;
@@ -246,13 +246,13 @@ footer {
     }
 
     .button-empresa {
-        background-color: #db34bc;
+        background-color: #3498db;
         color: #ffffff;
         border: none;
         padding: 10px 20px;
         text-decoration: none;
         display: inline-block;
-        font-size: 16px;
+        font-size: 10px;
         cursor: pointer;
         border-radius: 4px;
         margin-top: 2%;
@@ -263,6 +263,7 @@ footer {
     }
 
     h1 {
+        font-size: 19px;
         color: blue;
     }
 
@@ -276,72 +277,75 @@ footer {
     }
 
     .banner {
-        height: 1%;
-        margin-top: -1%;
-        margin-left: -5%;
+        height: 90%;
+        width: 90%;
+        margin-top: 0%;
+        margin-left: 7%;
     }
 
     .titulo {
-        font-size: 30px;
+        font-size: 18px;
         margin-top: 1%;
         margin-left: 10%;
     }
 
     .container {
         display: flex;
+        justify-content: center; 
         align-items: center;
-        margin-left: 1%;
+        margin-left: -10px;
     }
-
-    .cuadrado {
-        width: 70%;
-        height: 70%;
+    
+    .cuadrado1 {
+        width: 26%; 
+        height: 20%;
         background-color: white;
-        box-shadow: 10px 0 15px -5px black;
-        margin: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         display: inline-block;
         text-align: center;
-        padding: 20px;
+        padding: 2px;
+        margin: 5px;
         border-radius: 10px;
     }
-
-    .cuadrado h2{
-        font-size: 13px;
+    
+    .cuadrado2,
+    .cuadrado3 {
+        width: 28%; 
+        height: 1%;
+        background-color: white;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        display: inline-block;
+        text-align: center;
+        padding: 2px;
+        margin: 5px;
+        margin-right: 2%;
+        border-radius: 10px;
     }
-
+    
+    
+    .cuadrado h2,
     .cuadrado p {
-        font-size: 12px;
-        margin-top: 12%;
+        font-size: 9px;
+        margin-top: 7%;
     }
-
+    
     .cuadrado img {
+        margin-top: 10px;
         width: 60px;
     }
-
-    .cuadrado1 {
-        background-color: white;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    }
-
-    .cuadrado2 {
-        background-color: white;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    }
-
-    .cuadrado3 {
-        background-color: white;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    }
+    
+    
 
     footer {
-        font-size: 9.7px;
+        font-size: 6px;
         margin-top: 10px;
         margin-bottom: 15px;
-        margin-left: 6%;
+        margin-left: 4%;
     }
 }
 
-@media only screen and (max-width: 800px) {
+
+@media only screen and (min-width: 600px) and (max-width: 800px) {
 
     body {
         min-height: 100vh;
@@ -463,35 +467,33 @@ footer {
         align-items: center;
         margin-left: 11%;
     }
-    
-    .cuadrado1, .cuadrado2, .cuadrado3 {
-        width: 23%; 
+
+    .cuadrado1,
+    .cuadrado2,
+    .cuadrado3 {
+        width: 23%;
         height: 25%;
         background-color: white;
-        box-shadow: 5px 0 10px -5px black; 
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         display: inline-block;
         text-align: center;
-        padding: 10px; 
-        margin: 5px; 
+        padding: 10px;
+        margin: 5px;
         margin-left: 4%;
         border-radius: 10px;
     }
-    
-    
-    .cuadrado h2, .cuadrado p {
+
+
+    .cuadrado h2,
+    .cuadrado p {
         font-size: 13px;
         margin-top: 12%;
     }
-    
+
     .cuadrado img {
         width: 60px;
     }
-    
-    .cuadrado1, .cuadrado2, .cuadrado3 {
-        background-color: white;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    }
-    
+
     footer {
         font-size: 9.7px;
         margin-top: 10px;
